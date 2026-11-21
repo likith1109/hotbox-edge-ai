@@ -1,0 +1,60 @@
+MISSION 1 — TEAM 25 HOTBOX
+Started UTC: 2026-11-21T18:45:44.154044+00:00
+User prediction: mean-baseline validation MAE = 10 days.
+Only data/team_25_train.csv is used for analysis and training.
+Source data SHA256: d98ac426a958c2068093ef14d91472eb0956fccd086d2a38718aa4ced591b96e
+Environment: Python 3.14.10, torch 2.15.0+cpu, numpy 2.5.5, pandas 3.1.1, matplotlib 3.11.2; OMP_NUM_THREADS=1, MKL_NUM_THREADS=1.
+Untouched reference: validation MAE 20.39 days; no filtering, no normalisation; original seeded 1600/400 split. Preserved independently.
+Rules: all six values finite; battery_v > 0; temp_c != -127; rings_per_day >= 0; wifi_rssi_dbm < 0; age_months >= 0; days_left >= 0.
+Assumptions: zero voltage is invalid for a reporting battery-powered device; -127 temperature and zero RSSI are suspected placeholders in this log. Zero dBm is not universally impossible in RF; this log-specific interpretation should be revisited if device specifications become available. No plausible tails are trimmed.
+Counts may overlap; unique removal uses Boolean OR. Split remains default_rng(0), permutation after cleaning, validation first len(clean)//5 rows.
+COMMAND: python train.py --team 25 (isolated environment above)
+glitch rule nonfinite: 0 rows
+glitch rule battery_nonpositive: 11 rows
+glitch rule temperature_error_minus127: 3 rows
+glitch rule rings_negative: 0 rows
+glitch rule wifi_nonnegative: 10 rows
+glitch rule age_negative: 0 rows
+glitch rule target_negative: 0 rows
+2000 rows, 24 glitch rows dropped
+baseline (predict the mean): 53.97 days
+baseline (linear regression): 23.37 days
+  epoch    0  val MAE 58.91 days
+  epoch  300  val MAE 24.43 days
+  epoch  600  val MAE 17.58 days
+  epoch  900  val MAE 18.21 days
+  epoch 1200  val MAE 17.16 days
+  epoch 1499  val MAE 16.83 days
+network (32, 32):            16.83 days
+saved model/model.pt and model/config.json
+Training exit code: 0
+
+INDEPENDENT VERIFICATION
+PASS: Python syntax and git diff --check.
+PASS: seeded split block is byte-for-byte unchanged and remains after cleaning.
+PASS: unique removed rows=24; retained=1976; train=1581, validation=395; no split overlap or missing retained rows.
+PASS: sklearn LinearRegression independently reproduces lstsq validation predictions and MAE; design rank=6; mean baseline uses training targets only.
+Training target mean: 78.559959 days; retained target range: 0.4–341.2 days.
+Mean MAE: 53.972000 days; difference from user prediction: 43.972000 days.
+Linear MAE: 23.365919 days; reduction versus constant: 56.71%.
+PASS: all 12 requested PNG plots exist and decode correctly; six histograms, five sensor scatter plots, one validation predicted-versus-actual plot.
+PASS: saved Team 25 model/config pair reloads and reproduces cleaned network validation MAE 16.834801 days; config stores 16.83.
+Untouched starter network MAE remains separately recorded as 20.39 days on its original 400-row validation set; cleaned network uses 395 different validation rows, so this is not a controlled accuracy comparison.
+
+LINEAR ERROR ANALYSIS (validation only)
+actual <20 days: n=99, MAE=19.83, signed error (predicted-actual)=8.71 days.
+actual 20–100 days: n=161, MAE=19.99, signed error (predicted-actual)=13.58 days.
+actual 100–200 days: n=106, MAE=21.49, signed error (predicted-actual)=-4.64 days.
+actual >=200 days: n=29, MAE=61.07, signed error (predicted-actual)=-61.07 days.
+Ten largest linear errors saved with input readings in linear_worst_validation_rows.csv.
+Plot interpretation: battery voltage has a pronounced curved rise; rings show a declining upper envelope; Wi-Fi has a rising envelope that appears to flatten; temperature and age show weaker, confounded marginal patterns. Scatter plots do not isolate causal effects.
+Predicted-versus-actual plot: linear model underpredicts long lifetimes and produces some negative predictions at the low end. Predictions were not clipped, preserving the specified linear baseline.
+The constant is the training-target mean, with no validation leakage. Mean minimises squared error; median minimises absolute error, but the requested baseline is the mean. The 10-day guess understated the spread of days_left, which spans hundreds of days.
+PASS: input data SHA256 matches untouched-reference provenance: d98ac426a958c2068093ef14d91472eb0956fccd086d2a38718aa4ced591b96e
+Artifact SHA256 hashes saved in verified_artifact_sha256.json. All Mission 1 checks passed.
+
+REVIEW AND HANDOFF
+Reviewed train.py diff: Mission 1 cleaning, intercept baseline, plot export, and measurement export only. Mission 2 normalisation and architecture remain unchanged; API and devcontainer unchanged.
+Raw and retained histograms inspected: target distribution is strongly right-skewed; zero voltage and -127 temperature are isolated from the main readings. All five feature scatter plots and validation predicted-versus-actual plot inspected.
+Fetched origin before committing: no teammate commits diverged from local HEAD. Ordinary push to main will be used.
+Mission 1 implementation and verification complete; ready for Prompt 3. Future prompts should record numerical predictions before measurements.

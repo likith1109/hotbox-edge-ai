@@ -1,0 +1,19 @@
+{
+  "team": 25,
+  "data": "data/team_25_train.csv",
+  "source_commit": "24f9d1a2a3e9952fa7c91ff554b31c81558dde4e",
+  "training_command": "python train.py --team 25",
+  "environment": {
+    "python": "3.14.10",
+    "torch": "2.15.0+cpu",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "sha256": {
+    "train.py": "c743ad018f5ce34a6d6f2a4d670aef0d3c13c9d2a498265a31864725b7256073",
+    "app/model.py": "8759b401c69da30a095dd693b0f022e12b3d87a8c91314c07eaa332324c5926d",
+    "data/team_25_train.csv": "d98ac426a958c2068093ef14d91472eb0956fccd086d2a38718aa4ced591b96e",
+    "model/model.pt": "a04be7066c00f437606cb2e856908b428051991f7bd51cebdcbf29ba2a150268",
+    "model/config.json": "dfba7746a7af6de59bf8b00e500af2ca9ffbf28e854ab5d0ef4eea1f09ce4749"
+  }
+}

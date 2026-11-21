@@ -1,0 +1,18 @@
+{
+  "train.py": "b7c301e1557e0904d0ee57ade9cf5c2ea1572512b98db7a6616e3068c16b8b3c",
+  "data/team_25_train.csv": "d98ac426a958c2068093ef14d91472eb0956fccd086d2a38718aa4ced591b96e",
+  "model/model.pt": "31045c2aca36d84dd484c9333432f579c0070657da394d71e8006da684fe922e",
+  "model/config.json": "50f89b342e54c7beda52c4545780d174c7894e15bd818fecf754e40827e9bb4b",
+  "artifacts/team_25/mission1/hist_age_months.png": "47db6488cfb016a67cbe5f2058671890004dc356398de21b64aeff87e5cef4e3",
+  "artifacts/team_25/mission1/hist_battery_v.png": "ae8fc39930aedfbe781fcb5cf5a4a21c00e81b1f33bb50a128c8407cea947010",
+  "artifacts/team_25/mission1/hist_days_left.png": "85797ed9d3b196a4723220741d68c307f502dc23a228e48fb8ee0080a1ce3fe6",
+  "artifacts/team_25/mission1/hist_rings_per_day.png": "d86b987bffdf04abe73df1c580e36d319395655ab4a7d534f39827cfb092007f",
+  "artifacts/team_25/mission1/hist_temp_c.png": "e5fbff67443f25c74c0fa5b5f7808efb4765abbab3808b0e0e290daf0269fc16",
+  "artifacts/team_25/mission1/hist_wifi_rssi_dbm.png": "d25518462b0a9dc636a0455d54123190e6c327c5599d5dca9657ef88d4a4e8d1",
+  "artifacts/team_25/mission1/linear_predicted_vs_actual.png": "2d596abadc34b0dd63ba15663cb9719b9e54bb713b915e34a8e8148161960dd8",
+  "artifacts/team_25/mission1/scatter_days_left_vs_age_months.png": "874f1f1ab6a8e6a936a6c9f42679fef28ce22e3dfa63f9ddf07017bfb4f252fe",
+  "artifacts/team_25/mission1/scatter_days_left_vs_battery_v.png": "9652760df139ccf78e07e04e6af7a6dba71df50eb2f5e51543f1ef02a001f4a6",
+  "artifacts/team_25/mission1/scatter_days_left_vs_rings_per_day.png": "f854d40c83865cbe1d2d53e221b3ce68664d1208618ae0dda0ebb43bee6ca92a",
+  "artifacts/team_25/mission1/scatter_days_left_vs_temp_c.png": "e751b20d80e5041e3d5b33393243e0282cb91b63daf87cbd279b984237a410d8",
+  "artifacts/team_25/mission1/scatter_days_left_vs_wifi_rssi_dbm.png": "048e5671aae0262b8d17eaea7bf210cbeb2f07f8ab879c1cf83ca3bdda425447"
+}
