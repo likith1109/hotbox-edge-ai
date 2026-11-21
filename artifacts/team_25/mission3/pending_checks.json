@@ -1,43 +1,57 @@
 {
   "predictions": {
-    "status": "pending",
-    "needed": [
-      "inference milliseconds",
-      "public laptop-to-Codespace round-trip milliseconds"
-    ],
-    "rule": "No latency benchmarks may run until the user supplies both predictions."
+    "status": "recorded",
+    "inference_ms": 1,
+    "public_round_trip_ms": 250,
+    "recorded_before_any_latency_benchmark": true
   },
   "codespace_access": {
-    "status": "pending",
-    "command": "gh auth refresh -h github.com -s codespace",
-    "action": "Open the displayed URL, enter the device code, and Authorize GitHub CLI. Then report completion."
+    "status": "blocked_missing_ssh_server",
+    "authorization": "codespace scope verified",
+    "name": "hotbox-team-25-v66pj7gw7v5q2x6q",
+    "state": "Available",
+    "web_url": "https://hotbox-team-25-v66pj7gw7v5q2x6q.github.dev",
+    "machine": "basicLinux32gb",
+    "region": "SouthEastAsia",
+    "port_8000_visibility": "public",
+    "public_url": "https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev",
+    "exact_action": "Open the web_url, wait for setup, choose Terminal \u2192 New Terminal, run sudo apt-get update && sudo apt-get install -y openssh-server, then tell Codex it completed.",
+    "diagnostic": "gh codespace ssh failed to start SSH server; gh codespace logs also requires the missing SSH server."
   },
   "public_keepalive": {
     "status": "pending",
     "location": "laptop",
-    "command": "python client/bench.py --url \"$PUBLIC_URL\" --n 200",
-    "save": "Run from artifacts/team_25/mission3/public_keepalive with an absolute path to client/bench.py, saving stdout and its bench_*.csv."
+    "command": "python client/bench.py --url https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev --n 200",
+    "save": "Run from artifacts/team_25/mission3/public_keepalive with an absolute path to client/bench.py, saving stdout and its bench_*.csv.",
+    "reason": "Endpoint unavailable until the SSH server is installed and Uvicorn is started. Numerical predictions are now recorded.",
+    "prepared_runner": "python experiments/benchmark_mission3.py --location laptop --url https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev"
   },
   "public_no_keepalive": {
     "status": "pending",
     "location": "laptop",
-    "command": "python client/bench.py --url \"$PUBLIC_URL\" --n 200 --no-keepalive"
+    "command": "python client/bench.py --url https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev --n 200 --no-keepalive",
+    "reason": "Endpoint unavailable until the SSH server is installed and Uvicorn is started. Numerical predictions are now recorded."
   },
   "codespace_localhost": {
     "status": "pending",
     "location": "inside the Codespace",
-    "command": "python client/bench.py --url http://localhost:8000 --n 200"
+    "command": "python client/bench.py --url http://localhost:8000 --n 200",
+    "reason": "Endpoint unavailable until the SSH server is installed and Uvicorn is started. Numerical predictions are now recorded.",
+    "prepared_runner": "python experiments/benchmark_mission3.py --location codespace --url http://localhost:8000"
   },
   "comparison_400": {
     "status": "pending",
-    "reason": "Requires the pre-run guesses and a running endpoint; compare identical saved Team 25 readings using a warmed persistent connection for both methods."
+    "reason": "Endpoint unavailable until the SSH server is installed and Uvicorn is started. Numerical predictions are now recorded."
   },
   "timing_breakdown": {
     "status": "pending",
-    "reason": "Needs actual benchmark CSV. Select one representative measured request; use its own stages plus server_other and round_trip-minus-server_total residual. Do not add independently computed medians."
+    "reason": "Endpoint unavailable until the SSH server is installed and Uvicorn is started. Numerical predictions are now recorded.",
+    "prepared_runner": "python experiments/benchmark_mission3.py --location summarise"
   },
   "swagger_glitches": {
-    "status": "pending",
-    "action": "Open PUBLIC_URL/docs \u2192 POST /predict \u2192 Try it out. Start with the documented valid example; separately change battery_v to 0, temp_c to -127, then wifi_rssi_dbm to 0. Execute each and confirm HTTP 422. All other fields must remain valid."
+    "status": "pending_live_endpoint",
+    "browser": "System Chrome successfully launched through Playwright",
+    "prepared_runner": "python experiments/swagger_mission3.py --url https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev",
+    "action": "No browser action currently required from user; Codex can attempt all three real Swagger interactions once Uvicorn is available."
   }
 }

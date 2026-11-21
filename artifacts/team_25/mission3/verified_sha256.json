@@ -5,5 +5,7 @@
   "model/model.pt": "8772252f4817c0bcd6e64fc21f56d66d45a323216f1420c856467645d2df8e17",
   "model/config.json": "26a1e2a49b0169f1f4bc63c399be4fee3de34189d3d442f155858d87e9bdfcfd",
   "data/team_25_train.csv": "d98ac426a958c2068093ef14d91472eb0956fccd086d2a38718aa4ced591b96e",
-  "client/bench.py": "4c2171e8a624299d84c5f59e3cf65cc34fcd4cc09738c53fb29c780f23a42d65"
+  "client/bench.py": "4c2171e8a624299d84c5f59e3cf65cc34fcd4cc09738c53fb29c780f23a42d65",
+  "experiments/benchmark_mission3.py": "dc0144d0d4e6682bac809227ed4ad68457727a3658403d0893c296df29da4366",
+  "experiments/swagger_mission3.py": "acc56ffb55701387864ecfcd46ea7ac6be92c058c25d2d1d3582bed449d239c0"
 }

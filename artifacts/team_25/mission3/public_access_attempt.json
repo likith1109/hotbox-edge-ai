@@ -1,0 +1,16 @@
+{
+  "url": "https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev",
+  "latency_benchmark": false,
+  "results": {
+    "/health": {
+      "status": 502,
+      "content_type": null,
+      "body_preview": ""
+    },
+    "/docs": {
+      "status": 502,
+      "content_type": null,
+      "body_preview": ""
+    }
+  }
+}

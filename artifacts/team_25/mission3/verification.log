@@ -33,3 +33,18 @@ REVIEW BEFORE COMMIT
 Reviewed app/main.py diff and correctness checker; response keys and shapes are preserved, with the required timing keys added. Git diff --check passed. Fetched origin: no teammate divergence. Model/config and benchmark client are unchanged.
 Verified implementation and correctness evidence will be committed with an ordinary push. Mission 3 overall remains pending the user’s numerical predictions, Codespaces access, three benchmark runs, the 400-reading timing comparison, measured timing breakdown, public endpoint checks and interactive Swagger checks.
 Staged whitespace review caught CSV writer CRLF line endings in agreement_50.csv. Set its writer to LF and normalised that generated artifact; numeric results and order are unchanged.
+
+MISSION 3 RESUMED
+User supplied pre-run guesses before any latency benchmark: inference 1 ms, public laptop-to-Codespace round trip 250 ms. User expects network travel and HTTP overhead to dominate.
+GitHub auth now includes codespace scope. Inspecting or creating the Codespace, then verifying the selected artifacts before benchmarking.
+
+CODESPACE CREATION AND ACCESS EVIDENCE
+Created Codespace hotbox-team-25-v66pj7gw7v5q2x6q on basicLinux32gb (2 cores, 8 GB RAM, 32 GB storage), SouthEastAsia, main branch, 60-minute idle timeout. GitHub reports state Available.
+Web editor: https://hotbox-team-25-v66pj7gw7v5q2x6q.github.dev
+gh codespace ssh and gh codespace logs both failed: SSH server is not installed in the starter container. Kept .devcontainer unchanged, as required by README.
+Set port 8000 visibility to Public and confirmed forwarded URL https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev. Availability request to /health returned HTTP 502; this is not a verified working endpoint and no latency benchmark was attempted. Full /health and /docs availability responses: public_access_attempt.json.
+Required user action: in the Codespace web editor, Terminal → New Terminal, run sudo apt-get update && sudo apt-get install -y openssh-server. Then report completion so Codex can connect, verify commit and selected model hashes, install any missing dependencies, start Uvicorn, and benchmark.
+Installed optional Playwright locally and successfully launched system Chrome with a temporary browser context. Evidence: laptop_environment.json. Three actual Swagger glitch submissions remain pending the live endpoint, but can now be automated.
+Prepared experiments/benchmark_mission3.py for untouched client 200-request runs in the required locations, identical 400 Team 25 readings under warmed keep-alive connections, full summaries and a single-request additive timing breakdown. Prepared experiments/swagger_mission3.py for actual Try it out/Execute browser checks. Scripts pass syntax checks; they have NOT been exercised end to end against the unavailable endpoint.
+Confirmed at least 400 distinct eligible Team 25 sensor readings exist, and client/bench.py is unchanged. No benchmark data, percentile values or elapsed-time comparison results were invented.
+Mission 3 remains incomplete solely pending container access and execution of the prepared deployment/benchmark/browser work. Exact current status and commands are saved in pending_checks.json.

@@ -1,0 +1,8 @@
+{
+  "hostname": "fedora",
+  "python": "3.14.10 (main, Oct 26 2026, 00:00:00) [GCC 16.2.1 20260819 (Red Hat 16.2.1-2)]",
+  "codespace_name": null,
+  "chrome_version": "157.0.8103.50",
+  "browser_launch_verified": true,
+  "swagger_public_checks": "pending live endpoint"
+}
