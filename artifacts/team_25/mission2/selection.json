@@ -1,0 +1,30 @@
+{
+  "policy": "fewest parameters within 0.5 days of best validation MAE",
+  "chosen": {
+    "run": "16-16_normalised",
+    "hidden": "16,16",
+    "normalised": true,
+    "epochs": 1500,
+    "params": 385,
+    "bytes_f32": 1540,
+    "train_mae": 4.815988063812256,
+    "val_mae": 5.30826473236084,
+    "command": "python train.py --team 25 --hidden 16,16 --epochs 1500 --skip-plots --output-dir artifacts/team_25/mission2/16-16_normalised --model-dir artifacts/team_25/mission2/16-16_normalised/model"
+  },
+  "retrain": {
+    "run": "selected_retrain",
+    "hidden": "16,16",
+    "normalised": true,
+    "epochs": 1500,
+    "params": 385,
+    "bytes_f32": 1540,
+    "train_mae": 4.815988063812256,
+    "val_mae": 5.30826473236084,
+    "command": "python train.py --team 25 --hidden 16,16 --epochs 1500 --skip-plots --output-dir artifacts/team_25/mission2/selected_retrain --model-dir model"
+  },
+  "unseen_mae_estimate_days": 7,
+  "estimate_caveat": "Informal estimate: validation MAE plus one day, rounded up. Not measured, not a confidence bound; ten-model selection reuses validation and can be optimistic.",
+  "accuracy_size_reason": "16,16 has the lowest observed validation MAE among the ten fixed-seed models and 385 parameters; 64,64 uses 4609 parameters with slightly worse validation MAE. No accuracy was traded away on this split.",
+  "overfitting_discussion": "Selected train MAE 4.815988 and validation MAE 5.308265 give a 0.492277-day gap. The 64,64 gap is 1.609487 days despite lower training error and no validation gain, consistent with greater overfitting. Poorer single-layer runs have high training and validation error, so their larger MAEs alone are not evidence of overfitting. Single-seed results do not establish robust rankings.",
+  "user_unseen_estimate": "Requested after model selection; not supplied at verification time. The recorded 7-day value is Codex\u2019s informal estimate."
+}

@@ -1,0 +1,57 @@
+{
+  "health": {
+    "status": "ok",
+    "team": 25,
+    "params": 385,
+    "val_mae": 5.31
+  },
+  "model_info": {
+    "layers": [
+      {
+        "name": "linear1",
+        "in": 5,
+        "out": 16,
+        "params": 96,
+        "bytes_f32": 384,
+        "macs": 80
+      },
+      {
+        "name": "linear2",
+        "in": 16,
+        "out": 16,
+        "params": 272,
+        "bytes_f32": 1088,
+        "macs": 256
+      },
+      {
+        "name": "linear3",
+        "in": 16,
+        "out": 1,
+        "params": 17,
+        "bytes_f32": 68,
+        "macs": 16
+      }
+    ],
+    "total_params": 385,
+    "total_bytes_f32": 1540,
+    "total_bytes_int8": 385,
+    "total_macs": 352,
+    "fits_300kb_sram_f32": true,
+    "fits_300kb_sram_int8": true
+  },
+  "single_predictions": [
+    62.96,
+    30.79,
+    9.61,
+    10.53,
+    184.06
+  ],
+  "batch_predictions": [
+    62.96,
+    30.79,
+    9.61,
+    10.53,
+    184.06
+  ],
+  "transport": "fresh in-process ASGI requests"
+}

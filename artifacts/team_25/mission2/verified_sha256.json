@@ -1,0 +1,13 @@
+{
+  "model/model.pt": "8772252f4817c0bcd6e64fc21f56d66d45a323216f1420c856467645d2df8e17",
+  "model/config.json": "26a1e2a49b0169f1f4bc63c399be4fee3de34189d3d442f155858d87e9bdfcfd",
+  "train.py": "e7a109a485d07944a04fc61997f00f0b82e6a6f0232fce75c87a7918990d4caa",
+  "app/main.py": "f05e6d9c35865e855cf11ae9ac47dc422c473dbbbce5f615534a4d5b2dc32942",
+  "app/model.py": "cfabbdd6b23d5956bb909695c4d2bfaccfdeb51cd503b5cfd5d1cb85d0618df1",
+  "app/preprocessing.py": "7b4b3eee7d5f476a28f73a11aa5553b70e44c969ab2a48742803816803e8fcc1",
+  "experiments/mission2.py": "a92fb12368c6f212c5c8ef9562d11e4b4e75d4ff9ffe4325587ab495160c2c62",
+  "experiments/verify_mission2.py": "e069ef4ce987f26ee7f3f89a2815c04002581929bb10e6ab3b31c8c074befc27",
+  "artifacts/team_25/mission2/results.csv": "84f979392503600428157b60a4d616e7e5b989338c1846bc172e0e623d70868f",
+  "artifacts/team_25/mission2/selection.json": "d3fc25500d31431f669d45760ff8ea132e124911526a515de954f9e6bf503653",
+  "artifacts/team_25/mission2/validation_mae_vs_parameters.png": "8104d515a4ee618d2e582622ac61b8f7003a6512c61c8afa02cc63e0d42b9b2e"
+}

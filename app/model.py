@@ -17,3 +17,27 @@ class BatteryNet(nn.Module):
 
     def forward(self, x):
         return self.net(x).squeeze(-1)
+
+
+def describe_model(net):
+    """Count Linear layers; bias additions and ReLU do not add weight MACs."""
+    layers = []
+    for layer in net.net:
+        if isinstance(layer, nn.Linear):
+            params = sum(p.numel() for p in layer.parameters())
+            layers.append({
+                "name": f"linear{len(layers) + 1}",
+                "in": layer.in_features, "out": layer.out_features,
+                "params": params, "bytes_f32": 4 * params,
+                "macs": layer.in_features * layer.out_features,
+            })
+    params = sum(layer["params"] for layer in layers)
+    # These are parameter-storage checks, not a whole-runtime RAM guarantee.
+    budget = 300 * 1024
+    return {
+        "layers": layers, "total_params": params,
+        "total_bytes_f32": 4 * params, "total_bytes_int8": params,
+        "total_macs": sum(layer["macs"] for layer in layers),
+        "fits_300kb_sram_f32": 4 * params <= budget,
+        "fits_300kb_sram_int8": params <= budget,
+    }

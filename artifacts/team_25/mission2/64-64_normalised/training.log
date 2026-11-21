@@ -1,0 +1,19 @@
+glitch rule nonfinite: 0 rows
+glitch rule battery_nonpositive: 11 rows
+glitch rule temperature_error_minus127: 3 rows
+glitch rule rings_negative: 0 rows
+glitch rule wifi_nonnegative: 10 rows
+glitch rule age_negative: 0 rows
+glitch rule target_negative: 0 rows
+2000 rows, 24 glitch rows dropped
+baseline (predict the mean): 53.97 days
+baseline (linear regression): 23.37 days
+  epoch    0  val MAE 79.23 days
+  epoch  300  val MAE 5.30 days
+  epoch  600  val MAE 5.41 days
+  epoch  900  val MAE 5.50 days
+  epoch 1200  val MAE 5.65 days
+  epoch 1499  val MAE 5.34 days
+network (64, 64):            5.34 days
+training MAE:               3.73 days
+saved artifacts/team_25/mission2/64-64_normalised/model/model.pt and artifacts/team_25/mission2/64-64_normalised/model/config.json

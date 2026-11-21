@@ -18,14 +18,21 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field, ValidationError
 
-from app.model import FEATURES, BatteryNet
+from app.model import FEATURES, BatteryNet, describe_model
+from app.preprocessing import normalise_inputs
 
 cfg = json.load(open("model/config.json"))
+if cfg["features"] != FEATURES:
+    raise ValueError("Saved feature order does not match API feature order")
 net = BatteryNet(tuple(cfg["hidden"]))
 net.load_state_dict(torch.load("model/model.pt", weights_only=True))
 net.eval()
 torch.set_num_threads(1)
 MU, SD = np.array(cfg["mu"], np.float32), np.array(cfg["sd"], np.float32)
+if (MU.shape != (len(FEATURES),) or SD.shape != (len(FEATURES),)
+        or not np.isfinite(MU).all() or not np.isfinite(SD).all()
+        or not (SD > 0).all()):
+    raise ValueError("Saved normalisation must have five finite means and positive scales")
 N_PARAMS = sum(p.numel() for p in net.parameters())
 
 
@@ -51,14 +58,7 @@ ms = lambda t0: round((time.perf_counter() - t0) * 1000, 3)
 
 @app.get("/model_info")
 def model_info():
-    # TODO Mission 2 + 4: return your per-layer table, worked out FROM THE NETWORK (net.net),
-    # not typed in by hand, so it stays right if you change the layer sizes. Exactly these keys:
-    # {"layers": [{"name": "linear1", "in": 5, "out": 32, "params": ..., "bytes_f32": ..., "macs": ...}, ...],
-    #  "total_params": ..., "total_bytes_f32": ..., "total_bytes_int8": ..., "total_macs": ...,
-    #  "fits_300kb_sram_f32": true/false, "fits_300kb_sram_int8": true/false}
-    # Count only the Linear layers (ReLU has no parameters). Clue: a Linear layer m has
-    # m.in_features and m.out_features.
-    return {"layers": [], "total_params": 0}
+    return describe_model(net)
 
 
 @app.get("/health")
@@ -77,7 +77,7 @@ async def run(request: Request, schema):
     rows = data.rows if isinstance(data, Batch) else [data]
     # TODO Mission 3: time each of the three stages below the same way "parse" is timed above,
     # storing them as t["normalise"], t["inference"] and t["build"].
-    x = (np.array([[getattr(r, f) for f in FEATURES] for r in rows], np.float32) - MU) / SD
+    x = normalise_inputs([[getattr(r, f) for f in FEATURES] for r in rows], MU, SD)
     with torch.no_grad():
         y = net(torch.from_numpy(x)).numpy()
     days = [round(float(v), 2) for v in np.maximum(y, 0)]

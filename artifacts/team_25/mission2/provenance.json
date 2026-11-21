@@ -1,0 +1,10 @@
+{
+  "python": "3.14.10 (main, Oct 26 2026, 00:00:00) [GCC 16.2.1 20260819 (Red Hat 16.2.1-2)]",
+  "executable": "/tmp/hotbox-team25-venv/bin/python",
+  "source_sha256": {
+    "train.py": "e7a109a485d07944a04fc61997f00f0b82e6a6f0232fce75c87a7918990d4caa",
+    "app/model.py": "cfabbdd6b23d5956bb909695c4d2bfaccfdeb51cd503b5cfd5d1cb85d0618df1",
+    "app/preprocessing.py": "7b4b3eee7d5f476a28f73a11aa5553b70e44c969ab2a48742803816803e8fcc1",
+    "data/team_25_train.csv": "d98ac426a958c2068093ef14d91472eb0956fccd086d2a38718aa4ced591b96e"
+  }
+}

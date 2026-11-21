@@ -8,7 +8,6 @@ Look for TODO. The training loop is given; the decisions are yours.
 """
 import argparse
 import json
-import os
 from pathlib import Path
 
 import matplotlib
@@ -19,17 +18,24 @@ import pandas as pd
 import torch
 
 from app.model import FEATURES, BatteryNet
+from app.preprocessing import normalise_inputs, training_statistics
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--team", type=int, required=True)
 ap.add_argument("--hidden", default="32,32")
 ap.add_argument("--epochs", type=int, default=1500)
 ap.add_argument("--output-dir", help="Directory for data plots and baseline measurements")
+ap.add_argument("--model-dir", default="model", help="Weights/config destination; default model/ is overwritten")
+ap.add_argument("--no-normalise", action="store_true", help="Control run with identity input scaling")
+ap.add_argument("--skip-plots", action="store_true", help="Reuse existing Mission 1 data plots during sweeps")
 a = ap.parse_args()
 hidden = tuple(int(h) for h in a.hidden.split(","))
+if not hidden or any(h <= 0 for h in hidden) or a.epochs <= 0:
+    ap.error("hidden widths and epoch budget must be positive")
 
 df = pd.read_csv(f"data/team_{a.team:02d}_train.csv")
-output_dir = Path(a.output_dir or f"artifacts/team_{a.team:02d}/mission1")
+run_name = f'{a.hidden.replace(",", "-")}_{"raw" if a.no_normalise else "normalised"}_e{a.epochs}'
+output_dir = Path(a.output_dir or f"artifacts/team_{a.team:02d}/runs/{run_name}")
 output_dir.mkdir(parents=True, exist_ok=True)
 raw = df.copy()
 # These rules identify the observed placeholders without trimming plausible tails.
@@ -53,38 +59,42 @@ df = df[~bad]
 
 # Show raw and retained data separately so placeholders cannot hide the shape
 # of the plausible distribution. These plots include all six columns.
-for column in raw.columns:
-    fig, axes = plt.subplots(1, 2, figsize=(10, 4))
-    for ax, frame, title in zip(axes, (raw, df), ("Raw", "After cleaning")):
-        values = frame[column].to_numpy()
-        ax.hist(values[np.isfinite(values)], bins=30, edgecolor="white")
-        ax.set(xlabel=column, ylabel="Rows", title=title)
-    fig.suptitle(f"Team {a.team}: {column}")
-    fig.tight_layout()
-    fig.savefig(output_dir / f"hist_{column}.png", dpi=150)
-    plt.close(fig)
-for feature in FEATURES:
-    fig, axes = plt.subplots(1, 2, figsize=(10, 4))
-    axes[0].scatter(raw.loc[~bad, feature], raw.loc[~bad, "days_left"],
-                    s=8, alpha=0.35, label="Retained")
-    axes[0].scatter(raw.loc[bad, feature], raw.loc[bad, "days_left"],
-                    s=25, marker="x", color="tab:red", label="Removed")
-    axes[0].legend()
-    axes[1].scatter(df[feature], df.days_left, s=8, alpha=0.35)
-    for ax, title in zip(axes, ("Raw, flagged rows marked", "After cleaning")):
-        ax.set(xlabel=feature, ylabel="days_left (days)", title=title)
-    fig.suptitle(f"Team {a.team}: days_left against {feature}")
-    fig.tight_layout()
-    fig.savefig(output_dir / f"scatter_days_left_vs_{feature}.png", dpi=150)
-    plt.close(fig)
+if not a.skip_plots:
+    for column in raw.columns:
+        fig, axes = plt.subplots(1, 2, figsize=(10, 4))
+        for ax, frame, title in zip(axes, (raw, df), ("Raw", "After cleaning")):
+            values = frame[column].to_numpy()
+            ax.hist(values[np.isfinite(values)], bins=30, edgecolor="white")
+            ax.set(xlabel=column, ylabel="Rows", title=title)
+        fig.suptitle(f"Team {a.team}: {column}")
+        fig.tight_layout()
+        fig.savefig(output_dir / f"hist_{column}.png", dpi=150)
+        plt.close(fig)
+    for feature in FEATURES:
+        fig, axes = plt.subplots(1, 2, figsize=(10, 4))
+        axes[0].scatter(raw.loc[~bad, feature], raw.loc[~bad, "days_left"],
+                        s=8, alpha=0.35, label="Retained")
+        axes[0].scatter(raw.loc[bad, feature], raw.loc[bad, "days_left"],
+                        s=25, marker="x", color="tab:red", label="Removed")
+        axes[0].legend()
+        axes[1].scatter(df[feature], df.days_left, s=8, alpha=0.35)
+        for ax, title in zip(axes, ("Raw, flagged rows marked", "After cleaning")):
+            ax.set(xlabel=feature, ylabel="days_left (days)", title=title)
+        fig.suptitle(f"Team {a.team}: days_left against {feature}")
+        fig.tight_layout()
+        fig.savefig(output_dir / f"scatter_days_left_vs_{feature}.png", dpi=150)
+        plt.close(fig)
 
 rng = np.random.default_rng(0)
 idx = rng.permutation(len(df)); n_val = len(df) // 5
 val, tr = df.iloc[idx[:n_val]], df.iloc[idx[n_val:]]
 X, y = tr[FEATURES].to_numpy(np.float32), tr.days_left.to_numpy(np.float32)
 Xv, yv = val[FEATURES].to_numpy(np.float32), val.days_left.to_numpy(np.float32)
-# TODO Mission 2: normalisation. Why must mu and sd come from the TRAINING rows only?
-mu, sd = np.zeros(X.shape[1], np.float32), np.ones(X.shape[1], np.float32)
+# Validation rows never contribute statistics: the validation set stays unseen.
+if a.no_normalise:
+    mu, sd = np.zeros(X.shape[1], np.float32), np.ones(X.shape[1], np.float32)
+else:
+    mu, sd = training_statistics(X)
 
 mae = lambda p, t: float(np.mean(np.abs(p - t)))
 mean_mae = mae(np.full_like(yv, y.mean()), yv)
@@ -96,18 +106,19 @@ beta, _, rank, _ = np.linalg.lstsq(design, y, rcond=None)
 linear_predictions = design_val @ beta
 linear_mae = mae(linear_predictions, yv)
 print(f"baseline (linear regression): {linear_mae:.2f} days")
-fig, ax = plt.subplots(figsize=(6, 6))
-ax.scatter(yv, linear_predictions, s=14, alpha=0.5)
-limits = (float(min(yv.min(), linear_predictions.min())),
-          float(max(yv.max(), linear_predictions.max())))
-ax.plot(limits, limits, "k--", label="Perfect prediction")
-ax.set(xlabel="Actual days_left (days)", ylabel="Predicted days_left (days)",
-       title=f"Team {a.team}: linear baseline, validation rows",
-       xlim=limits, ylim=limits, aspect="equal")
-ax.legend()
-fig.tight_layout()
-fig.savefig(output_dir / "linear_predicted_vs_actual.png", dpi=150)
-plt.close(fig)
+if not a.skip_plots:
+    fig, ax = plt.subplots(figsize=(6, 6))
+    ax.scatter(yv, linear_predictions, s=14, alpha=0.5)
+    limits = (float(min(yv.min(), linear_predictions.min())),
+              float(max(yv.max(), linear_predictions.max())))
+    ax.plot(limits, limits, "k--", label="Perfect prediction")
+    ax.set(xlabel="Actual days_left (days)", ylabel="Predicted days_left (days)",
+           title=f"Team {a.team}: linear baseline, validation rows",
+           xlim=limits, ylim=limits, aspect="equal")
+    ax.legend()
+    fig.tight_layout()
+    fig.savefig(output_dir / "linear_predicted_vs_actual.png", dpi=150)
+    plt.close(fig)
 pd.DataFrame({"source_index": val.index, "actual": yv,
               "linear_prediction": linear_predictions,
               "absolute_error": np.abs(linear_predictions - yv)}).to_csv(
@@ -126,8 +137,8 @@ metrics = {
 torch.manual_seed(0)
 net = BatteryNet(hidden)
 opt = torch.optim.Adam(net.parameters(), lr=3e-3)
-Xt, yt = torch.tensor((X - mu) / sd), torch.tensor(y)
-Xvt = torch.tensor((Xv - mu) / sd)
+Xt, yt = torch.tensor(normalise_inputs(X, mu, sd)), torch.tensor(y)
+Xvt = torch.tensor(normalise_inputs(Xv, mu, sd))
 for ep in range(a.epochs):
     perm = torch.randperm(len(Xt))
     for i in range(0, len(Xt), 128):
@@ -138,13 +149,21 @@ for ep in range(a.epochs):
         with torch.no_grad():
             print(f"  epoch {ep:4d}  val MAE {mae(net(Xvt).numpy(), yv):.2f} days")
 with torch.no_grad():
+    train_mae = mae(net(Xt).numpy(), y)
     val_mae = mae(net(Xvt).numpy(), yv)
 print(f"network {hidden}:            {val_mae:.2f} days")
+print(f"training MAE:               {train_mae:.2f} days")
 metrics["cleaned_network_val_mae"] = val_mae
+metrics.update(hidden=list(hidden), epochs=a.epochs, torch_seed=0,
+               normalised=not a.no_normalise, features=FEATURES,
+               mu=mu.tolist(), sd=sd.tolist(), train_mae=train_mae,
+               val_mae=val_mae, params=sum(p.numel() for p in net.parameters()))
 (output_dir / "metrics.json").write_text(json.dumps(metrics, indent=2) + "\n")
 
-os.makedirs("model", exist_ok=True)
-torch.save(net.state_dict(), "model/model.pt")
-json.dump(dict(team=a.team, hidden=list(hidden), mu=mu.tolist(), sd=sd.tolist(),
-               features=FEATURES, val_mae=round(val_mae, 2)), open("model/config.json", "w"), indent=2)
-print("saved model/model.pt and model/config.json")
+model_dir = Path(a.model_dir)
+model_dir.mkdir(parents=True, exist_ok=True)
+torch.save(net.state_dict(), model_dir / "model.pt")
+config = dict(team=a.team, hidden=list(hidden), mu=mu.tolist(), sd=sd.tolist(),
+              features=FEATURES, val_mae=round(val_mae, 2))
+(model_dir / "config.json").write_text(json.dumps(config, indent=2) + "\n")
+print(f"saved {model_dir / 'model.pt'} and {model_dir / 'config.json'}")

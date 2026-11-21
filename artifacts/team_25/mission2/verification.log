@@ -1,0 +1,110 @@
+MISSION 2 — TEAM 25 HOTBOX
+Started UTC: 2026-11-21T18:56:34.245039+00:00
+User hand calculation checked: layers 192/1056/33 parameters; total 1281 parameters, 5124 float32 bytes, 1216 weight MACs.
+User prediction: normalised 32,32 validation MAE = 15 days.
+Only data/team_25_train.csv is used. Cleaning and seeded split are unchanged from Mission 1.
+Controls: torch seed=0, split seed=0, epochs=1500, Adam lr=0.003, batch size=128, one CPU math thread.
+Selection policy fixed before measuring: choose the fewest parameters within 0.5 days of the lowest normalised validation MAE; break ties by validation MAE. This tolerance is an engineering choice, not a significance test.
+COMMAND: python train.py --team 25 --hidden 32,32 --epochs 1500 --skip-plots --output-dir artifacts/team_25/mission2/32-32_raw --model-dir artifacts/team_25/mission2/32-32_raw/model --no-normalise
+RESULT 32-32_raw: params=1281, train MAE=16.517593, validation MAE=16.834801 days; split/statistics checks passed.
+COMMAND: python train.py --team 25 --hidden 4 --epochs 1500 --skip-plots --output-dir artifacts/team_25/mission2/4_normalised --model-dir artifacts/team_25/mission2/4_normalised/model
+RESULT 4_normalised: params=29, train MAE=13.586804, validation MAE=13.913291 days; split/statistics checks passed.
+COMMAND: python train.py --team 25 --hidden 4,4 --epochs 1500 --skip-plots --output-dir artifacts/team_25/mission2/4-4_normalised --model-dir artifacts/team_25/mission2/4-4_normalised/model
+RESULT 4-4_normalised: params=49, train MAE=10.175427, validation MAE=9.934690 days; split/statistics checks passed.
+COMMAND: python train.py --team 25 --hidden 8 --epochs 1500 --skip-plots --output-dir artifacts/team_25/mission2/8_normalised --model-dir artifacts/team_25/mission2/8_normalised/model
+RESULT 8_normalised: params=57, train MAE=17.550177, validation MAE=18.237324 days; split/statistics checks passed.
+COMMAND: python train.py --team 25 --hidden 8,8 --epochs 1500 --skip-plots --output-dir artifacts/team_25/mission2/8-8_normalised --model-dir artifacts/team_25/mission2/8-8_normalised/model
+RESULT 8-8_normalised: params=129, train MAE=5.859714, validation MAE=6.561144 days; split/statistics checks passed.
+COMMAND: python train.py --team 25 --hidden 16 --epochs 1500 --skip-plots --output-dir artifacts/team_25/mission2/16_normalised --model-dir artifacts/team_25/mission2/16_normalised/model
+RESULT 16_normalised: params=113, train MAE=17.525816, validation MAE=18.246351 days; split/statistics checks passed.
+COMMAND: python train.py --team 25 --hidden 16,16 --epochs 1500 --skip-plots --output-dir artifacts/team_25/mission2/16-16_normalised --model-dir artifacts/team_25/mission2/16-16_normalised/model
+RESULT 16-16_normalised: params=385, train MAE=4.815988, validation MAE=5.308265 days; split/statistics checks passed.
+COMMAND: python train.py --team 25 --hidden 32 --epochs 1500 --skip-plots --output-dir artifacts/team_25/mission2/32_normalised --model-dir artifacts/team_25/mission2/32_normalised/model
+RESULT 32_normalised: params=225, train MAE=9.319214, validation MAE=9.516997 days; split/statistics checks passed.
+COMMAND: python train.py --team 25 --hidden 32,32 --epochs 1500 --skip-plots --output-dir artifacts/team_25/mission2/32-32_normalised --model-dir artifacts/team_25/mission2/32-32_normalised/model
+RESULT 32-32_normalised: params=1281, train MAE=4.388602, validation MAE=5.510101 days; split/statistics checks passed.
+COMMAND: python train.py --team 25 --hidden 64 --epochs 1500 --skip-plots --output-dir artifacts/team_25/mission2/64_normalised --model-dir artifacts/team_25/mission2/64_normalised/model
+RESULT 64_normalised: params=449, train MAE=17.502182, validation MAE=18.256144 days; split/statistics checks passed.
+COMMAND: python train.py --team 25 --hidden 64,64 --epochs 1500 --skip-plots --output-dir artifacts/team_25/mission2/64-64_normalised --model-dir artifacts/team_25/mission2/64-64_normalised/model
+RESULT 64-64_normalised: params=4609, train MAE=3.728643, validation MAE=5.338130 days; split/statistics checks passed.
+Normalised 32,32 is shared by the controlled comparison and the ten-model sweep: 11 unique experiments in total, followed by a separate selected-model retrain.
+SELECTED 16,16: 385 parameters, train MAE 4.815988, validation MAE 5.308265 days; best observed validation MAE 5.308265.
+COMMAND: python train.py --team 25 --hidden 16,16 --epochs 1500 --skip-plots --output-dir artifacts/team_25/mission2/selected_retrain --model-dir model
+RESULT selected_retrain: params=385, train MAE=4.815988, validation MAE=5.308265 days; split/statistics checks passed.
+UNSEEN MAE ESTIMATE: 7 days (informal, not measured or a calibrated confidence bound).
+Selected artifacts regenerated; separate saved-weight and API verification follows.
+
+INDEPENDENT SAVED-ARTIFACT AND API CHECKS
+PASS: changed Python syntax and git diff --check.
+PASS: cleaned split block is unchanged from Mission 1.
+PASS: Team 25 CSV hash matches Mission 1; no other team's data loaded.
+PASS: constant-feature fixture gives scale=1 and zero finite centred values (fixture is not used for model training).
+PASS 16-16_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=5.308265 days.
+PASS 16_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=18.246351 days.
+PASS 32-32_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=5.510101 days.
+PASS 32-32_raw: saved stats, feature order, model counts, train/validation MAE reproduced; validation=16.834801 days.
+PASS 32_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=9.516997 days.
+PASS 4-4_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=9.934690 days.
+PASS 4_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=13.913291 days.
+PASS 64-64_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=5.338130 days.
+PASS 64_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=18.256144 days.
+PASS 8-8_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=6.561144 days.
+PASS 8_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=18.237324 days.
+PASS selected_retrain: saved stats, feature order, model counts, train/validation MAE reproduced; validation=5.308265 days.
+
+Verification attempt 1 terminated with exit 143 during the API harness after all saved-weight checks passed. Corrected the ASGI test receiver to deliver its body once and wait thereafter; retrying the checks.
+
+INDEPENDENT SAVED-ARTIFACT AND API CHECKS
+PASS: changed Python syntax and git diff --check.
+PASS: cleaned split block is unchanged from Mission 1.
+PASS: Team 25 CSV hash matches Mission 1; no other team's data loaded.
+PASS: constant-feature fixture gives scale=1 and zero finite centred values (fixture is not used for model training).
+PASS 16-16_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=5.308265 days.
+PASS 16_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=18.246351 days.
+PASS 32-32_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=5.510101 days.
+PASS 32-32_raw: saved stats, feature order, model counts, train/validation MAE reproduced; validation=16.834801 days.
+PASS 32_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=9.516997 days.
+PASS 4-4_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=9.934690 days.
+PASS 4_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=13.913291 days.
+PASS 64-64_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=5.338130 days.
+PASS 64_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=18.256144 days.
+PASS 8-8_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=6.561144 days.
+PASS 8_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=18.237324 days.
+PASS selected_retrain: saved stats, feature order, model counts, train/validation MAE reproduced; validation=5.308265 days.
+
+INDEPENDENT SAVED-ARTIFACT AND API CHECKS
+PASS: changed Python syntax and git diff --check.
+PASS: cleaned split block is unchanged from Mission 1.
+PASS: Team 25 CSV hash matches Mission 1; no other team's data loaded.
+PASS: constant-feature fixture gives scale=1 and zero finite centred values (fixture is not used for model training).
+PASS 16-16_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=5.308265 days.
+PASS 16_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=18.246351 days.
+PASS 32-32_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=5.510101 days.
+PASS 32-32_raw: saved stats, feature order, model counts, train/validation MAE reproduced; validation=16.834801 days.
+PASS 32_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=9.516997 days.
+PASS 4-4_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=9.934690 days.
+PASS 4_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=13.913291 days.
+PASS 64-64_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=5.338130 days.
+PASS 64_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=18.256144 days.
+PASS 8-8_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=6.561144 days.
+PASS 8_normalised: saved stats, feature order, model counts, train/validation MAE reproduced; validation=18.237324 days.
+PASS selected_retrain: saved stats, feature order, model counts, train/validation MAE reproduced; validation=5.308265 days.
+PASS: fresh API ASGI requests return HTTP 200 for /health, /model_info, /predict and /predict_batch. Captured inference inputs exactly match training-only saved statistics despite reversed JSON key order.
+Selected architecture [16, 16]: validation minus training MAE = 0.492277 days. A positive gap suggests some generalisation loss; a single split does not establish its stability. Model selection reused validation, so its score may be optimistic.
+Training-only means: [3.776444673538208, 28.160594940185547, 7.969639301300049, -66.65338134765625, 17.905122756958008]
+Training-only safe scales: [0.24636812508106232, 7.112374305725098, 5.468242168426514, 12.541595458984375, 10.437481880187988]
+PASS: root weights/config exactly match the selected retrain archive; parameter plot decodes.
+Mission 2 artifact and API checks passed. Mission 3 input ranges and stage timing remain to be implemented.
+
+FINAL REVIEW
+The first harness receiver was improved, but the sandbox still stalled on FastAPI’s anyio worker-thread handoff. A diagnostic health request timed out there. Retrying the same artifact/API verification outside the sandbox passed without application changes.
+PASS: each selected-retrain state-dict tensor exactly equals the independently saved 16,16 sweep tensor.
+Controlled 32,32 comparison: raw train=16.517593, validation=16.834801; normalised train=4.388602, validation=5.510101 days. Normalised validation MAE is 9.489899 days lower than the user’s 15-day prediction.
+16,16 has the lowest observed validation MAE among the ten fixed-seed models and 385 parameters; 64,64 uses 4609 parameters with slightly worse validation MAE. No accuracy was traded away on this split.
+Selected train MAE 4.815988 and validation MAE 5.308265 give a 0.492277-day gap. The 64,64 gap is 1.609487 days despite lower training error and no validation gain, consistent with greater overfitting. Poorer single-layer runs have high training and validation error, so their larger MAEs alone are not evidence of overfitting. Single-seed results do not establish robust rankings.
+Shared preprocessing computes per-feature population statistics from training X only, with float64 accumulation and saved float32 values. Zero standard deviation becomes one. Validation/test inputs use these same saved values. Validation statistics never fit the transform.
+Feature order verified: battery_v, temp_c, rings_per_day, wifi_rssi_dbm, age_months. JSON key order does not affect inference order.
+Commands: experiments/mission2.py runs the eleven unique experiments and chosen retrain; commands.sh records each invocation; experiments/verify_mission2.py verifies all saved pairs and the fresh API. Installed versions are recorded in package_versions.json.
+API transport for this mission’s checks: fresh in-process ASGI requests, not a public endpoint check. Mission 3 will verify serving and external latency.
+User was asked to estimate unseen MAE after selection; no estimate supplied yet. Codex estimate is 7 days, informal and unmeasured. Reusing validation for ten-model selection can make its score optimistic.
+Reviewed source diff, exact unchanged cleaning/split, all experiment metrics, plot, and API outputs. Fetched origin; no teammate divergence. Ordinary push to main will be used. Mission 2 complete.
