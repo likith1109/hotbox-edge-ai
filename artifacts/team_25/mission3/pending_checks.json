@@ -1,0 +1,43 @@
+{
+  "predictions": {
+    "status": "pending",
+    "needed": [
+      "inference milliseconds",
+      "public laptop-to-Codespace round-trip milliseconds"
+    ],
+    "rule": "No latency benchmarks may run until the user supplies both predictions."
+  },
+  "codespace_access": {
+    "status": "pending",
+    "command": "gh auth refresh -h github.com -s codespace",
+    "action": "Open the displayed URL, enter the device code, and Authorize GitHub CLI. Then report completion."
+  },
+  "public_keepalive": {
+    "status": "pending",
+    "location": "laptop",
+    "command": "python client/bench.py --url \"$PUBLIC_URL\" --n 200",
+    "save": "Run from artifacts/team_25/mission3/public_keepalive with an absolute path to client/bench.py, saving stdout and its bench_*.csv."
+  },
+  "public_no_keepalive": {
+    "status": "pending",
+    "location": "laptop",
+    "command": "python client/bench.py --url \"$PUBLIC_URL\" --n 200 --no-keepalive"
+  },
+  "codespace_localhost": {
+    "status": "pending",
+    "location": "inside the Codespace",
+    "command": "python client/bench.py --url http://localhost:8000 --n 200"
+  },
+  "comparison_400": {
+    "status": "pending",
+    "reason": "Requires the pre-run guesses and a running endpoint; compare identical saved Team 25 readings using a warmed persistent connection for both methods."
+  },
+  "timing_breakdown": {
+    "status": "pending",
+    "reason": "Needs actual benchmark CSV. Select one representative measured request; use its own stages plus server_other and round_trip-minus-server_total residual. Do not add independently computed medians."
+  },
+  "swagger_glitches": {
+    "status": "pending",
+    "action": "Open PUBLIC_URL/docs \u2192 POST /predict \u2192 Try it out. Start with the documented valid example; separately change battery_v to 0, temp_c to -127, then wifi_rssi_dbm to 0. Execute each and confirm HTTP 422. All other fields must remain valid."
+  }
+}

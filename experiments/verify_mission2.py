@@ -72,7 +72,8 @@ def main():
             ast.parse(Path(name).read_text(), filename=name)
         subprocess.run(["git", "diff", "--check"], check=True)
         record("PASS: changed Python syntax and git diff --check.")
-        original = subprocess.check_output(["git", "show", "HEAD:train.py"], text=True)
+        # Pin the Mission 1 reference; HEAD advances after each mission.
+        original = subprocess.check_output(["git", "show", "e1ed7b4:train.py"], text=True)
         split = original[original.index("rng = np.random.default_rng(0)"):original.index("# TODO Mission 2:")]
         assert split in Path("train.py").read_text()
         record("PASS: cleaned split block is unchanged from Mission 1.")

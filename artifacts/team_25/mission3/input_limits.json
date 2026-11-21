@@ -1,0 +1,52 @@
+{
+  "battery_v": {
+    "lower": 0,
+    "lower_inclusive": false,
+    "upper": 5,
+    "upper_inclusive": true,
+    "rationale": "Positive terminal voltage for a functioning battery-powered reporting device. A generous 5 V ceiling is an engineering guard for the single-cell battery context, not a bound fitted to the observed 3.x\u20134.x V samples. Team 25 contains eleven zero readings treated as invalid.",
+    "training_min": 3.35,
+    "training_max": 4.199,
+    "allow_nonfinite": false
+  },
+  "temp_c": {
+    "lower": -40,
+    "lower_inclusive": true,
+    "upper": 85,
+    "upper_inclusive": true,
+    "rationale": "Assumed outdoor-electronics operating envelope, allowing freezing weather and substantial heating beyond the samples. Team 25 has three -127 C suspected error placeholders, outside this envelope. No particular temperature-sensor datasheet was supplied.",
+    "training_min": 8.0,
+    "training_max": 46.0,
+    "allow_nonfinite": false
+  },
+  "rings_per_day": {
+    "lower": 0,
+    "lower_inclusive": true,
+    "upper": 86400,
+    "upper_inclusive": true,
+    "rationale": "A count/rate cannot be negative. A deliberately generous ceiling assumes one independently debounced event per second for 24 hours, far beyond a busy doorway. The debounce ceiling is an explicit operating assumption, not a measured sensor specification.",
+    "training_min": 0.0,
+    "training_max": 40.0,
+    "allow_nonfinite": false
+  },
+  "wifi_rssi_dbm": {
+    "lower": -120,
+    "lower_inclusive": true,
+    "upper": 0,
+    "upper_inclusive": false,
+    "rationale": "A broad assumed received-Wi-Fi signal envelope allows much weaker and stronger signals than the sample. Team 25 has ten zero RSSI placeholders. Zero dBm is not universally impossible in radio physics; it is excluded as an invalid received-doorbell reading under this log interpretation.",
+    "training_min": -88.0,
+    "training_max": -45.0,
+    "allow_nonfinite": false
+  },
+  "age_months": {
+    "lower": 0,
+    "lower_inclusive": true,
+    "upper": 240,
+    "upper_inclusive": true,
+    "rationale": "Service age cannot be negative; 240 months allows twenty years, much longer than the observed service ages. Twenty years is an explicit, generous service-life assumption, not a property inferred from the CSV.",
+    "training_min": 0.0,
+    "training_max": 36.0,
+    "allow_nonfinite": false
+  }
+}

@@ -1,0 +1,35 @@
+MISSION 3 — TEAM 25 HOTBOX
+Model: preserved Mission 2 5 → 16 → 16 → 1, 385 parameters, recorded validation MAE 5.31 days.
+Pre-run expectation: network travel and HTTP/framework overhead dominate public laptop-to-Codespace round trips for this tiny model; first-request DNS and TLS setup may add overhead. The longest internal stage is uncertain until measured.
+User inference and public round-trip guesses: requested; pending. No latency benchmark has been run.
+GitHub authentication succeeds, but token scopes do not include codespace. gh codespace list returned HTTP 404 with an explicit codespace-scope requirement.
+Access action: gh auth refresh -h github.com -s codespace; open the displayed URL, enter the device code, and click Authorize GitHub CLI.
+Running correctness checks independently of latency benchmarking.
+
+CORRECTNESS VERIFICATION — fresh in-process ASGI requests; not latency benchmarks
+PASS: unchanged selected model hashes; /health and /model_info return HTTP 200 with Team 25, 5→16→16→1, 385 parameters, 1540 float32 bytes, 352 MACs.
+PASS: /docs HTML and /openapi.json return HTTP 200; Swagger has request bodies, valid model references, examples and bounds for all five inputs. Interactive browser execution is pending (no browser automation tool available).
+First correctness run found a nonfinite-input error response failure: Pydantic rejected NaN, but its error detail contained NaN and JSONResponse raised ValueError. Fixed by preserving nonfinite error values as strings while retaining error/detail response shape. Retrying all checks.
+
+CORRECTNESS VERIFICATION — fresh in-process ASGI requests; not latency benchmarks
+PASS: unchanged selected model hashes; /health and /model_info return HTTP 200 with Team 25, 5→16→16→1, 385 parameters, 1540 float32 bytes, 352 MACs.
+PASS: /docs HTML and /openapi.json return HTTP 200; Swagger has request bodies, valid model references, examples and bounds for all five inputs. Interactive browser execution is pending (no browser automation tool available).
+PASS: one invalid value per field is HTTP 422 on both routes; opposite-bound violations, nonfinite inputs in all fields, malformed JSON, empty and oversized batches are rejected.
+PASS: plausible values just outside each training-feature range return HTTP 200. Negative rings and age are physically invalid, so their below-zero sides remain rejected.
+PASS: separate 50-distinct-reading agreement/order check; absolute tolerance=0.01 days, relative tolerance=0, maximum observed difference=0.00000000 days. Reversed input order also preserved.
+PASS: all five timing keys are finite/nonnegative on both valid prediction routes; stage sums fit server_total within 0.003 ms rounding tolerance. No latency percentiles or throughput benchmark computed.
+
+RANGE RATIONALE AND PENDING WORK
+Per-field limits, physical/operating assumptions, and actual training bounds are documented in input_limits.json; outside-training acceptance results are in outside_training_range.json. Exact hardware specifications were not provided; these are broad, explicit engineering assumptions.
+Timing boundaries: parse includes awaiting the body and Pydantic validation; normalise includes ordered feature extraction and scaling; inference includes tensor conversion/network execution/output conversion; build includes nonnegative clipping, rounding and response-body assembly. server_total spans run() for valid requests and excludes FastAPI routing, final JSON serialization, socket transport and network latency. Each stage is rounded to 0.001 ms; stage-sum checks allow 0.003 ms rounding error.
+Swagger HTML/schema and equivalent API payloads are checked automatically. Interactive Swagger use is explicitly pending because no browser automation tool is available.
+All three 200-request benchmarks, their percentile summaries, the representative timing breakdown, and the 400 sequential-versus-batch elapsed-time comparison are PENDING: no user latency predictions yet, and Codespaces access lacks the codespace scope. None have been replaced with local-ASGI timing or fabricated values.
+Pending status, exact benchmark commands, access instructions and Swagger steps are saved in pending_checks.json. Run benchmark commands only after recording both guesses. client/bench.py is untouched.
+PASS: Python syntax; client/bench.py byte-for-byte unchanged from starter. Saved selected model/config hashes remain unchanged from Mission 2.
+Fixed a reproducibility issue in the Mission 2 verifier: its split-source comparison now pins the Mission 1 commit e1ed7b4 instead of evolving HEAD. Confirmed that the pinned split still exactly matches train.py. No training or latency benchmark rerun was needed for this reference-only correction.
+Correctness artifact paths: correctness_summary.json, agreement_50.csv, invalid_readings.json, outside_training_range.json, openapi.json. Additional rationale/status: input_limits.json and pending_checks.json. Source/model/data/client hashes: verified_sha256.json.
+
+REVIEW BEFORE COMMIT
+Reviewed app/main.py diff and correctness checker; response keys and shapes are preserved, with the required timing keys added. Git diff --check passed. Fetched origin: no teammate divergence. Model/config and benchmark client are unchanged.
+Verified implementation and correctness evidence will be committed with an ordinary push. Mission 3 overall remains pending the user’s numerical predictions, Codespaces access, three benchmark runs, the 400-reading timing comparison, measured timing breakdown, public endpoint checks and interactive Swagger checks.
+Staged whitespace review caught CSV writer CRLF line endings in agreement_50.csv. Set its writer to LF and normalised that generated artifact; numeric results and order are unchanged.

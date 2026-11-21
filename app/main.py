@@ -15,6 +15,7 @@ import time
 import numpy as np
 import torch
 from fastapi import FastAPI, Request
+from fastapi.openapi.utils import get_openapi
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field, ValidationError
 
@@ -37,15 +38,18 @@ N_PARAMS = sum(p.numel() for p in net.parameters())
 
 
 class Reading(BaseModel):
-    # TODO Mission 3: a doorbell will send you glitches like the ones you found in Mission 1.
-    # Give every field a sensible range, e.g. Field(ge=..., le=...), so a glitch is refused
-    # with HTTP 422 instead of being answered with a made-up number. Base the limits on what a
-    # real sensor can report, not on your data's min and max: real readings must still get answers.
-    battery_v: float
-    temp_c: float
-    rings_per_day: float
-    wifi_rssi_dbm: float
-    age_months: float
+    # Broad engineering operating envelopes, not training-data extrema.
+    # Documented assumptions and boundary checks: artifacts/team_25/mission3/.
+    battery_v: float = Field(gt=0, le=5, allow_inf_nan=False,
+                             description="Single-cell battery reading, volts; zero is invalid")
+    temp_c: float = Field(ge=-40, le=85, allow_inf_nan=False,
+                          description="Assumed outdoor electronics operating envelope, degrees C")
+    rings_per_day: float = Field(ge=0, le=86400, allow_inf_nan=False,
+                                 description="Daily count/rate; assumes at most one debounced ring per second")
+    wifi_rssi_dbm: float = Field(ge=-120, lt=0, allow_inf_nan=False,
+                                description="Assumed received Wi-Fi signal envelope, dBm; zero is a placeholder")
+    age_months: float = Field(ge=0, le=240, allow_inf_nan=False,
+                              description="Nonnegative service age; generous 20-year operating assumption")
 
 
 class Batch(BaseModel):
@@ -72,16 +76,23 @@ async def run(request: Request, schema):
     try:
         data = schema.model_validate_json(await request.body())
     except ValidationError as e:
-        return JSONResponse(status_code=422, content={"error": "bad reading", "detail": json.loads(e.json())})
+        # Error input values may themselves be NaN/Infinity. Keep their spelling
+        # as strings so the error response remains valid JSON instead of a 500.
+        detail = json.loads(e.json(), parse_constant=lambda value: value)
+        return JSONResponse(status_code=422, content={"error": "bad reading", "detail": detail})
     t["parse"] = ms(t0)
+    t0 = time.perf_counter()
     rows = data.rows if isinstance(data, Batch) else [data]
-    # TODO Mission 3: time each of the three stages below the same way "parse" is timed above,
-    # storing them as t["normalise"], t["inference"] and t["build"].
     x = normalise_inputs([[getattr(r, f) for f in FEATURES] for r in rows], MU, SD)
+    t["normalise"] = ms(t0)
+    t0 = time.perf_counter()
     with torch.no_grad():
         y = net(torch.from_numpy(x)).numpy()
+    t["inference"] = ms(t0)
+    t0 = time.perf_counter()
     days = [round(float(v), 2) for v in np.maximum(y, 0)]
     body = {"days_left": days if isinstance(data, Batch) else days[0]}
+    t["build"] = ms(t0)
     t["server_total"] = ms(t_all)
     body["timings_ms"] = t
     return body
@@ -95,3 +106,29 @@ async def predict(request: Request):
 @app.post("/predict_batch")
 async def predict_batch(request: Request):
     return await run(request, Batch)
+
+
+def prediction_openapi():
+    # Validation stays inside run() so parse timing includes it. Register the
+    # same Pydantic schemas explicitly so Swagger can still send request bodies.
+    if app.openapi_schema is None:
+        schema = get_openapi(title=app.title, version=app.version, routes=app.routes)
+        models = schema.setdefault("components", {}).setdefault("schemas", {})
+        example = dict(battery_v=3.86, temp_c=28.0, rings_per_day=5,
+                       wifi_rssi_dbm=-66, age_months=22)
+        for path, model, sample in (("/predict", Reading, example),
+                                    ("/predict_batch", Batch, {"rows": [example]})):
+            definition = model.model_json_schema(ref_template="#/components/schemas/{model}")
+            models.update(definition.pop("$defs", {}))
+            models[model.__name__] = definition
+            schema["paths"][path]["post"]["requestBody"] = {
+                "required": True, "content": {"application/json": {
+                    "schema": {"$ref": f"#/components/schemas/{model.__name__}"},
+                    "example": sample,
+                }},
+            }
+        app.openapi_schema = schema
+    return app.openapi_schema
+
+
+app.openapi = prediction_openapi

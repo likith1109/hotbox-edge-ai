@@ -1,0 +1,9 @@
+{
+  "app/main.py": "9bd351d517a21930e4c6e120d0567cbe5e2d68c9df294a359c32c4afe517297b",
+  "experiments/verify_mission3.py": "e440b5c6ca12a66066a2dbb148ecdffdebed74a461e537d67b7abbb00e59d7a3",
+  "experiments/verify_mission2.py": "4572d8ac25a5c1a7f924ce3fd5a6b821b6f662d0499f5ab4097311d5d75d5322",
+  "model/model.pt": "8772252f4817c0bcd6e64fc21f56d66d45a323216f1420c856467645d2df8e17",
+  "model/config.json": "26a1e2a49b0169f1f4bc63c399be4fee3de34189d3d442f155858d87e9bdfcfd",
+  "data/team_25_train.csv": "d98ac426a958c2068093ef14d91472eb0956fccd086d2a38718aa4ced591b96e",
+  "client/bench.py": "4c2171e8a624299d84c5f59e3cf65cc34fcd4cc09738c53fb29c780f23a42d65"
+}
