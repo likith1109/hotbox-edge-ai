@@ -1,0 +1,8 @@
+{
+  "user_inference_guess_ms": 1,
+  "user_public_round_trip_guess_ms": 250,
+  "measured_inference_p50_ms": 0.121,
+  "measured_public_round_trip_p50_ms": 37.00764199311379,
+  "inference_difference_ms": -0.879,
+  "public_round_trip_difference_ms": -212.9923580068862
+}

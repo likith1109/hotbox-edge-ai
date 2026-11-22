@@ -1,0 +1,55 @@
+{
+  "command": "/usr/local/bin/python -u /workspaces/hotbox-edge-ai/client/bench.py --url http://localhost:8000 --n 200",
+  "url": "http://localhost:8000",
+  "hostname": "codespaces-7481e7",
+  "python": "3.11.18 (main, Nov  5 2026, 09:38:56) [GCC 14.2.0]",
+  "codespace": "hotbox-team-25-v66pj7gw7v5q2x6q",
+  "no_keepalive": false,
+  "user_guesses_ms": {
+    "inference": 1,
+    "public_round_trip": 250
+  },
+  "endpoint": {
+    "health": {
+      "status": "ok",
+      "team": 25,
+      "params": 385,
+      "val_mae": 5.31
+    },
+    "model_info": {
+      "layers": [
+        {
+          "name": "linear1",
+          "in": 5,
+          "out": 16,
+          "params": 96,
+          "bytes_f32": 384,
+          "macs": 80
+        },
+        {
+          "name": "linear2",
+          "in": 16,
+          "out": 16,
+          "params": 272,
+          "bytes_f32": 1088,
+          "macs": 256
+        },
+        {
+          "name": "linear3",
+          "in": 16,
+          "out": 1,
+          "params": 17,
+          "bytes_f32": 68,
+          "macs": 16
+        }
+      ],
+      "total_params": 385,
+      "total_bytes_f32": 1540,
+      "total_bytes_int8": 385,
+      "total_macs": 352,
+      "fits_300kb_sram_f32": true,
+      "fits_300kb_sram_int8": true
+    }
+  },
+  "client_sha256": "4c2171e8a624299d84c5f59e3cf65cc34fcd4cc09738c53fb29c780f23a42d65"
+}

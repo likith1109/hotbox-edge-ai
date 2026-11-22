@@ -1,0 +1,11 @@
+{
+  "url": "https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev/health",
+  "status": 200,
+  "unauthenticated": true,
+  "body": {
+    "status": "ok",
+    "team": 25,
+    "params": 385,
+    "val_mae": 5.31
+  }
+}

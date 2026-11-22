@@ -1,0 +1,92 @@
+[
+  {
+    "field": "battery_v",
+    "value": 0,
+    "request": {
+      "battery_v": 0,
+      "temp_c": 28.0,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -66,
+      "age_months": 22
+    },
+    "status": 422,
+    "response": {
+      "error": "bad reading",
+      "detail": [
+        {
+          "type": "greater_than",
+          "loc": [
+            "battery_v"
+          ],
+          "msg": "Input should be greater than 0",
+          "input": 0,
+          "ctx": {
+            "gt": 0.0
+          },
+          "url": "https://errors.pydantic.dev/2.14/v/greater_than"
+        }
+      ]
+    },
+    "interaction": "Swagger Try it out \u2192 edit request JSON \u2192 Execute"
+  },
+  {
+    "field": "temp_c",
+    "value": -127,
+    "request": {
+      "battery_v": 3.86,
+      "temp_c": -127,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -66,
+      "age_months": 22
+    },
+    "status": 422,
+    "response": {
+      "error": "bad reading",
+      "detail": [
+        {
+          "type": "greater_than_equal",
+          "loc": [
+            "temp_c"
+          ],
+          "msg": "Input should be greater than or equal to -40",
+          "input": -127,
+          "ctx": {
+            "ge": -40.0
+          },
+          "url": "https://errors.pydantic.dev/2.14/v/greater_than_equal"
+        }
+      ]
+    },
+    "interaction": "Swagger Try it out \u2192 edit request JSON \u2192 Execute"
+  },
+  {
+    "field": "wifi_rssi_dbm",
+    "value": 0,
+    "request": {
+      "battery_v": 3.86,
+      "temp_c": 28.0,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": 0,
+      "age_months": 22
+    },
+    "status": 422,
+    "response": {
+      "error": "bad reading",
+      "detail": [
+        {
+          "type": "less_than",
+          "loc": [
+            "wifi_rssi_dbm"
+          ],
+          "msg": "Input should be less than 0",
+          "input": 0,
+          "ctx": {
+            "lt": 0.0
+          },
+          "url": "https://errors.pydantic.dev/2.14/v/less_than"
+        }
+      ]
+    },
+    "interaction": "Swagger Try it out \u2192 edit request JSON \u2192 Execute"
+  }
+]

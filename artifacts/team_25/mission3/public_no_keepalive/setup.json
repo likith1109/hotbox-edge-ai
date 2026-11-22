@@ -1,0 +1,55 @@
+{
+  "command": "/tmp/hotbox-team25-venv/bin/python -u /home/likithshashidhar/Desktop/edge_ai_assignment1/client/bench.py --url https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev --n 200 --no-keepalive",
+  "url": "https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev",
+  "hostname": "fedora",
+  "python": "3.14.10 (main, Oct 26 2026, 00:00:00) [GCC 16.2.1 20260819 (Red Hat 16.2.1-2)]",
+  "codespace": null,
+  "no_keepalive": true,
+  "user_guesses_ms": {
+    "inference": 1,
+    "public_round_trip": 250
+  },
+  "endpoint": {
+    "health": {
+      "status": "ok",
+      "team": 25,
+      "params": 385,
+      "val_mae": 5.31
+    },
+    "model_info": {
+      "layers": [
+        {
+          "name": "linear1",
+          "in": 5,
+          "out": 16,
+          "params": 96,
+          "bytes_f32": 384,
+          "macs": 80
+        },
+        {
+          "name": "linear2",
+          "in": 16,
+          "out": 16,
+          "params": 272,
+          "bytes_f32": 1088,
+          "macs": 256
+        },
+        {
+          "name": "linear3",
+          "in": 16,
+          "out": 1,
+          "params": 17,
+          "bytes_f32": 68,
+          "macs": 16
+        }
+      ],
+      "total_params": 385,
+      "total_bytes_f32": 1540,
+      "total_bytes_int8": 385,
+      "total_macs": 352,
+      "fits_300kb_sram_f32": true,
+      "fits_300kb_sram_int8": true
+    }
+  },
+  "client_sha256": "4c2171e8a624299d84c5f59e3cf65cc34fcd4cc09738c53fb29c780f23a42d65"
+}

@@ -1,0 +1,37 @@
+RUN /tmp/hotbox-team25-venv/bin/python -u /home/likithshashidhar/Desktop/edge_ai_assignment1/client/bench.py --url https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev --n 200
+health: {'status': 'ok', 'team': 25, 'params': 385, 'val_mae': 5.31}
+
+first request: 154.8 ms round trip
+stage                       p50 ms    p95 ms    p99 ms   (requests 2..200)
+round_trip                  37.008   138.347   205.048
+parse                        0.024     0.051     0.055
+normalise                    0.023     0.054     0.088
+inference                    0.121     0.263     0.309
+build                        0.014     0.022     0.041
+server_total                 0.201     0.409     0.463
+network_and_framework       36.823   138.056   204.806
+saved bench_20261122_083324.csv
+
+RUN /tmp/hotbox-team25-venv/bin/python -u /home/likithshashidhar/Desktop/edge_ai_assignment1/client/bench.py --url https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev --n 200 --no-keepalive
+health: {'status': 'ok', 'team': 25, 'params': 385, 'val_mae': 5.31}
+
+first request: 286.0 ms round trip
+stage                       p50 ms    p95 ms    p99 ms   (requests 2..200)
+round_trip                 254.907   351.120   563.311
+parse                        0.043     0.059     0.073
+normalise                    0.044     0.062     0.083
+inference                    0.213     0.283     0.332
+build                        0.018     0.025     0.029
+server_total                 0.330     0.436     0.489
+network_and_framework      254.555   350.799   562.832
+saved bench_20261122_083417.csv
+
+400-singles comparison: 50/400 responses
+400-singles comparison: 100/400 responses
+400-singles comparison: 150/400 responses
+400-singles comparison: 200/400 responses
+400-singles comparison: 250/400 responses
+400-singles comparison: 300/400 responses
+400-singles comparison: 350/400 responses
+400-singles comparison: 400/400 responses
+400 SINGLE VS BATCH: {"singles_elapsed_ms": 37113.54701399978, "batch_elapsed_ms": 181.52882499271072, "speedup": 204.44988290697123, "count": 400, "absolute_tolerance_days": 0.01, "maximum_prediction_difference_days": 0.009999999999999787, "same_order": true}

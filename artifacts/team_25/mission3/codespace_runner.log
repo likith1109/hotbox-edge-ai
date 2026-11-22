@@ -1,0 +1,14 @@
+RUN /usr/local/bin/python -u /workspaces/hotbox-edge-ai/client/bench.py --url http://localhost:8000 --n 200
+health: {'status': 'ok', 'team': 25, 'params': 385, 'val_mae': 5.31}
+
+first request: 423.9 ms round trip
+stage                       p50 ms    p95 ms    p99 ms   (requests 2..200)
+round_trip                   1.218     1.402     2.116
+parse                        0.018     0.086     0.090
+normalise                    0.017     0.022     0.052
+inference                    0.086     0.126     0.133
+build                        0.011     0.013     0.016
+server_total                 0.145     0.220     0.256
+network_and_framework        1.062     1.217     1.935
+saved bench_20261122_025910.csv
+

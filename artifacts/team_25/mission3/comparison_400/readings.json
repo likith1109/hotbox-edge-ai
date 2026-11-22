@@ -1,0 +1,3206 @@
+{
+  "source_indices": [
+    202,
+    1334,
+    470,
+    436,
+    724,
+    1,
+    1246,
+    783,
+    219,
+    661,
+    777,
+    1102,
+    401,
+    1968,
+    1010,
+    1613,
+    1445,
+    641,
+    1994,
+    1116,
+    1026,
+    61,
+    1374,
+    439,
+    1955,
+    1111,
+    443,
+    1606,
+    310,
+    182,
+    94,
+    629,
+    909,
+    751,
+    520,
+    1527,
+    885,
+    888,
+    1203,
+    1884,
+    847,
+    1571,
+    1999,
+    567,
+    1809,
+    234,
+    18,
+    1976,
+    1040,
+    1791,
+    67,
+    779,
+    1668,
+    645,
+    1697,
+    1985,
+    30,
+    331,
+    1564,
+    506,
+    1062,
+    604,
+    631,
+    1158,
+    1424,
+    1284,
+    848,
+    473,
+    712,
+    1366,
+    947,
+    1701,
+    699,
+    606,
+    1128,
+    1640,
+    1438,
+    780,
+    463,
+    1957,
+    1183,
+    883,
+    791,
+    1100,
+    613,
+    1058,
+    1746,
+    1781,
+    1940,
+    1245,
+    1089,
+    1440,
+    1832,
+    1635,
+    1308,
+    1266,
+    1490,
+    1948,
+    690,
+    343,
+    1351,
+    1519,
+    330,
+    223,
+    1677,
+    1486,
+    1417,
+    123,
+    1597,
+    103,
+    633,
+    444,
+    1364,
+    579,
+    1421,
+    1723,
+    1177,
+    220,
+    694,
+    1077,
+    1645,
+    1309,
+    1476,
+    1568,
+    914,
+    421,
+    1156,
+    1628,
+    1949,
+    1963,
+    1405,
+    481,
+    1237,
+    1893,
+    246,
+    7,
+    38,
+    772,
+    602,
+    1577,
+    1729,
+    1088,
+    184,
+    1796,
+    977,
+    236,
+    242,
+    1916,
+    542,
+    1386,
+    1685,
+    616,
+    1475,
+    1734,
+    731,
+    1572,
+    1509,
+    91,
+    78,
+    1484,
+    1205,
+    295,
+    925,
+    1324,
+    1816,
+    253,
+    1050,
+    609,
+    345,
+    1198,
+    1838,
+    1219,
+    231,
+    1331,
+    1448,
+    290,
+    113,
+    1469,
+    1384,
+    1214,
+    475,
+    1019,
+    238,
+    1473,
+    1081,
+    709,
+    787,
+    774,
+    1716,
+    1836,
+    227,
+    681,
+    810,
+    293,
+    844,
+    189,
+    397,
+    1965,
+    172,
+    1113,
+    887,
+    726,
+    711,
+    342,
+    446,
+    1502,
+    1874,
+    907,
+    257,
+    430,
+    248,
+    997,
+    1733,
+    1890,
+    512,
+    163,
+    1427,
+    1041,
+    1625,
+    948,
+    75,
+    1006,
+    1027,
+    299,
+    976,
+    1829,
+    1790,
+    574,
+    1764,
+    927,
+    1927,
+    431,
+    380,
+    1642,
+    147,
+    1620,
+    1995,
+    1083,
+    1115,
+    831,
+    279,
+    1460,
+    934,
+    1807,
+    1289,
+    748,
+    946,
+    796,
+    1209,
+    1107,
+    1072,
+    208,
+    1174,
+    859,
+    410,
+    1524,
+    1139,
+    255,
+    226,
+    477,
+    1844,
+    1650,
+    304,
+    585,
+    901,
+    198,
+    1780,
+    1124,
+    680,
+    193,
+    920,
+    732,
+    1534,
+    747,
+    828,
+    1507,
+    1376,
+    501,
+    674,
+    1024,
+    1121,
+    1850,
+    68,
+    526,
+    605,
+    513,
+    1959,
+    1845,
+    129,
+    1715,
+    291,
+    157,
+    351,
+    1624,
+    795,
+    649,
+    1812,
+    611,
+    1045,
+    1365,
+    1795,
+    57,
+    1441,
+    286,
+    1778,
+    1820,
+    183,
+    44,
+    1372,
+    329,
+    1918,
+    138,
+    524,
+    1557,
+    451,
+    1861,
+    433,
+    824,
+    1235,
+    1096,
+    180,
+    1166,
+    549,
+    545,
+    1401,
+    1679,
+    1707,
+    637,
+    1704,
+    617,
+    965,
+    1912,
+    1052,
+    1895,
+    893,
+    447,
+    1238,
+    1702,
+    1420,
+    458,
+    388,
+    759,
+    1926,
+    232,
+    1208,
+    145,
+    1082,
+    891,
+    1966,
+    1043,
+    1922,
+    1827,
+    1808,
+    1914,
+    811,
+    1673,
+    122,
+    760,
+    1294,
+    1414,
+    135,
+    354,
+    1218,
+    1336,
+    913,
+    1144,
+    35,
+    282,
+    334,
+    90,
+    1981,
+    134,
+    1759,
+    392,
+    1950,
+    1655,
+    1399,
+    1011,
+    360,
+    1992,
+    1496,
+    1315,
+    406,
+    1671,
+    1370,
+    131,
+    1241,
+    1018,
+    839,
+    1801,
+    555,
+    39,
+    1623,
+    812,
+    1392,
+    1297,
+    1342,
+    800,
+    521,
+    188
+  ],
+  "rows": [
+    {
+      "battery_v": 3.88,
+      "temp_c": 26.7,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -87,
+      "age_months": 5
+    },
+    {
+      "battery_v": 4.053,
+      "temp_c": 33.7,
+      "rings_per_day": 13,
+      "wifi_rssi_dbm": -88,
+      "age_months": 27
+    },
+    {
+      "battery_v": 4.146,
+      "temp_c": 42.8,
+      "rings_per_day": 11,
+      "wifi_rssi_dbm": -68,
+      "age_months": 25
+    },
+    {
+      "battery_v": 4.184,
+      "temp_c": 15.2,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -54,
+      "age_months": 7
+    },
+    {
+      "battery_v": 3.734,
+      "temp_c": 22.0,
+      "rings_per_day": 14,
+      "wifi_rssi_dbm": -51,
+      "age_months": 15
+    },
+    {
+      "battery_v": 3.632,
+      "temp_c": 26.5,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -62,
+      "age_months": 31
+    },
+    {
+      "battery_v": 3.768,
+      "temp_c": 17.8,
+      "rings_per_day": 18,
+      "wifi_rssi_dbm": -53,
+      "age_months": 18
+    },
+    {
+      "battery_v": 3.408,
+      "temp_c": 22.8,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -61,
+      "age_months": 30
+    },
+    {
+      "battery_v": 4.005,
+      "temp_c": 30.3,
+      "rings_per_day": 12,
+      "wifi_rssi_dbm": -65,
+      "age_months": 20
+    },
+    {
+      "battery_v": 4.107,
+      "temp_c": 27.1,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -83,
+      "age_months": 2
+    },
+    {
+      "battery_v": 3.472,
+      "temp_c": 30.1,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -61,
+      "age_months": 22
+    },
+    {
+      "battery_v": 3.563,
+      "temp_c": 31.9,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -67,
+      "age_months": 6
+    },
+    {
+      "battery_v": 4.096,
+      "temp_c": 22.3,
+      "rings_per_day": 15,
+      "wifi_rssi_dbm": -66,
+      "age_months": 16
+    },
+    {
+      "battery_v": 3.845,
+      "temp_c": 31.1,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -49,
+      "age_months": 3
+    },
+    {
+      "battery_v": 3.907,
+      "temp_c": 29.3,
+      "rings_per_day": 11,
+      "wifi_rssi_dbm": -59,
+      "age_months": 35
+    },
+    {
+      "battery_v": 3.977,
+      "temp_c": 17.7,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -63,
+      "age_months": 1
+    },
+    {
+      "battery_v": 3.423,
+      "temp_c": 20.9,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -57,
+      "age_months": 35
+    },
+    {
+      "battery_v": 3.535,
+      "temp_c": 31.2,
+      "rings_per_day": 1,
+      "wifi_rssi_dbm": -80,
+      "age_months": 10
+    },
+    {
+      "battery_v": 3.95,
+      "temp_c": 26.5,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -54,
+      "age_months": 1
+    },
+    {
+      "battery_v": 3.66,
+      "temp_c": 39.7,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -71,
+      "age_months": 1
+    },
+    {
+      "battery_v": 4.104,
+      "temp_c": 36.6,
+      "rings_per_day": 14,
+      "wifi_rssi_dbm": -87,
+      "age_months": 11
+    },
+    {
+      "battery_v": 3.818,
+      "temp_c": 17.7,
+      "rings_per_day": 13,
+      "wifi_rssi_dbm": -78,
+      "age_months": 26
+    },
+    {
+      "battery_v": 3.585,
+      "temp_c": 18.1,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -62,
+      "age_months": 8
+    },
+    {
+      "battery_v": 3.956,
+      "temp_c": 36.8,
+      "rings_per_day": 11,
+      "wifi_rssi_dbm": -70,
+      "age_months": 20
+    },
+    {
+      "battery_v": 4.089,
+      "temp_c": 31.6,
+      "rings_per_day": 10,
+      "wifi_rssi_dbm": -71,
+      "age_months": 35
+    },
+    {
+      "battery_v": 3.863,
+      "temp_c": 29.7,
+      "rings_per_day": 11,
+      "wifi_rssi_dbm": -51,
+      "age_months": 11
+    },
+    {
+      "battery_v": 3.734,
+      "temp_c": 20.9,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -83,
+      "age_months": 25
+    },
+    {
+      "battery_v": 3.98,
+      "temp_c": 26.2,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -87,
+      "age_months": 30
+    },
+    {
+      "battery_v": 3.702,
+      "temp_c": 16.4,
+      "rings_per_day": 11,
+      "wifi_rssi_dbm": -71,
+      "age_months": 20
+    },
+    {
+      "battery_v": 3.491,
+      "temp_c": 24.3,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -67,
+      "age_months": 19
+    },
+    {
+      "battery_v": 3.674,
+      "temp_c": 26.8,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -78,
+      "age_months": 28
+    },
+    {
+      "battery_v": 4.11,
+      "temp_c": 18.6,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -85,
+      "age_months": 33
+    },
+    {
+      "battery_v": 3.4,
+      "temp_c": 30.8,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -80,
+      "age_months": 24
+    },
+    {
+      "battery_v": 3.437,
+      "temp_c": 25.4,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -88,
+      "age_months": 31
+    },
+    {
+      "battery_v": 3.443,
+      "temp_c": 28.2,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -69,
+      "age_months": 31
+    },
+    {
+      "battery_v": 3.387,
+      "temp_c": 25.4,
+      "rings_per_day": 15,
+      "wifi_rssi_dbm": -63,
+      "age_months": 30
+    },
+    {
+      "battery_v": 3.81,
+      "temp_c": 21.8,
+      "rings_per_day": 11,
+      "wifi_rssi_dbm": -79,
+      "age_months": 27
+    },
+    {
+      "battery_v": 3.953,
+      "temp_c": 33.8,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -77,
+      "age_months": 3
+    },
+    {
+      "battery_v": 3.917,
+      "temp_c": 16.4,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -55,
+      "age_months": 14
+    },
+    {
+      "battery_v": 4.122,
+      "temp_c": 33.0,
+      "rings_per_day": 15,
+      "wifi_rssi_dbm": -54,
+      "age_months": 11
+    },
+    {
+      "battery_v": 4.002,
+      "temp_c": 22.1,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -66,
+      "age_months": 17
+    },
+    {
+      "battery_v": 3.546,
+      "temp_c": 18.2,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -47,
+      "age_months": 8
+    },
+    {
+      "battery_v": 3.985,
+      "temp_c": 18.8,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -88,
+      "age_months": 12
+    },
+    {
+      "battery_v": 3.538,
+      "temp_c": 30.1,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -45,
+      "age_months": 6
+    },
+    {
+      "battery_v": 3.771,
+      "temp_c": 37.8,
+      "rings_per_day": 43,
+      "wifi_rssi_dbm": -45,
+      "age_months": 3
+    },
+    {
+      "battery_v": 3.854,
+      "temp_c": 20.2,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -64,
+      "age_months": 18
+    },
+    {
+      "battery_v": 3.698,
+      "temp_c": 17.1,
+      "rings_per_day": 21,
+      "wifi_rssi_dbm": -84,
+      "age_months": 36
+    },
+    {
+      "battery_v": 3.542,
+      "temp_c": 34.1,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -81,
+      "age_months": 14
+    },
+    {
+      "battery_v": 4.165,
+      "temp_c": 32.4,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -64,
+      "age_months": 6
+    },
+    {
+      "battery_v": 3.74,
+      "temp_c": 28.5,
+      "rings_per_day": 1,
+      "wifi_rssi_dbm": -75,
+      "age_months": 2
+    },
+    {
+      "battery_v": 4.199,
+      "temp_c": 23.5,
+      "rings_per_day": 17,
+      "wifi_rssi_dbm": -85,
+      "age_months": 13
+    },
+    {
+      "battery_v": 4.005,
+      "temp_c": 19.9,
+      "rings_per_day": 15,
+      "wifi_rssi_dbm": -76,
+      "age_months": 21
+    },
+    {
+      "battery_v": 3.685,
+      "temp_c": 23.1,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -55,
+      "age_months": 13
+    },
+    {
+      "battery_v": 3.718,
+      "temp_c": 31.4,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -51,
+      "age_months": 8
+    },
+    {
+      "battery_v": 3.783,
+      "temp_c": 25.3,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -69,
+      "age_months": 5
+    },
+    {
+      "battery_v": 3.926,
+      "temp_c": 19.5,
+      "rings_per_day": 14,
+      "wifi_rssi_dbm": -62,
+      "age_months": 29
+    },
+    {
+      "battery_v": 3.982,
+      "temp_c": 8.0,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -58,
+      "age_months": 10
+    },
+    {
+      "battery_v": 4.041,
+      "temp_c": 25.8,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -53,
+      "age_months": 2
+    },
+    {
+      "battery_v": 3.725,
+      "temp_c": 24.6,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -74,
+      "age_months": 19
+    },
+    {
+      "battery_v": 3.459,
+      "temp_c": 35.0,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -75,
+      "age_months": 3
+    },
+    {
+      "battery_v": 3.66,
+      "temp_c": 21.9,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -54,
+      "age_months": 15
+    },
+    {
+      "battery_v": 3.376,
+      "temp_c": 28.5,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -72,
+      "age_months": 4
+    },
+    {
+      "battery_v": 3.462,
+      "temp_c": 39.1,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -70,
+      "age_months": 32
+    },
+    {
+      "battery_v": 3.642,
+      "temp_c": 34.1,
+      "rings_per_day": 18,
+      "wifi_rssi_dbm": -57,
+      "age_months": 16
+    },
+    {
+      "battery_v": 3.632,
+      "temp_c": 23.8,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -58,
+      "age_months": 15
+    },
+    {
+      "battery_v": 4.193,
+      "temp_c": 26.8,
+      "rings_per_day": 15,
+      "wifi_rssi_dbm": -71,
+      "age_months": 27
+    },
+    {
+      "battery_v": 3.687,
+      "temp_c": 38.4,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -71,
+      "age_months": 27
+    },
+    {
+      "battery_v": 3.858,
+      "temp_c": 13.8,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -71,
+      "age_months": 2
+    },
+    {
+      "battery_v": 3.905,
+      "temp_c": 46.0,
+      "rings_per_day": 1,
+      "wifi_rssi_dbm": -65,
+      "age_months": 25
+    },
+    {
+      "battery_v": 4.134,
+      "temp_c": 27.9,
+      "rings_per_day": 16,
+      "wifi_rssi_dbm": -58,
+      "age_months": 19
+    },
+    {
+      "battery_v": 3.919,
+      "temp_c": 31.7,
+      "rings_per_day": 16,
+      "wifi_rssi_dbm": -64,
+      "age_months": 33
+    },
+    {
+      "battery_v": 3.977,
+      "temp_c": 36.6,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -50,
+      "age_months": 24
+    },
+    {
+      "battery_v": 3.354,
+      "temp_c": 42.7,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -54,
+      "age_months": 3
+    },
+    {
+      "battery_v": 3.53,
+      "temp_c": 37.1,
+      "rings_per_day": 14,
+      "wifi_rssi_dbm": -85,
+      "age_months": 35
+    },
+    {
+      "battery_v": 3.818,
+      "temp_c": 33.4,
+      "rings_per_day": 10,
+      "wifi_rssi_dbm": -73,
+      "age_months": 8
+    },
+    {
+      "battery_v": 3.609,
+      "temp_c": 28.6,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -62,
+      "age_months": 18
+    },
+    {
+      "battery_v": 3.664,
+      "temp_c": 21.3,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -46,
+      "age_months": 24
+    },
+    {
+      "battery_v": 3.42,
+      "temp_c": 35.6,
+      "rings_per_day": 17,
+      "wifi_rssi_dbm": -70,
+      "age_months": 31
+    },
+    {
+      "battery_v": 3.936,
+      "temp_c": 36.4,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -82,
+      "age_months": 32
+    },
+    {
+      "battery_v": 4.174,
+      "temp_c": 28.4,
+      "rings_per_day": 14,
+      "wifi_rssi_dbm": -75,
+      "age_months": 10
+    },
+    {
+      "battery_v": 3.649,
+      "temp_c": 17.6,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -80,
+      "age_months": 10
+    },
+    {
+      "battery_v": 3.776,
+      "temp_c": 32.1,
+      "rings_per_day": 14,
+      "wifi_rssi_dbm": -57,
+      "age_months": 28
+    },
+    {
+      "battery_v": 4.074,
+      "temp_c": 34.6,
+      "rings_per_day": 12,
+      "wifi_rssi_dbm": -57,
+      "age_months": 25
+    },
+    {
+      "battery_v": 3.56,
+      "temp_c": 38.7,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -83,
+      "age_months": 20
+    },
+    {
+      "battery_v": 4.015,
+      "temp_c": 26.0,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -88,
+      "age_months": 32
+    },
+    {
+      "battery_v": 3.6,
+      "temp_c": 29.0,
+      "rings_per_day": 10,
+      "wifi_rssi_dbm": -70,
+      "age_months": 20
+    },
+    {
+      "battery_v": 3.551,
+      "temp_c": 29.4,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -72,
+      "age_months": 28
+    },
+    {
+      "battery_v": 3.694,
+      "temp_c": 37.4,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -45,
+      "age_months": 26
+    },
+    {
+      "battery_v": 3.466,
+      "temp_c": 23.2,
+      "rings_per_day": 12,
+      "wifi_rssi_dbm": -48,
+      "age_months": 3
+    },
+    {
+      "battery_v": 3.388,
+      "temp_c": 30.5,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -72,
+      "age_months": 19
+    },
+    {
+      "battery_v": 3.583,
+      "temp_c": 46.0,
+      "rings_per_day": 17,
+      "wifi_rssi_dbm": -46,
+      "age_months": 12
+    },
+    {
+      "battery_v": 3.655,
+      "temp_c": 28.9,
+      "rings_per_day": 12,
+      "wifi_rssi_dbm": -64,
+      "age_months": 4
+    },
+    {
+      "battery_v": 3.468,
+      "temp_c": 37.0,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -58,
+      "age_months": 33
+    },
+    {
+      "battery_v": 3.613,
+      "temp_c": 10.0,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -64,
+      "age_months": 0
+    },
+    {
+      "battery_v": 3.428,
+      "temp_c": 22.6,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -85,
+      "age_months": 18
+    },
+    {
+      "battery_v": 3.4,
+      "temp_c": 20.4,
+      "rings_per_day": 19,
+      "wifi_rssi_dbm": -49,
+      "age_months": 2
+    },
+    {
+      "battery_v": 3.622,
+      "temp_c": 46.0,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -47,
+      "age_months": 2
+    },
+    {
+      "battery_v": 4.045,
+      "temp_c": 27.9,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -68,
+      "age_months": 26
+    },
+    {
+      "battery_v": 3.367,
+      "temp_c": 29.9,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -60,
+      "age_months": 20
+    },
+    {
+      "battery_v": 3.422,
+      "temp_c": 17.6,
+      "rings_per_day": 24,
+      "wifi_rssi_dbm": -63,
+      "age_months": 7
+    },
+    {
+      "battery_v": 3.558,
+      "temp_c": 22.6,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -62,
+      "age_months": 17
+    },
+    {
+      "battery_v": 4.043,
+      "temp_c": 30.6,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -47,
+      "age_months": 23
+    },
+    {
+      "battery_v": 3.362,
+      "temp_c": 33.9,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -84,
+      "age_months": 1
+    },
+    {
+      "battery_v": 3.911,
+      "temp_c": 38.2,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -65,
+      "age_months": 8
+    },
+    {
+      "battery_v": 3.591,
+      "temp_c": 19.6,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -73,
+      "age_months": 14
+    },
+    {
+      "battery_v": 3.707,
+      "temp_c": 27.7,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -67,
+      "age_months": 9
+    },
+    {
+      "battery_v": 3.541,
+      "temp_c": 15.3,
+      "rings_per_day": 18,
+      "wifi_rssi_dbm": -69,
+      "age_months": 14
+    },
+    {
+      "battery_v": 4.077,
+      "temp_c": 37.1,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -85,
+      "age_months": 8
+    },
+    {
+      "battery_v": 4.006,
+      "temp_c": 35.7,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -79,
+      "age_months": 27
+    },
+    {
+      "battery_v": 3.607,
+      "temp_c": 27.1,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -70,
+      "age_months": 16
+    },
+    {
+      "battery_v": 3.554,
+      "temp_c": 31.4,
+      "rings_per_day": 22,
+      "wifi_rssi_dbm": -61,
+      "age_months": 0
+    },
+    {
+      "battery_v": 4.1,
+      "temp_c": 45.0,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -51,
+      "age_months": 10
+    },
+    {
+      "battery_v": 3.753,
+      "temp_c": 9.0,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -87,
+      "age_months": 6
+    },
+    {
+      "battery_v": 3.477,
+      "temp_c": 29.3,
+      "rings_per_day": 12,
+      "wifi_rssi_dbm": -79,
+      "age_months": 16
+    },
+    {
+      "battery_v": 4.16,
+      "temp_c": 33.0,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -73,
+      "age_months": 30
+    },
+    {
+      "battery_v": 4.045,
+      "temp_c": 29.5,
+      "rings_per_day": 1,
+      "wifi_rssi_dbm": -61,
+      "age_months": 15
+    },
+    {
+      "battery_v": 4.044,
+      "temp_c": 28.1,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -78,
+      "age_months": 23
+    },
+    {
+      "battery_v": 3.937,
+      "temp_c": 27.5,
+      "rings_per_day": 11,
+      "wifi_rssi_dbm": -45,
+      "age_months": 6
+    },
+    {
+      "battery_v": 3.47,
+      "temp_c": 33.0,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -54,
+      "age_months": 26
+    },
+    {
+      "battery_v": 3.743,
+      "temp_c": 27.1,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -83,
+      "age_months": 21
+    },
+    {
+      "battery_v": 3.609,
+      "temp_c": 37.7,
+      "rings_per_day": 11,
+      "wifi_rssi_dbm": -49,
+      "age_months": 34
+    },
+    {
+      "battery_v": 3.856,
+      "temp_c": 20.6,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -72,
+      "age_months": 7
+    },
+    {
+      "battery_v": 4.076,
+      "temp_c": 28.1,
+      "rings_per_day": 15,
+      "wifi_rssi_dbm": -67,
+      "age_months": 8
+    },
+    {
+      "battery_v": 3.845,
+      "temp_c": 27.4,
+      "rings_per_day": 12,
+      "wifi_rssi_dbm": -58,
+      "age_months": 8
+    },
+    {
+      "battery_v": 3.356,
+      "temp_c": 31.1,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -51,
+      "age_months": 13
+    },
+    {
+      "battery_v": 4.061,
+      "temp_c": 14.7,
+      "rings_per_day": 13,
+      "wifi_rssi_dbm": -52,
+      "age_months": 0
+    },
+    {
+      "battery_v": 3.373,
+      "temp_c": 28.3,
+      "rings_per_day": 10,
+      "wifi_rssi_dbm": -57,
+      "age_months": 21
+    },
+    {
+      "battery_v": 3.962,
+      "temp_c": 24.2,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -48,
+      "age_months": 21
+    },
+    {
+      "battery_v": 3.709,
+      "temp_c": 27.3,
+      "rings_per_day": 11,
+      "wifi_rssi_dbm": -61,
+      "age_months": 12
+    },
+    {
+      "battery_v": 3.735,
+      "temp_c": 31.5,
+      "rings_per_day": 10,
+      "wifi_rssi_dbm": -62,
+      "age_months": 19
+    },
+    {
+      "battery_v": 3.519,
+      "temp_c": 19.1,
+      "rings_per_day": 21,
+      "wifi_rssi_dbm": -72,
+      "age_months": 21
+    },
+    {
+      "battery_v": 4.005,
+      "temp_c": 28.5,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -78,
+      "age_months": 11
+    },
+    {
+      "battery_v": 3.558,
+      "temp_c": 25.1,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -53,
+      "age_months": 33
+    },
+    {
+      "battery_v": 4.079,
+      "temp_c": 33.5,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -63,
+      "age_months": 2
+    },
+    {
+      "battery_v": 3.755,
+      "temp_c": 39.7,
+      "rings_per_day": 0,
+      "wifi_rssi_dbm": -85,
+      "age_months": 17
+    },
+    {
+      "battery_v": 3.613,
+      "temp_c": 18.0,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -83,
+      "age_months": 12
+    },
+    {
+      "battery_v": 3.784,
+      "temp_c": 20.8,
+      "rings_per_day": 10,
+      "wifi_rssi_dbm": -56,
+      "age_months": 19
+    },
+    {
+      "battery_v": 4.092,
+      "temp_c": 34.8,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -79,
+      "age_months": 10
+    },
+    {
+      "battery_v": 4.129,
+      "temp_c": 16.3,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -72,
+      "age_months": 31
+    },
+    {
+      "battery_v": 4.152,
+      "temp_c": 25.9,
+      "rings_per_day": 16,
+      "wifi_rssi_dbm": -54,
+      "age_months": 18
+    },
+    {
+      "battery_v": 4.099,
+      "temp_c": 33.1,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -85,
+      "age_months": 15
+    },
+    {
+      "battery_v": 3.593,
+      "temp_c": 11.4,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -62,
+      "age_months": 15
+    },
+    {
+      "battery_v": 3.589,
+      "temp_c": 27.3,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -84,
+      "age_months": 36
+    },
+    {
+      "battery_v": 3.602,
+      "temp_c": 14.6,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -68,
+      "age_months": 8
+    },
+    {
+      "battery_v": 3.484,
+      "temp_c": 25.4,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -87,
+      "age_months": 16
+    },
+    {
+      "battery_v": 3.965,
+      "temp_c": 27.2,
+      "rings_per_day": 17,
+      "wifi_rssi_dbm": -54,
+      "age_months": 4
+    },
+    {
+      "battery_v": 3.586,
+      "temp_c": 8.0,
+      "rings_per_day": 21,
+      "wifi_rssi_dbm": -56,
+      "age_months": 31
+    },
+    {
+      "battery_v": 3.882,
+      "temp_c": 27.5,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -59,
+      "age_months": 7
+    },
+    {
+      "battery_v": 4.087,
+      "temp_c": 30.8,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -50,
+      "age_months": 33
+    },
+    {
+      "battery_v": 4.103,
+      "temp_c": 24.2,
+      "rings_per_day": 29,
+      "wifi_rssi_dbm": -74,
+      "age_months": 29
+    },
+    {
+      "battery_v": 3.413,
+      "temp_c": 28.1,
+      "rings_per_day": 1,
+      "wifi_rssi_dbm": -62,
+      "age_months": 31
+    },
+    {
+      "battery_v": 3.382,
+      "temp_c": 24.1,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -86,
+      "age_months": 4
+    },
+    {
+      "battery_v": 3.987,
+      "temp_c": 31.6,
+      "rings_per_day": 23,
+      "wifi_rssi_dbm": -52,
+      "age_months": 28
+    },
+    {
+      "battery_v": 4.091,
+      "temp_c": 27.0,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -73,
+      "age_months": 23
+    },
+    {
+      "battery_v": 3.814,
+      "temp_c": 28.8,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -86,
+      "age_months": 27
+    },
+    {
+      "battery_v": 4.132,
+      "temp_c": 22.4,
+      "rings_per_day": 13,
+      "wifi_rssi_dbm": -70,
+      "age_months": 14
+    },
+    {
+      "battery_v": 4.169,
+      "temp_c": 31.4,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -52,
+      "age_months": 0
+    },
+    {
+      "battery_v": 3.771,
+      "temp_c": 20.4,
+      "rings_per_day": 18,
+      "wifi_rssi_dbm": -61,
+      "age_months": 28
+    },
+    {
+      "battery_v": 3.511,
+      "temp_c": 31.1,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -61,
+      "age_months": 33
+    },
+    {
+      "battery_v": 3.679,
+      "temp_c": 26.6,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -81,
+      "age_months": 11
+    },
+    {
+      "battery_v": 4.154,
+      "temp_c": 28.1,
+      "rings_per_day": 14,
+      "wifi_rssi_dbm": -81,
+      "age_months": 8
+    },
+    {
+      "battery_v": 3.807,
+      "temp_c": 32.6,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -72,
+      "age_months": 36
+    },
+    {
+      "battery_v": 3.904,
+      "temp_c": 39.4,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -56,
+      "age_months": 10
+    },
+    {
+      "battery_v": 3.535,
+      "temp_c": 30.4,
+      "rings_per_day": 10,
+      "wifi_rssi_dbm": -64,
+      "age_months": 26
+    },
+    {
+      "battery_v": 3.775,
+      "temp_c": 25.0,
+      "rings_per_day": 16,
+      "wifi_rssi_dbm": -82,
+      "age_months": 20
+    },
+    {
+      "battery_v": 3.663,
+      "temp_c": 34.1,
+      "rings_per_day": 11,
+      "wifi_rssi_dbm": -49,
+      "age_months": 16
+    },
+    {
+      "battery_v": 4.151,
+      "temp_c": 30.2,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -62,
+      "age_months": 5
+    },
+    {
+      "battery_v": 4.124,
+      "temp_c": 32.9,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -85,
+      "age_months": 21
+    },
+    {
+      "battery_v": 3.954,
+      "temp_c": 26.3,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -57,
+      "age_months": 4
+    },
+    {
+      "battery_v": 3.542,
+      "temp_c": 42.0,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -68,
+      "age_months": 26
+    },
+    {
+      "battery_v": 3.995,
+      "temp_c": 43.2,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -78,
+      "age_months": 24
+    },
+    {
+      "battery_v": 3.784,
+      "temp_c": 32.1,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -59,
+      "age_months": 11
+    },
+    {
+      "battery_v": 3.664,
+      "temp_c": 25.2,
+      "rings_per_day": 1,
+      "wifi_rssi_dbm": -83,
+      "age_months": 10
+    },
+    {
+      "battery_v": 3.965,
+      "temp_c": 27.7,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -52,
+      "age_months": 17
+    },
+    {
+      "battery_v": 3.672,
+      "temp_c": 24.5,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -79,
+      "age_months": 11
+    },
+    {
+      "battery_v": 3.457,
+      "temp_c": 19.3,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -71,
+      "age_months": 10
+    },
+    {
+      "battery_v": 3.606,
+      "temp_c": 34.1,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -59,
+      "age_months": 34
+    },
+    {
+      "battery_v": 4.038,
+      "temp_c": 24.7,
+      "rings_per_day": 17,
+      "wifi_rssi_dbm": -79,
+      "age_months": 8
+    },
+    {
+      "battery_v": 3.874,
+      "temp_c": 17.4,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -68,
+      "age_months": 17
+    },
+    {
+      "battery_v": 3.506,
+      "temp_c": 32.2,
+      "rings_per_day": 19,
+      "wifi_rssi_dbm": -74,
+      "age_months": 3
+    },
+    {
+      "battery_v": 3.995,
+      "temp_c": 24.5,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -78,
+      "age_months": 19
+    },
+    {
+      "battery_v": 3.722,
+      "temp_c": 32.8,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -80,
+      "age_months": 8
+    },
+    {
+      "battery_v": 3.511,
+      "temp_c": 34.7,
+      "rings_per_day": 10,
+      "wifi_rssi_dbm": -66,
+      "age_months": 3
+    },
+    {
+      "battery_v": 3.68,
+      "temp_c": 20.4,
+      "rings_per_day": 11,
+      "wifi_rssi_dbm": -60,
+      "age_months": 1
+    },
+    {
+      "battery_v": 4.027,
+      "temp_c": 13.5,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -78,
+      "age_months": 10
+    },
+    {
+      "battery_v": 3.416,
+      "temp_c": 28.1,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -76,
+      "age_months": 34
+    },
+    {
+      "battery_v": 3.483,
+      "temp_c": 46.0,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -55,
+      "age_months": 8
+    },
+    {
+      "battery_v": 3.574,
+      "temp_c": 29.7,
+      "rings_per_day": 11,
+      "wifi_rssi_dbm": -73,
+      "age_months": 11
+    },
+    {
+      "battery_v": 3.951,
+      "temp_c": 39.1,
+      "rings_per_day": 13,
+      "wifi_rssi_dbm": -71,
+      "age_months": 21
+    },
+    {
+      "battery_v": 4.077,
+      "temp_c": 33.9,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -54,
+      "age_months": 32
+    },
+    {
+      "battery_v": 3.351,
+      "temp_c": 22.2,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -53,
+      "age_months": 34
+    },
+    {
+      "battery_v": 4.196,
+      "temp_c": 14.0,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -68,
+      "age_months": 4
+    },
+    {
+      "battery_v": 3.849,
+      "temp_c": 35.4,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -56,
+      "age_months": 17
+    },
+    {
+      "battery_v": 3.893,
+      "temp_c": 22.1,
+      "rings_per_day": 1,
+      "wifi_rssi_dbm": -47,
+      "age_months": 21
+    },
+    {
+      "battery_v": 3.544,
+      "temp_c": 23.9,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -74,
+      "age_months": 35
+    },
+    {
+      "battery_v": 3.702,
+      "temp_c": 34.3,
+      "rings_per_day": 14,
+      "wifi_rssi_dbm": -50,
+      "age_months": 34
+    },
+    {
+      "battery_v": 3.408,
+      "temp_c": 32.6,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -60,
+      "age_months": 20
+    },
+    {
+      "battery_v": 3.595,
+      "temp_c": 21.9,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -60,
+      "age_months": 20
+    },
+    {
+      "battery_v": 3.664,
+      "temp_c": 42.6,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -74,
+      "age_months": 32
+    },
+    {
+      "battery_v": 3.385,
+      "temp_c": 23.0,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -79,
+      "age_months": 9
+    },
+    {
+      "battery_v": 3.822,
+      "temp_c": 14.1,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -84,
+      "age_months": 13
+    },
+    {
+      "battery_v": 4.032,
+      "temp_c": 24.8,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -74,
+      "age_months": 35
+    },
+    {
+      "battery_v": 3.39,
+      "temp_c": 28.5,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -45,
+      "age_months": 19
+    },
+    {
+      "battery_v": 4.157,
+      "temp_c": 19.3,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -81,
+      "age_months": 30
+    },
+    {
+      "battery_v": 4.1,
+      "temp_c": 29.0,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -87,
+      "age_months": 0
+    },
+    {
+      "battery_v": 3.924,
+      "temp_c": 28.4,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -80,
+      "age_months": 11
+    },
+    {
+      "battery_v": 3.489,
+      "temp_c": 36.6,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -88,
+      "age_months": 35
+    },
+    {
+      "battery_v": 3.986,
+      "temp_c": 21.8,
+      "rings_per_day": 0,
+      "wifi_rssi_dbm": -49,
+      "age_months": 31
+    },
+    {
+      "battery_v": 3.466,
+      "temp_c": 31.1,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -56,
+      "age_months": 25
+    },
+    {
+      "battery_v": 3.687,
+      "temp_c": 22.2,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -85,
+      "age_months": 25
+    },
+    {
+      "battery_v": 4.123,
+      "temp_c": 29.5,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -45,
+      "age_months": 29
+    },
+    {
+      "battery_v": 3.577,
+      "temp_c": 23.2,
+      "rings_per_day": 14,
+      "wifi_rssi_dbm": -69,
+      "age_months": 23
+    },
+    {
+      "battery_v": 3.468,
+      "temp_c": 35.1,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -87,
+      "age_months": 24
+    },
+    {
+      "battery_v": 3.719,
+      "temp_c": 24.2,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -65,
+      "age_months": 2
+    },
+    {
+      "battery_v": 4.164,
+      "temp_c": 39.1,
+      "rings_per_day": 18,
+      "wifi_rssi_dbm": -73,
+      "age_months": 36
+    },
+    {
+      "battery_v": 4.101,
+      "temp_c": 26.9,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -46,
+      "age_months": 25
+    },
+    {
+      "battery_v": 3.984,
+      "temp_c": 24.1,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -81,
+      "age_months": 2
+    },
+    {
+      "battery_v": 3.95,
+      "temp_c": 38.9,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -62,
+      "age_months": 33
+    },
+    {
+      "battery_v": 3.441,
+      "temp_c": 31.1,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -86,
+      "age_months": 13
+    },
+    {
+      "battery_v": 3.45,
+      "temp_c": 15.8,
+      "rings_per_day": 14,
+      "wifi_rssi_dbm": -79,
+      "age_months": 3
+    },
+    {
+      "battery_v": 3.425,
+      "temp_c": 23.2,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -64,
+      "age_months": 24
+    },
+    {
+      "battery_v": 3.806,
+      "temp_c": 22.7,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -63,
+      "age_months": 27
+    },
+    {
+      "battery_v": 3.433,
+      "temp_c": 26.9,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -83,
+      "age_months": 2
+    },
+    {
+      "battery_v": 3.455,
+      "temp_c": 33.2,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -53,
+      "age_months": 0
+    },
+    {
+      "battery_v": 3.464,
+      "temp_c": 15.2,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -50,
+      "age_months": 17
+    },
+    {
+      "battery_v": 4.097,
+      "temp_c": 20.0,
+      "rings_per_day": 21,
+      "wifi_rssi_dbm": -62,
+      "age_months": 27
+    },
+    {
+      "battery_v": 3.729,
+      "temp_c": 28.4,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -46,
+      "age_months": 11
+    },
+    {
+      "battery_v": 3.426,
+      "temp_c": 28.1,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -73,
+      "age_months": 11
+    },
+    {
+      "battery_v": 3.934,
+      "temp_c": 30.3,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -50,
+      "age_months": 20
+    },
+    {
+      "battery_v": 3.77,
+      "temp_c": 29.6,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -62,
+      "age_months": 7
+    },
+    {
+      "battery_v": 4.092,
+      "temp_c": 28.3,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -57,
+      "age_months": 30
+    },
+    {
+      "battery_v": 3.525,
+      "temp_c": 24.2,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -52,
+      "age_months": 11
+    },
+    {
+      "battery_v": 3.943,
+      "temp_c": 36.4,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -65,
+      "age_months": 0
+    },
+    {
+      "battery_v": 3.721,
+      "temp_c": 21.0,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -66,
+      "age_months": 1
+    },
+    {
+      "battery_v": 3.472,
+      "temp_c": 38.6,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -71,
+      "age_months": 29
+    },
+    {
+      "battery_v": 4.129,
+      "temp_c": 37.5,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -75,
+      "age_months": 3
+    },
+    {
+      "battery_v": 4.117,
+      "temp_c": 36.3,
+      "rings_per_day": 12,
+      "wifi_rssi_dbm": -87,
+      "age_months": 10
+    },
+    {
+      "battery_v": 3.986,
+      "temp_c": 40.3,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -81,
+      "age_months": 17
+    },
+    {
+      "battery_v": 3.585,
+      "temp_c": 26.7,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -75,
+      "age_months": 28
+    },
+    {
+      "battery_v": 3.351,
+      "temp_c": 42.3,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -83,
+      "age_months": 25
+    },
+    {
+      "battery_v": 3.982,
+      "temp_c": 32.8,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -80,
+      "age_months": 23
+    },
+    {
+      "battery_v": 3.921,
+      "temp_c": 26.9,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -75,
+      "age_months": 7
+    },
+    {
+      "battery_v": 3.774,
+      "temp_c": 14.7,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -87,
+      "age_months": 19
+    },
+    {
+      "battery_v": 3.726,
+      "temp_c": 18.4,
+      "rings_per_day": 16,
+      "wifi_rssi_dbm": -83,
+      "age_months": 34
+    },
+    {
+      "battery_v": 3.899,
+      "temp_c": 34.6,
+      "rings_per_day": 12,
+      "wifi_rssi_dbm": -74,
+      "age_months": 30
+    },
+    {
+      "battery_v": 3.641,
+      "temp_c": 23.6,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -54,
+      "age_months": 33
+    },
+    {
+      "battery_v": 3.787,
+      "temp_c": 33.9,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -48,
+      "age_months": 20
+    },
+    {
+      "battery_v": 3.683,
+      "temp_c": 22.6,
+      "rings_per_day": 12,
+      "wifi_rssi_dbm": -72,
+      "age_months": 23
+    },
+    {
+      "battery_v": 3.442,
+      "temp_c": 35.5,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -62,
+      "age_months": 28
+    },
+    {
+      "battery_v": 3.76,
+      "temp_c": 33.8,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -79,
+      "age_months": 21
+    },
+    {
+      "battery_v": 3.421,
+      "temp_c": 34.5,
+      "rings_per_day": 16,
+      "wifi_rssi_dbm": -47,
+      "age_months": 10
+    },
+    {
+      "battery_v": 3.353,
+      "temp_c": 14.8,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -86,
+      "age_months": 13
+    },
+    {
+      "battery_v": 3.511,
+      "temp_c": 23.2,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -81,
+      "age_months": 12
+    },
+    {
+      "battery_v": 4.08,
+      "temp_c": 34.6,
+      "rings_per_day": 0,
+      "wifi_rssi_dbm": -52,
+      "age_months": 25
+    },
+    {
+      "battery_v": 4.121,
+      "temp_c": 25.4,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -53,
+      "age_months": 25
+    },
+    {
+      "battery_v": 3.404,
+      "temp_c": 20.9,
+      "rings_per_day": 11,
+      "wifi_rssi_dbm": -60,
+      "age_months": 19
+    },
+    {
+      "battery_v": 3.957,
+      "temp_c": 28.3,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -66,
+      "age_months": 11
+    },
+    {
+      "battery_v": 3.698,
+      "temp_c": 30.5,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -75,
+      "age_months": 3
+    },
+    {
+      "battery_v": 3.766,
+      "temp_c": 25.1,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -62,
+      "age_months": 9
+    },
+    {
+      "battery_v": 3.537,
+      "temp_c": 25.3,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -69,
+      "age_months": 35
+    },
+    {
+      "battery_v": 3.599,
+      "temp_c": 35.2,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -63,
+      "age_months": 20
+    },
+    {
+      "battery_v": 3.705,
+      "temp_c": 26.5,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -57,
+      "age_months": 2
+    },
+    {
+      "battery_v": 3.499,
+      "temp_c": 20.6,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -64,
+      "age_months": 24
+    },
+    {
+      "battery_v": 4.162,
+      "temp_c": 46.0,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -64,
+      "age_months": 8
+    },
+    {
+      "battery_v": 3.564,
+      "temp_c": 22.6,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -59,
+      "age_months": 16
+    },
+    {
+      "battery_v": 4.114,
+      "temp_c": 23.9,
+      "rings_per_day": 10,
+      "wifi_rssi_dbm": -54,
+      "age_months": 3
+    },
+    {
+      "battery_v": 4.099,
+      "temp_c": 27.6,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -67,
+      "age_months": 30
+    },
+    {
+      "battery_v": 3.846,
+      "temp_c": 21.1,
+      "rings_per_day": 14,
+      "wifi_rssi_dbm": -74,
+      "age_months": 24
+    },
+    {
+      "battery_v": 3.911,
+      "temp_c": 26.5,
+      "rings_per_day": 10,
+      "wifi_rssi_dbm": -57,
+      "age_months": 20
+    },
+    {
+      "battery_v": 4.056,
+      "temp_c": 38.3,
+      "rings_per_day": 16,
+      "wifi_rssi_dbm": -62,
+      "age_months": 14
+    },
+    {
+      "battery_v": 3.924,
+      "temp_c": 28.6,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -66,
+      "age_months": 35
+    },
+    {
+      "battery_v": 3.854,
+      "temp_c": 27.5,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -66,
+      "age_months": 1
+    },
+    {
+      "battery_v": 3.797,
+      "temp_c": 40.3,
+      "rings_per_day": 11,
+      "wifi_rssi_dbm": -88,
+      "age_months": 23
+    },
+    {
+      "battery_v": 4.153,
+      "temp_c": 25.7,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -76,
+      "age_months": 14
+    },
+    {
+      "battery_v": 3.362,
+      "temp_c": 33.4,
+      "rings_per_day": 11,
+      "wifi_rssi_dbm": -70,
+      "age_months": 20
+    },
+    {
+      "battery_v": 4.063,
+      "temp_c": 24.3,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -52,
+      "age_months": 2
+    },
+    {
+      "battery_v": 3.493,
+      "temp_c": 36.3,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -55,
+      "age_months": 14
+    },
+    {
+      "battery_v": 3.942,
+      "temp_c": 42.1,
+      "rings_per_day": 24,
+      "wifi_rssi_dbm": -73,
+      "age_months": 13
+    },
+    {
+      "battery_v": 3.408,
+      "temp_c": 29.2,
+      "rings_per_day": 14,
+      "wifi_rssi_dbm": -61,
+      "age_months": 3
+    },
+    {
+      "battery_v": 3.786,
+      "temp_c": 20.9,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -75,
+      "age_months": 24
+    },
+    {
+      "battery_v": 3.847,
+      "temp_c": 24.9,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -82,
+      "age_months": 27
+    },
+    {
+      "battery_v": 3.578,
+      "temp_c": 34.7,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -82,
+      "age_months": 34
+    },
+    {
+      "battery_v": 3.744,
+      "temp_c": 31.6,
+      "rings_per_day": 14,
+      "wifi_rssi_dbm": -85,
+      "age_months": 19
+    },
+    {
+      "battery_v": 3.683,
+      "temp_c": 28.6,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -66,
+      "age_months": 23
+    },
+    {
+      "battery_v": 3.982,
+      "temp_c": 39.1,
+      "rings_per_day": 21,
+      "wifi_rssi_dbm": -74,
+      "age_months": 34
+    },
+    {
+      "battery_v": 4.084,
+      "temp_c": 29.1,
+      "rings_per_day": 12,
+      "wifi_rssi_dbm": -59,
+      "age_months": 19
+    },
+    {
+      "battery_v": 3.899,
+      "temp_c": 35.9,
+      "rings_per_day": 11,
+      "wifi_rssi_dbm": -64,
+      "age_months": 3
+    },
+    {
+      "battery_v": 4.164,
+      "temp_c": 38.0,
+      "rings_per_day": 1,
+      "wifi_rssi_dbm": -62,
+      "age_months": 33
+    },
+    {
+      "battery_v": 3.698,
+      "temp_c": 33.4,
+      "rings_per_day": 16,
+      "wifi_rssi_dbm": -45,
+      "age_months": 33
+    },
+    {
+      "battery_v": 3.721,
+      "temp_c": 34.8,
+      "rings_per_day": 10,
+      "wifi_rssi_dbm": -67,
+      "age_months": 17
+    },
+    {
+      "battery_v": 3.456,
+      "temp_c": 28.4,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -72,
+      "age_months": 33
+    },
+    {
+      "battery_v": 3.648,
+      "temp_c": 27.0,
+      "rings_per_day": 11,
+      "wifi_rssi_dbm": -59,
+      "age_months": 10
+    },
+    {
+      "battery_v": 3.947,
+      "temp_c": 31.9,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -67,
+      "age_months": 13
+    },
+    {
+      "battery_v": 3.984,
+      "temp_c": 28.6,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -49,
+      "age_months": 18
+    },
+    {
+      "battery_v": 4.102,
+      "temp_c": 29.0,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -53,
+      "age_months": 11
+    },
+    {
+      "battery_v": 4.172,
+      "temp_c": 19.9,
+      "rings_per_day": 1,
+      "wifi_rssi_dbm": -60,
+      "age_months": 5
+    },
+    {
+      "battery_v": 3.793,
+      "temp_c": 40.2,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -77,
+      "age_months": 16
+    },
+    {
+      "battery_v": 3.889,
+      "temp_c": 42.1,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -71,
+      "age_months": 16
+    },
+    {
+      "battery_v": 3.537,
+      "temp_c": 26.1,
+      "rings_per_day": 10,
+      "wifi_rssi_dbm": -62,
+      "age_months": 30
+    },
+    {
+      "battery_v": 4.18,
+      "temp_c": 33.0,
+      "rings_per_day": 14,
+      "wifi_rssi_dbm": -66,
+      "age_months": 7
+    },
+    {
+      "battery_v": 3.457,
+      "temp_c": 18.1,
+      "rings_per_day": 12,
+      "wifi_rssi_dbm": -56,
+      "age_months": 18
+    },
+    {
+      "battery_v": 4.196,
+      "temp_c": 32.0,
+      "rings_per_day": 23,
+      "wifi_rssi_dbm": -81,
+      "age_months": 28
+    },
+    {
+      "battery_v": 4.022,
+      "temp_c": 21.3,
+      "rings_per_day": 16,
+      "wifi_rssi_dbm": -50,
+      "age_months": 36
+    },
+    {
+      "battery_v": 3.674,
+      "temp_c": 37.5,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -78,
+      "age_months": 29
+    },
+    {
+      "battery_v": 4.13,
+      "temp_c": 29.8,
+      "rings_per_day": 16,
+      "wifi_rssi_dbm": -61,
+      "age_months": 31
+    },
+    {
+      "battery_v": 3.602,
+      "temp_c": 24.6,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -61,
+      "age_months": 21
+    },
+    {
+      "battery_v": 4.141,
+      "temp_c": 30.7,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -63,
+      "age_months": 31
+    },
+    {
+      "battery_v": 3.641,
+      "temp_c": 26.8,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -52,
+      "age_months": 20
+    },
+    {
+      "battery_v": 3.385,
+      "temp_c": 21.4,
+      "rings_per_day": 10,
+      "wifi_rssi_dbm": -81,
+      "age_months": 7
+    },
+    {
+      "battery_v": 3.564,
+      "temp_c": 23.0,
+      "rings_per_day": 25,
+      "wifi_rssi_dbm": -72,
+      "age_months": 23
+    },
+    {
+      "battery_v": 3.907,
+      "temp_c": 45.0,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -75,
+      "age_months": 13
+    },
+    {
+      "battery_v": 3.824,
+      "temp_c": 27.1,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -77,
+      "age_months": 10
+    },
+    {
+      "battery_v": 3.631,
+      "temp_c": 30.4,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -60,
+      "age_months": 9
+    },
+    {
+      "battery_v": 3.467,
+      "temp_c": 36.3,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -59,
+      "age_months": 5
+    },
+    {
+      "battery_v": 3.672,
+      "temp_c": 29.9,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -80,
+      "age_months": 9
+    },
+    {
+      "battery_v": 3.708,
+      "temp_c": 29.5,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -87,
+      "age_months": 33
+    },
+    {
+      "battery_v": 4.014,
+      "temp_c": 32.2,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -76,
+      "age_months": 2
+    },
+    {
+      "battery_v": 3.561,
+      "temp_c": 25.7,
+      "rings_per_day": 14,
+      "wifi_rssi_dbm": -49,
+      "age_months": 36
+    },
+    {
+      "battery_v": 3.902,
+      "temp_c": 34.2,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -85,
+      "age_months": 29
+    },
+    {
+      "battery_v": 3.589,
+      "temp_c": 30.8,
+      "rings_per_day": 11,
+      "wifi_rssi_dbm": -66,
+      "age_months": 9
+    },
+    {
+      "battery_v": 3.698,
+      "temp_c": 24.6,
+      "rings_per_day": 11,
+      "wifi_rssi_dbm": -51,
+      "age_months": 6
+    },
+    {
+      "battery_v": 4.195,
+      "temp_c": 28.7,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -78,
+      "age_months": 2
+    },
+    {
+      "battery_v": 4.05,
+      "temp_c": 38.5,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -49,
+      "age_months": 16
+    },
+    {
+      "battery_v": 3.962,
+      "temp_c": 12.4,
+      "rings_per_day": 12,
+      "wifi_rssi_dbm": -58,
+      "age_months": 25
+    },
+    {
+      "battery_v": 3.361,
+      "temp_c": 29.7,
+      "rings_per_day": 19,
+      "wifi_rssi_dbm": -78,
+      "age_months": 6
+    },
+    {
+      "battery_v": 3.58,
+      "temp_c": 35.1,
+      "rings_per_day": 0,
+      "wifi_rssi_dbm": -61,
+      "age_months": 1
+    },
+    {
+      "battery_v": 3.791,
+      "temp_c": 33.3,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -69,
+      "age_months": 30
+    },
+    {
+      "battery_v": 3.951,
+      "temp_c": 32.1,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -80,
+      "age_months": 29
+    },
+    {
+      "battery_v": 3.556,
+      "temp_c": 25.6,
+      "rings_per_day": 12,
+      "wifi_rssi_dbm": -45,
+      "age_months": 31
+    },
+    {
+      "battery_v": 3.386,
+      "temp_c": 26.8,
+      "rings_per_day": 26,
+      "wifi_rssi_dbm": -64,
+      "age_months": 6
+    },
+    {
+      "battery_v": 3.416,
+      "temp_c": 30.7,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -48,
+      "age_months": 3
+    },
+    {
+      "battery_v": 4.006,
+      "temp_c": 23.1,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -66,
+      "age_months": 0
+    },
+    {
+      "battery_v": 4.03,
+      "temp_c": 38.0,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -71,
+      "age_months": 17
+    },
+    {
+      "battery_v": 3.677,
+      "temp_c": 30.4,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -64,
+      "age_months": 4
+    },
+    {
+      "battery_v": 3.386,
+      "temp_c": 19.8,
+      "rings_per_day": 1,
+      "wifi_rssi_dbm": -80,
+      "age_months": 25
+    },
+    {
+      "battery_v": 3.551,
+      "temp_c": 23.8,
+      "rings_per_day": 1,
+      "wifi_rssi_dbm": -50,
+      "age_months": 35
+    },
+    {
+      "battery_v": 3.616,
+      "temp_c": 26.7,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -59,
+      "age_months": 24
+    },
+    {
+      "battery_v": 3.798,
+      "temp_c": 22.3,
+      "rings_per_day": 1,
+      "wifi_rssi_dbm": -59,
+      "age_months": 18
+    },
+    {
+      "battery_v": 3.706,
+      "temp_c": 45.4,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -68,
+      "age_months": 24
+    },
+    {
+      "battery_v": 4.182,
+      "temp_c": 31.9,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -75,
+      "age_months": 24
+    },
+    {
+      "battery_v": 3.506,
+      "temp_c": 27.6,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -71,
+      "age_months": 22
+    },
+    {
+      "battery_v": 3.634,
+      "temp_c": 22.8,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -56,
+      "age_months": 36
+    },
+    {
+      "battery_v": 4.089,
+      "temp_c": 35.6,
+      "rings_per_day": 10,
+      "wifi_rssi_dbm": -46,
+      "age_months": 5
+    },
+    {
+      "battery_v": 3.564,
+      "temp_c": 20.6,
+      "rings_per_day": 1,
+      "wifi_rssi_dbm": -52,
+      "age_months": 19
+    },
+    {
+      "battery_v": 3.418,
+      "temp_c": 31.9,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -48,
+      "age_months": 18
+    },
+    {
+      "battery_v": 3.621,
+      "temp_c": 24.5,
+      "rings_per_day": 14,
+      "wifi_rssi_dbm": -51,
+      "age_months": 5
+    },
+    {
+      "battery_v": 3.841,
+      "temp_c": 30.8,
+      "rings_per_day": 11,
+      "wifi_rssi_dbm": -45,
+      "age_months": 35
+    },
+    {
+      "battery_v": 3.698,
+      "temp_c": 42.0,
+      "rings_per_day": 25,
+      "wifi_rssi_dbm": -82,
+      "age_months": 7
+    },
+    {
+      "battery_v": 3.863,
+      "temp_c": 40.1,
+      "rings_per_day": 10,
+      "wifi_rssi_dbm": -71,
+      "age_months": 8
+    },
+    {
+      "battery_v": 3.97,
+      "temp_c": 30.0,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -74,
+      "age_months": 4
+    },
+    {
+      "battery_v": 3.686,
+      "temp_c": 36.7,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -62,
+      "age_months": 12
+    },
+    {
+      "battery_v": 3.378,
+      "temp_c": 38.9,
+      "rings_per_day": 1,
+      "wifi_rssi_dbm": -83,
+      "age_months": 16
+    },
+    {
+      "battery_v": 4.186,
+      "temp_c": 30.8,
+      "rings_per_day": 11,
+      "wifi_rssi_dbm": -69,
+      "age_months": 36
+    },
+    {
+      "battery_v": 3.766,
+      "temp_c": 30.2,
+      "rings_per_day": 12,
+      "wifi_rssi_dbm": -87,
+      "age_months": 28
+    },
+    {
+      "battery_v": 3.618,
+      "temp_c": 33.4,
+      "rings_per_day": 1,
+      "wifi_rssi_dbm": -78,
+      "age_months": 31
+    },
+    {
+      "battery_v": 4.129,
+      "temp_c": 29.5,
+      "rings_per_day": 21,
+      "wifi_rssi_dbm": -73,
+      "age_months": 14
+    },
+    {
+      "battery_v": 3.999,
+      "temp_c": 18.1,
+      "rings_per_day": 10,
+      "wifi_rssi_dbm": -54,
+      "age_months": 3
+    },
+    {
+      "battery_v": 4.002,
+      "temp_c": 36.5,
+      "rings_per_day": 21,
+      "wifi_rssi_dbm": -85,
+      "age_months": 36
+    },
+    {
+      "battery_v": 4.181,
+      "temp_c": 28.2,
+      "rings_per_day": 10,
+      "wifi_rssi_dbm": -65,
+      "age_months": 23
+    },
+    {
+      "battery_v": 3.557,
+      "temp_c": 35.4,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -49,
+      "age_months": 27
+    },
+    {
+      "battery_v": 4.061,
+      "temp_c": 26.7,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -61,
+      "age_months": 32
+    },
+    {
+      "battery_v": 3.866,
+      "temp_c": 42.0,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -59,
+      "age_months": 35
+    },
+    {
+      "battery_v": 3.595,
+      "temp_c": 29.2,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -86,
+      "age_months": 31
+    },
+    {
+      "battery_v": 3.879,
+      "temp_c": 30.0,
+      "rings_per_day": 9,
+      "wifi_rssi_dbm": -75,
+      "age_months": 2
+    },
+    {
+      "battery_v": 3.831,
+      "temp_c": 41.3,
+      "rings_per_day": 11,
+      "wifi_rssi_dbm": -66,
+      "age_months": 22
+    },
+    {
+      "battery_v": 3.915,
+      "temp_c": 28.0,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -61,
+      "age_months": 34
+    },
+    {
+      "battery_v": 3.618,
+      "temp_c": 28.2,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -49,
+      "age_months": 29
+    },
+    {
+      "battery_v": 3.408,
+      "temp_c": 25.9,
+      "rings_per_day": 15,
+      "wifi_rssi_dbm": -67,
+      "age_months": 8
+    },
+    {
+      "battery_v": 4.076,
+      "temp_c": 35.0,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -71,
+      "age_months": 18
+    },
+    {
+      "battery_v": 3.623,
+      "temp_c": 38.8,
+      "rings_per_day": 0,
+      "wifi_rssi_dbm": -57,
+      "age_months": 1
+    },
+    {
+      "battery_v": 3.858,
+      "temp_c": 38.1,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -51,
+      "age_months": 8
+    },
+    {
+      "battery_v": 3.841,
+      "temp_c": 27.2,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -81,
+      "age_months": 23
+    },
+    {
+      "battery_v": 4.137,
+      "temp_c": 32.5,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -81,
+      "age_months": 12
+    },
+    {
+      "battery_v": 3.536,
+      "temp_c": 24.7,
+      "rings_per_day": 22,
+      "wifi_rssi_dbm": -59,
+      "age_months": 21
+    },
+    {
+      "battery_v": 3.821,
+      "temp_c": 23.0,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -76,
+      "age_months": 3
+    },
+    {
+      "battery_v": 3.501,
+      "temp_c": 39.1,
+      "rings_per_day": 1,
+      "wifi_rssi_dbm": -80,
+      "age_months": 6
+    },
+    {
+      "battery_v": 3.497,
+      "temp_c": 28.0,
+      "rings_per_day": 14,
+      "wifi_rssi_dbm": -61,
+      "age_months": 24
+    },
+    {
+      "battery_v": 4.005,
+      "temp_c": 36.1,
+      "rings_per_day": 5,
+      "wifi_rssi_dbm": -81,
+      "age_months": 5
+    },
+    {
+      "battery_v": 3.861,
+      "temp_c": 23.6,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -68,
+      "age_months": 2
+    },
+    {
+      "battery_v": 3.487,
+      "temp_c": 12.2,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -66,
+      "age_months": 1
+    },
+    {
+      "battery_v": 4.145,
+      "temp_c": 20.1,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -86,
+      "age_months": 25
+    },
+    {
+      "battery_v": 4.14,
+      "temp_c": 28.4,
+      "rings_per_day": 23,
+      "wifi_rssi_dbm": -60,
+      "age_months": 22
+    },
+    {
+      "battery_v": 4.055,
+      "temp_c": 19.2,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -84,
+      "age_months": 28
+    },
+    {
+      "battery_v": 3.896,
+      "temp_c": 27.0,
+      "rings_per_day": 1,
+      "wifi_rssi_dbm": -54,
+      "age_months": 19
+    },
+    {
+      "battery_v": 4.046,
+      "temp_c": 24.0,
+      "rings_per_day": 4,
+      "wifi_rssi_dbm": -82,
+      "age_months": 22
+    },
+    {
+      "battery_v": 3.697,
+      "temp_c": 31.5,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -70,
+      "age_months": 0
+    },
+    {
+      "battery_v": 3.651,
+      "temp_c": 33.6,
+      "rings_per_day": 12,
+      "wifi_rssi_dbm": -50,
+      "age_months": 35
+    },
+    {
+      "battery_v": 4.103,
+      "temp_c": 17.9,
+      "rings_per_day": 11,
+      "wifi_rssi_dbm": -57,
+      "age_months": 14
+    },
+    {
+      "battery_v": 3.896,
+      "temp_c": 36.5,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -65,
+      "age_months": 16
+    },
+    {
+      "battery_v": 4.177,
+      "temp_c": 33.8,
+      "rings_per_day": 2,
+      "wifi_rssi_dbm": -52,
+      "age_months": 7
+    },
+    {
+      "battery_v": 4.112,
+      "temp_c": 29.1,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -54,
+      "age_months": 25
+    },
+    {
+      "battery_v": 3.914,
+      "temp_c": 39.8,
+      "rings_per_day": 3,
+      "wifi_rssi_dbm": -74,
+      "age_months": 26
+    },
+    {
+      "battery_v": 3.778,
+      "temp_c": 21.9,
+      "rings_per_day": 17,
+      "wifi_rssi_dbm": -66,
+      "age_months": 30
+    },
+    {
+      "battery_v": 3.528,
+      "temp_c": 40.6,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -87,
+      "age_months": 3
+    },
+    {
+      "battery_v": 3.366,
+      "temp_c": 14.6,
+      "rings_per_day": 17,
+      "wifi_rssi_dbm": -50,
+      "age_months": 18
+    },
+    {
+      "battery_v": 3.979,
+      "temp_c": 30.7,
+      "rings_per_day": 14,
+      "wifi_rssi_dbm": -59,
+      "age_months": 20
+    },
+    {
+      "battery_v": 3.54,
+      "temp_c": 13.1,
+      "rings_per_day": 7,
+      "wifi_rssi_dbm": -61,
+      "age_months": 25
+    },
+    {
+      "battery_v": 3.818,
+      "temp_c": 23.0,
+      "rings_per_day": 6,
+      "wifi_rssi_dbm": -75,
+      "age_months": 18
+    },
+    {
+      "battery_v": 3.831,
+      "temp_c": 31.5,
+      "rings_per_day": 10,
+      "wifi_rssi_dbm": -46,
+      "age_months": 8
+    },
+    {
+      "battery_v": 3.815,
+      "temp_c": 40.5,
+      "rings_per_day": 8,
+      "wifi_rssi_dbm": -70,
+      "age_months": 25
+    }
+  ]
+}

@@ -3,6 +3,7 @@
 Run from the repository root: python experiments/verify_mission3.py
 """
 import asyncio
+import argparse
 import csv
 import hashlib
 import json
@@ -22,10 +23,17 @@ ROOT = Path("artifacts/team_25/mission3")
 EXAMPLE = dict(battery_v=3.86, temp_c=28.0, rings_per_day=5,
                wifi_rssi_dbm=-66, age_months=22)
 STAGES = {"parse", "normalise", "inference", "build", "server_total"}
+PUBLIC_URL = None
+PUBLIC_SESSION = None
 
 
 async def request(path, method="GET", body=None, raw=None):
     payload = raw if raw is not None else (b"" if body is None else json.dumps(body).encode())
+    if PUBLIC_URL:
+        response = PUBLIC_SESSION.request(method, PUBLIC_URL + path, data=payload,
+                                          headers={"Content-Type": "application/json"},
+                                          timeout=30, allow_redirects=False)
+        return response.status_code, response.text
     received = False
     messages = []
 
@@ -66,7 +74,8 @@ async def main():
             log.write(message + "\n")
             log.flush()
 
-        record("\nCORRECTNESS VERIFICATION — fresh in-process ASGI requests; not latency benchmarks")
+        transport = "real public HTTP requests" if PUBLIC_URL else "fresh in-process ASGI requests"
+        record(f"\nCORRECTNESS VERIFICATION — {transport}; not latency benchmarks")
         reference = json.loads(Path("artifacts/team_25/mission2/verified_sha256.json").read_text())
         for name in ("model/model.pt", "model/config.json"):
             assert hashlib.sha256(Path(name).read_bytes()).hexdigest() == reference[name]
@@ -94,7 +103,7 @@ async def main():
         assert all(("minimum" in props[f] or "exclusiveMinimum" in props[f]) and
                    ("maximum" in props[f] or "exclusiveMaximum" in props[f]) for f in FEATURES)
         (ROOT / "openapi.json").write_text(json.dumps(schema, indent=2) + "\n")
-        record("PASS: /docs HTML and /openapi.json return HTTP 200; Swagger has request bodies, valid model references, examples and bounds for all five inputs. Interactive browser execution is pending (no browser automation tool available).")
+        record("PASS: /docs HTML and /openapi.json return HTTP 200; Swagger has request bodies, valid model references, examples and bounds for all five inputs. Interactive browser execution is tracked separately by swagger_mission3.py.")
 
         validation_cases = []
         for field, value in dict(battery_v=0, temp_c=-127, rings_per_day=-1,
@@ -183,7 +192,7 @@ async def main():
         summary = dict(count=50, distinct_inputs=50, absolute_tolerance_days=tolerance,
                        relative_tolerance=0, maximum_absolute_difference_days=float(delta.max()),
                        same_order=True, reversed_order_also_checked=True,
-                       transport="fresh in-process ASGI; no latency measurement",
+                       transport=transport + "; no latency measurement",
                        health=health, model_info=info)
         (ROOT / "correctness_summary.json").write_text(json.dumps(summary, indent=2) + "\n")
         record(f'PASS: separate 50-distinct-reading agreement/order check; absolute tolerance={tolerance} days, relative tolerance=0, maximum observed difference={delta.max():.8f} days. Reversed input order also preserved.')
@@ -191,4 +200,12 @@ async def main():
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--url", help="Optional real public endpoint; otherwise use in-process ASGI")
+    args = parser.parse_args()
+    if args.url:
+        import requests
+        PUBLIC_URL = args.url.rstrip("/")
+        PUBLIC_SESSION = requests.Session()
+        ROOT = ROOT / "public_correctness"
     asyncio.run(main())

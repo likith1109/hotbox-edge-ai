@@ -48,3 +48,77 @@ Installed optional Playwright locally and successfully launched system Chrome wi
 Prepared experiments/benchmark_mission3.py for untouched client 200-request runs in the required locations, identical 400 Team 25 readings under warmed keep-alive connections, full summaries and a single-request additive timing breakdown. Prepared experiments/swagger_mission3.py for actual Try it out/Execute browser checks. Scripts pass syntax checks; they have NOT been exercised end to end against the unavailable endpoint.
 Confirmed at least 400 distinct eligible Team 25 sensor readings exist, and client/bench.py is unchanged. No benchmark data, percentile values or elapsed-time comparison results were invented.
 Mission 3 remains incomplete solely pending container access and execution of the prepared deployment/benchmark/browser work. Exact current status and commands are saved in pending_checks.json.
+
+ACCESS RESTORED AND LIVE VERIFICATION
+SSH succeeds after the user installed OpenSSH. The default SSH directory is /home/vscode; repository is /workspaces/hotbox-edge-ai.
+Codespace Python is 3.11.18; torch 2.15.0+cpu, FastAPI 0.165.0, Uvicorn 0.54.0, NumPy 2.4.6 import successfully. Package details are in codespace_localhost/packages.log.
+Remote HTTPS git pull failed for lack of Git credentials. Transferred a verified full-history Git bundle over SSH stdin, then fetched and fast-forwarded the clean checkout from c26c746 to e0730c9. No GitHub credentials were transferred. The scp-based gh cp attempt failed on quoted SFTP paths; the SSH stdin transfer succeeded.
+Deployment log records selected weights/config/client/application hashes, exact commit, Uvicorn PID and successful local health. Source/hashes and URL are in deployment.json. Uvicorn started detached, bound to 0.0.0.0:8000.
+Port visibility had reset to Private, causing an unauthenticated HTTP 302. Restored Public visibility. Public /health, /model_info and /docs then returned HTTP 200 without login; evidence: public_endpoint_verified.json.
+Ran the complete correctness checker against the real public HTTP endpoint. All field-invalid, nonfinite, malformed JSON and batch-bound tests passed; plausible just-outside-training readings passed. Separate 50-distinct-reading agreement/order check passed with maximum difference 0 days at atol=0.01 days, rtol=0, and reversed ordering also verified. Evidence: public_correctness/ and public_correctness_runner.log.
+The public correctness checker’s historical output line about unavailable browser automation is stale; browser support was subsequently verified and the source message corrected. Actual browser results are recorded next.
+Initial Swagger attempt stopped at GitHub’s one-time Codespaces Access Port warning. Recorded its actual page, continued to our verified Codespace, then executed all three glitches through Swagger controls. All returned HTTP 422 with the expected field in the error. Evidence: swagger/results.json and battery_v_422.png, temp_c_422.png, wifi_rssi_dbm_422.png; raw output swagger_runner.log.
+Inside-Codespace benchmark initially stopped before sending requests because SSH does not export CODESPACE_NAME. Repeated the actual SSH-hosted run with the verified Codespace name explicitly supplied; this remains a real inside-Codespace localhost run. Preserved the initial guard output in codespace_environment_guard.log.
+Retrieved the inside-Codespace raw log, CSV and summary over SSH without changing raw CSV bytes. Public keep-alive run completed; no-keepalive and 400-reading comparison are currently running sequentially.
+
+FINAL EVIDENCE CHECKS
+PASS: changed helper syntax.
+PASS: untouched client and exact selected model/config hashes.
+PASS public_keepalive: all 200 replies recorded in order; first request and every p50/p95/p99 independently reproduce from CSV, excluding first request for percentiles; correct endpoint/location/connection flags.
+PASS public_no_keepalive: all 200 replies recorded in order; first request and every p50/p95/p99 independently reproduce from CSV, excluding first request for percentiles; correct endpoint/location/connection flags.
+PASS codespace_localhost: all 200 replies recorded in order; first request and every p50/p95/p99 independently reproduce from CSV, excluding first request for percentiles; correct endpoint/location/connection flags.
+PASS: identical 400 distinct Team 25 inputs and source-index order; 400 single results match batch within 0.01 days; timing setup and speedup saved.
+PASS: separate real-public-HTTP 50-distinct-reading agreement/order evidence, observed max difference 0 days, atol 0.01 days.
+PASS: three actual Swagger HTTP 422 responses and decodable screenshots; timing diagram decodes.
+PASS: representative diagram components are from one actual CSV row and add exactly to its measured round trip.
+
+MEASURED BENCHMARK RESULTS — milliseconds, 200 requests per run
+Percentiles exclude the first prediction request, exactly as untouched client/bench.py specifies. First-request stage values and all p50/p95/p99 values are also saved in benchmark_metrics.csv and benchmark_summaries.json; original console logs and CSV bytes are retained under each run directory.
+
+public_keepalive
+metric | first | p50 | p95 | p99 (ms)
+round_trip | 154.790625005 | 37.007641993 | 138.346958905 | 205.047642908
+parse | 0.079000000 | 0.024000000 | 0.051100000 | 0.055020000
+normalise | 0.057000000 | 0.023000000 | 0.054100000 | 0.088160000
+inference | 0.238000000 | 0.121000000 | 0.263400000 | 0.309240000
+build | 0.018000000 | 0.014000000 | 0.022000000 | 0.041020000
+server_total | 0.405000000 | 0.201000000 | 0.409200000 | 0.462720000
+network_and_framework | 154.385625005 | 36.822617003 | 138.055858905 | 204.805922908
+
+public_no_keepalive
+metric | first | p50 | p95 | p99 (ms)
+round_trip | 285.980914996 | 254.907023002 | 351.120321307 | 563.311497803
+parse | 0.082000000 | 0.043000000 | 0.059000000 | 0.073120000
+normalise | 0.055000000 | 0.044000000 | 0.062000000 | 0.083320000
+inference | 0.238000000 | 0.213000000 | 0.283100000 | 0.332360000
+build | 0.020000000 | 0.018000000 | 0.025000000 | 0.029340000
+server_total | 0.409000000 | 0.330000000 | 0.436000000 | 0.488960000
+network_and_framework | 285.571914996 | 254.555023002 | 350.798921307 | 562.831697803
+
+codespace_localhost
+metric | first | p50 | p95 | p99 (ms)
+round_trip | 423.924687000 | 1.217944000 | 1.402155800 | 2.115873660
+parse | 0.049000000 | 0.018000000 | 0.086100000 | 0.090060000
+normalise | 1.430000000 | 0.017000000 | 0.022000000 | 0.052020000
+inference | 419.785000000 | 0.086000000 | 0.126100000 | 0.133120000
+build | 0.340000000 | 0.011000000 | 0.013000000 | 0.016020000
+server_total | 421.634000000 | 0.145000000 | 0.220300000 | 0.256320000
+network_and_framework | 2.290687000 | 1.061962000 | 1.217322900 | 1.935013660
+
+INTERPRETATION
+Compared with the user guesses: public keep-alive median inference 0.121 ms versus 1 ms predicted; median round trip 37.007642 ms versus 250 ms predicted. The differences are -0.879 ms and -212.992358 ms respectively.
+No-keepalive median RTT 254.907023 ms is 6.89 times the keep-alive median. Reopening connections adds TCP/TLS/HTTP setup cost; these aggregate measurements do not isolate individual protocol costs. Server work remains sub-millisecond for typical requests.
+Inside-Codespace localhost median RTT 1.217944 ms removes the public tunnel and laptop network path, though framework/socket/client overhead remains. Its first request had 419.785 ms in inference and a 423.924687 ms RTT; warm median inference was 0.086 ms. This is consistent with first-use overhead, but no profile isolates its exact cause. The public runs occurred later against the already warmed process; their first requests are connection-first observations, not fresh-model cold starts.
+Pre-run expectation supported: network/framework/client residual dominates the representative public request (36.859641993/37.007641993 ms, 99.60%). Inference is the largest internal server stage in the warm medians.
+Representative timing components from actual request index 64: {"parse": 0.019, "normalise": 0.018, "inference": 0.092, "build": 0.011, "server_other": 0.008000000000000007, "network_and_framework": 36.85964199311379}; sum=37.00764199311379 ms, equal to measured RTT. Diagram: timing_breakdown.png. Separate marginal medians were not added together.
+400 identical distinct Team 25 readings: sequential singles 37113.547014000 ms; one batch 181.528824993 ms; measured speedup 204.449883x. Two separate persistent sessions were each warmed by one one-row request, with handshake/warm-up/file I/O outside timers. Singles were sequential and ran first; batch ran second. One trial per arm, so no confidence interval or stable speedup claim.
+Batch amortises repeated network/framework work and executes the network on a matrix. All 400 outputs matched in order within atol=0.01 days, rtol=0; maximum observed difference was 0.009999999999999787 days, one API rounding unit. Different batched float32 accumulation can move a prediction across a rounding boundary. The separate 50-reading check observed exact equality (0 days difference).
+Actual 400-reading inputs, original source indices, per-single timings, batch response and setup are saved under comparison_400/. Synthetic 200-request benchmark inputs are generated by the untouched supplied client as required; all data-file analysis and the 400-reading sample use Team 25 only.
+
+FINAL REVIEW
+Reviewed actual timing diagram and Swagger screenshot. All three 200-request runs contain 200 successful responses and reproduce their saved summaries. Public endpoint, model identity, all five field checks, outside-sample acceptance, both timing routes, 50-reading agreement/order, 400-reading comparison and three real Swagger submissions passed. No Mission 3 checks remain pending.
+Final public /health recheck returned HTTP 200 without authentication: Team 25, 385 parameters, validation MAE 5.31; evidence final_health.json. Port 8000 is still Public. Fetched origin; no teammate divergence.
+Timing boundary clarification: untouched bench.py stops its round_trip timer after HTTP response receipt and before response.json(); the 400-comparison timers include response decoding and client-loop work in both arms.
+Raw supplied-client CSV files retain their original CRLF bytes. Staged whitespace review recognises CR-at-EOL rather than rewriting raw measurements. No application or model changes were made during benchmarking; helper changes only added public correctness transport and handled GitHub’s browser interstitial.
+Ready for ordinary commit/push of completed Mission 3 results. No further user access action is required for this mission.
+Staged review flagged trailing spaces emitted by pip show and trailing blank lines in captured console logs. Preserved these raw .log bytes; excluded only raw .log artifacts from whitespace checking. All source and structured artifacts pass git diff --cached --check with CR-at-EOL recognition for raw client CSVs.

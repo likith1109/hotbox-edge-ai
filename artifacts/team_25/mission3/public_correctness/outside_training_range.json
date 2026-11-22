@@ -1,0 +1,62 @@
+[
+  {
+    "field": "battery_v",
+    "side": "below",
+    "value": 3.3400000000000003,
+    "status": 200
+  },
+  {
+    "field": "battery_v",
+    "side": "above",
+    "value": 4.209,
+    "status": 200
+  },
+  {
+    "field": "temp_c",
+    "side": "below",
+    "value": 7.9,
+    "status": 200
+  },
+  {
+    "field": "temp_c",
+    "side": "above",
+    "value": 46.1,
+    "status": 200
+  },
+  {
+    "field": "rings_per_day",
+    "side": "below",
+    "value": -1.0,
+    "result": "not physically plausible: below zero; tested rejection separately"
+  },
+  {
+    "field": "rings_per_day",
+    "side": "above",
+    "value": 41.0,
+    "status": 200
+  },
+  {
+    "field": "wifi_rssi_dbm",
+    "side": "below",
+    "value": -89.0,
+    "status": 200
+  },
+  {
+    "field": "wifi_rssi_dbm",
+    "side": "above",
+    "value": -44.0,
+    "status": 200
+  },
+  {
+    "field": "age_months",
+    "side": "below",
+    "value": -1.0,
+    "result": "not physically plausible: below zero; tested rejection separately"
+  },
+  {
+    "field": "age_months",
+    "side": "above",
+    "value": 37.0,
+    "status": 200
+  }
+]

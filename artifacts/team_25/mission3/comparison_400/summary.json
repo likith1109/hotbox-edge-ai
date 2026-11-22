@@ -1,0 +1,9 @@
+{
+  "singles_elapsed_ms": 37113.54701399978,
+  "batch_elapsed_ms": 181.52882499271072,
+  "speedup": 204.44988290697123,
+  "count": 400,
+  "absolute_tolerance_days": 0.01,
+  "maximum_prediction_difference_days": 0.009999999999999787,
+  "same_order": true
+}

@@ -1,0 +1,26 @@
+{
+  "codespace": "hotbox-team-25-v66pj7gw7v5q2x6q",
+  "repository_path": "/workspaces/hotbox-edge-ai",
+  "deployed_commit": "e0730c9951afed0170a661ab410acfebb77ff2c9",
+  "public_url": "https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev",
+  "public_port": 8000,
+  "visibility": "public",
+  "server_command": "python -u -m uvicorn app.main:app --host 0.0.0.0 --port 8000",
+  "server_pid_at_start": 3188,
+  "server_log": "/tmp/hotbox-team25-uvicorn.log",
+  "selected_model": {
+    "team": 25,
+    "hidden": [
+      16,
+      16
+    ],
+    "params": 385,
+    "val_mae": 5.31
+  },
+  "sha256": {
+    "model/model.pt": "8772252f4817c0bcd6e64fc21f56d66d45a323216f1420c856467645d2df8e17",
+    "model/config.json": "26a1e2a49b0169f1f4bc63c399be4fee3de34189d3d442f155858d87e9bdfcfd",
+    "app/main.py": "9bd351d517a21930e4c6e120d0567cbe5e2d68c9df294a359c32c4afe517297b",
+    "client/bench.py": "4c2171e8a624299d84c5f59e3cf65cc34fcd4cc09738c53fb29c780f23a42d65"
+  }
+}

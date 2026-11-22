@@ -6,52 +6,36 @@
     "recorded_before_any_latency_benchmark": true
   },
   "codespace_access": {
-    "status": "blocked_missing_ssh_server",
-    "authorization": "codespace scope verified",
+    "status": "passed",
     "name": "hotbox-team-25-v66pj7gw7v5q2x6q",
-    "state": "Available",
-    "web_url": "https://hotbox-team-25-v66pj7gw7v5q2x6q.github.dev",
-    "machine": "basicLinux32gb",
-    "region": "SouthEastAsia",
-    "port_8000_visibility": "public",
+    "ssh": "connected after user installation",
     "public_url": "https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev",
-    "exact_action": "Open the web_url, wait for setup, choose Terminal \u2192 New Terminal, run sudo apt-get update && sudo apt-get install -y openssh-server, then tell Codex it completed.",
-    "diagnostic": "gh codespace ssh failed to start SSH server; gh codespace logs also requires the missing SSH server."
+    "port_8000_visibility": "public",
+    "selected_model_verified": true
   },
   "public_keepalive": {
-    "status": "pending",
-    "location": "laptop",
-    "command": "python client/bench.py --url https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev --n 200",
-    "save": "Run from artifacts/team_25/mission3/public_keepalive with an absolute path to client/bench.py, saving stdout and its bench_*.csv.",
-    "reason": "Endpoint unavailable until the SSH server is installed and Uvicorn is started. Numerical predictions are now recorded.",
-    "prepared_runner": "python experiments/benchmark_mission3.py --location laptop --url https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev"
+    "status": "passed",
+    "artifact": "public_keepalive/summary.json"
   },
   "public_no_keepalive": {
-    "status": "pending",
-    "location": "laptop",
-    "command": "python client/bench.py --url https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev --n 200 --no-keepalive",
-    "reason": "Endpoint unavailable until the SSH server is installed and Uvicorn is started. Numerical predictions are now recorded."
+    "status": "passed",
+    "artifact": "public_no_keepalive/summary.json"
   },
   "codespace_localhost": {
-    "status": "pending",
-    "location": "inside the Codespace",
-    "command": "python client/bench.py --url http://localhost:8000 --n 200",
-    "reason": "Endpoint unavailable until the SSH server is installed and Uvicorn is started. Numerical predictions are now recorded.",
-    "prepared_runner": "python experiments/benchmark_mission3.py --location codespace --url http://localhost:8000"
+    "status": "passed",
+    "artifact": "codespace_localhost/summary.json"
   },
   "comparison_400": {
-    "status": "pending",
-    "reason": "Endpoint unavailable until the SSH server is installed and Uvicorn is started. Numerical predictions are now recorded."
+    "status": "passed",
+    "artifact": "comparison_400/summary.json"
   },
   "timing_breakdown": {
-    "status": "pending",
-    "reason": "Endpoint unavailable until the SSH server is installed and Uvicorn is started. Numerical predictions are now recorded.",
-    "prepared_runner": "python experiments/benchmark_mission3.py --location summarise"
+    "status": "passed",
+    "artifact": "representative_breakdown.json"
   },
   "swagger_glitches": {
-    "status": "pending_live_endpoint",
-    "browser": "System Chrome successfully launched through Playwright",
-    "prepared_runner": "python experiments/swagger_mission3.py --url https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev",
-    "action": "No browser action currently required from user; Codex can attempt all three real Swagger interactions once Uvicorn is available."
-  }
+    "status": "passed",
+    "artifact": "swagger/results.json"
+  },
+  "overall": "Mission 3 complete; no pending checks"
 }

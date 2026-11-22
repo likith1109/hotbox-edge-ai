@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "checks": [
+    "PASS: changed helper syntax.",
+    "PASS: untouched client and exact selected model/config hashes.",
+    "PASS public_keepalive: all 200 replies recorded in order; first request and every p50/p95/p99 independently reproduce from CSV, excluding first request for percentiles; correct endpoint/location/connection flags.",
+    "PASS public_no_keepalive: all 200 replies recorded in order; first request and every p50/p95/p99 independently reproduce from CSV, excluding first request for percentiles; correct endpoint/location/connection flags.",
+    "PASS codespace_localhost: all 200 replies recorded in order; first request and every p50/p95/p99 independently reproduce from CSV, excluding first request for percentiles; correct endpoint/location/connection flags.",
+    "PASS: identical 400 distinct Team 25 inputs and source-index order; 400 single results match batch within 0.01 days; timing setup and speedup saved.",
+    "PASS: separate real-public-HTTP 50-distinct-reading agreement/order evidence, observed max difference 0 days, atol 0.01 days.",
+    "PASS: three actual Swagger HTTP 422 responses and decodable screenshots; timing diagram decodes.",
+    "PASS: representative diagram components are from one actual CSV row and add exactly to its measured round trip."
+  ],
+  "benchmark_requests": 600,
+  "separate_agreement_readings": 50,
+  "sequential_vs_batch_readings": 400
+}

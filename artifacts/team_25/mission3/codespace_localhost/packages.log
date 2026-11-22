@@ -1,0 +1,54 @@
+Name: torch
+Version: 2.15.0+cpu
+Summary: Tensors and Dynamic neural networks in Python with strong GPU acceleration
+Home-page: 
+Author: 
+Author-email: PyTorch Team <packages@pytorch.org>
+License: 
+Location: /home/vscode/.local/lib/python3.11/site-packages
+Requires: filelock, fsspec, jinja2, networkx, setuptools, sympy, typing-extensions
+Required-by: 
+---
+Name: numpy
+Version: 2.4.6
+Summary: Fundamental package for array computing in Python
+Home-page: 
+Author: Travis E. Oliphant et al.
+Author-email: 
+License: 
+Location: /home/vscode/.local/lib/python3.11/site-packages
+Requires: 
+Required-by: contourpy, matplotlib, pandas, scikit-learn, scipy
+---
+Name: pandas
+Version: 3.1.1
+Summary: Powerful data structures for data analysis, time series, and statistics
+Home-page: 
+Author: 
+Author-email: The Pandas Development Team <pandas-dev@python.org>
+License: 
+Location: /home/vscode/.local/lib/python3.11/site-packages
+Requires: numpy, python-dateutil
+Required-by: 
+---
+Name: fastapi
+Version: 0.165.0
+Summary: FastAPI framework, high performance, easy to learn, fast to code, ready for production
+Home-page: 
+Author: 
+Author-email: Sebastián Ramírez <tiangolo@gmail.com>
+License: 
+Location: /home/vscode/.local/lib/python3.11/site-packages
+Requires: annotated-doc, anyio, opentelemetry-api, pydantic, starlette, typing-extensions, typing-inspection
+Required-by: 
+---
+Name: uvicorn
+Version: 0.54.0
+Summary: The lightning-fast ASGI server.
+Home-page: 
+Author: 
+Author-email: Tom Christie <tom@tomchristie.com>
+License: 
+Location: /home/vscode/.local/lib/python3.11/site-packages
+Requires: click, h11
+Required-by: 

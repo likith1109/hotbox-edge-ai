@@ -1,0 +1,28 @@
+fatal: could not read Username for 'https://github.com': No such device or address
+shell closed: exit status 1
+From /tmp/hotbox-team25-main.bundle
+ * branch            main       -> FETCH_HEAD
+Updating c26c746..e0730c9
+Fast-forward
+ artifacts/team_25/mission3/laptop_environment.json |   8 +
+ artifacts/team_25/mission3/pending_checks.json     |  48 +++--
+ .../team_25/mission3/public_access_attempt.json    |  16 ++
+ artifacts/team_25/mission3/verification.log        |  15 ++
+ artifacts/team_25/mission3/verified_sha256.json    |   4 +-
+ experiments/benchmark_mission3.py                  | 203 +++++++++++++++++++++
+ experiments/swagger_mission3.py                    |  50 +++++
+ 7 files changed, 326 insertions(+), 18 deletions(-)
+ create mode 100644 artifacts/team_25/mission3/laptop_environment.json
+ create mode 100644 artifacts/team_25/mission3/public_access_attempt.json
+ create mode 100644 experiments/benchmark_mission3.py
+ create mode 100644 experiments/swagger_mission3.py
+e0730c9951afed0170a661ab410acfebb77ff2c9
+8772252f4817c0bcd6e64fc21f56d66d45a323216f1420c856467645d2df8e17  model/model.pt
+26a1e2a49b0169f1f4bc63c399be4fee3de34189d3d442f155858d87e9bdfcfd  model/config.json
+9bd351d517a21930e4c6e120d0567cbe5e2d68c9df294a359c32c4afe517297b  app/main.py
+4c2171e8a624299d84c5f59e3cf65cc34fcd4cc09738c53fb29c780f23a42d65  client/bench.py
+INFO:     Started server process [3188]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+{"status":"ok","team":25,"params":385,"val_mae":5.31}

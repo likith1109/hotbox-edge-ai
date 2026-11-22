@@ -1,0 +1,181 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Doorbell battery API",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/model_info": {
+      "get": {
+        "summary": "Model Info",
+        "operationId": "model_info_model_info_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/predict": {
+      "post": {
+        "summary": "Predict",
+        "operationId": "predict_predict_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Reading"
+              },
+              "example": {
+                "battery_v": 3.86,
+                "temp_c": 28.0,
+                "rings_per_day": 5,
+                "wifi_rssi_dbm": -66,
+                "age_months": 22
+              }
+            }
+          }
+        }
+      }
+    },
+    "/predict_batch": {
+      "post": {
+        "summary": "Predict Batch",
+        "operationId": "predict_batch_predict_batch_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Batch"
+              },
+              "example": {
+                "rows": [
+                  {
+                    "battery_v": 3.86,
+                    "temp_c": 28.0,
+                    "rings_per_day": 5,
+                    "wifi_rssi_dbm": -66,
+                    "age_months": 22
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Reading": {
+        "properties": {
+          "battery_v": {
+            "description": "Single-cell battery reading, volts; zero is invalid",
+            "exclusiveMinimum": 0,
+            "maximum": 5,
+            "title": "Battery V",
+            "type": "number"
+          },
+          "temp_c": {
+            "description": "Assumed outdoor electronics operating envelope, degrees C",
+            "maximum": 85,
+            "minimum": -40,
+            "title": "Temp C",
+            "type": "number"
+          },
+          "rings_per_day": {
+            "description": "Daily count/rate; assumes at most one debounced ring per second",
+            "maximum": 86400,
+            "minimum": 0,
+            "title": "Rings Per Day",
+            "type": "number"
+          },
+          "wifi_rssi_dbm": {
+            "description": "Assumed received Wi-Fi signal envelope, dBm; zero is a placeholder",
+            "exclusiveMaximum": 0,
+            "minimum": -120,
+            "title": "Wifi Rssi Dbm",
+            "type": "number"
+          },
+          "age_months": {
+            "description": "Nonnegative service age; generous 20-year operating assumption",
+            "maximum": 240,
+            "minimum": 0,
+            "title": "Age Months",
+            "type": "number"
+          }
+        },
+        "required": [
+          "battery_v",
+          "temp_c",
+          "rings_per_day",
+          "wifi_rssi_dbm",
+          "age_months"
+        ],
+        "title": "Reading",
+        "type": "object"
+      },
+      "Batch": {
+        "properties": {
+          "rows": {
+            "items": {
+              "$ref": "#/components/schemas/Reading"
+            },
+            "maxItems": 10000,
+            "minItems": 1,
+            "title": "Rows",
+            "type": "array"
+          }
+        },
+        "required": [
+          "rows"
+        ],
+        "title": "Batch",
+        "type": "object"
+      }
+    }
+  }
+}

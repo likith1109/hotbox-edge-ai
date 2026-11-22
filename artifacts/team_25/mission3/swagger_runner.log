@@ -1,0 +1,3 @@
+PASS Swagger: battery_v=0 → HTTP 422
+PASS Swagger: temp_c=-127 → HTTP 422
+PASS Swagger: wifi_rssi_dbm=0 → HTTP 422
