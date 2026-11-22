@@ -1,0 +1,57 @@
+{
+  "checked_utc": "2026-11-22T03:47:06.754370+00:00",
+  "previous_commit": "e0730c9951afed0170a661ab410acfebb77ff2c9",
+  "deployed_commit": "7e26405bb1368869de66562f71ae64f6f5768d98",
+  "git_status": "## main...origin/main",
+  "preserved_benchmark_backup": "/tmp/hotbox-verified-benchmark-backup-whoxw_rt",
+  "restarted": true,
+  "server_pid": 23811,
+  "sha256": {
+    "app/main.py": "9bd351d517a21930e4c6e120d0567cbe5e2d68c9df294a359c32c4afe517297b",
+    "app/model.py": "d65f9327832a709d07c93d2c3a21ab495e66e504d1596400559a170bb16756e1",
+    "app/preprocessing.py": "7b4b3eee7d5f476a28f73a11aa5553b70e44c969ab2a48742803816803e8fcc1",
+    "model/model.pt": "8772252f4817c0bcd6e64fc21f56d66d45a323216f1420c856467645d2df8e17",
+    "model/config.json": "26a1e2a49b0169f1f4bc63c399be4fee3de34189d3d442f155858d87e9bdfcfd",
+    "client/bench.py": "4c2171e8a624299d84c5f59e3cf65cc34fcd4cc09738c53fb29c780f23a42d65"
+  },
+  "health": {
+    "status": "ok",
+    "team": 25,
+    "params": 385,
+    "val_mae": 5.31
+  },
+  "model_info": {
+    "layers": [
+      {
+        "name": "linear1",
+        "in": 5,
+        "out": 16,
+        "params": 96,
+        "bytes_f32": 384,
+        "macs": 80
+      },
+      {
+        "name": "linear2",
+        "in": 16,
+        "out": 16,
+        "params": 272,
+        "bytes_f32": 1088,
+        "macs": 256
+      },
+      {
+        "name": "linear3",
+        "in": 16,
+        "out": 1,
+        "params": 17,
+        "bytes_f32": 68,
+        "macs": 16
+      }
+    ],
+    "total_params": 385,
+    "total_bytes_f32": 1540,
+    "total_bytes_int8": 385,
+    "total_macs": 352,
+    "fits_300kb_sram_f32": true,
+    "fits_300kb_sram_int8": true
+  }
+}

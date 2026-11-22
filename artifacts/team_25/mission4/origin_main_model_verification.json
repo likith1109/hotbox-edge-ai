@@ -1,0 +1,28 @@
+{
+  "verified_origin_main_code_commit": "7e26405bb1368869de66562f71ae64f6f5768d98",
+  "files": [
+    {
+      "path": "model/config.json",
+      "git_blob": "4d597a439db8e8ce6d67f9f3e951e1124364f68c",
+      "sha256": "26a1e2a49b0169f1f4bc63c399be4fee3de34189d3d442f155858d87e9bdfcfd",
+      "bytes": 446
+    },
+    {
+      "path": "model/model.pt",
+      "git_blob": "e47b61a6ea2ea246c4b912d9616a043804b570c8",
+      "sha256": "8772252f4817c0bcd6e64fc21f56d66d45a323216f1420c856467645d2df8e17",
+      "bytes": 4285
+    }
+  ],
+  "team": 25,
+  "architecture": [
+    5,
+    16,
+    16,
+    1
+  ],
+  "params": 385,
+  "reproduced_validation_mae": 5.30826473236084,
+  "config_validation_mae": 5.31,
+  "selected_run": "artifacts/team_25/mission2/selected_retrain"
+}

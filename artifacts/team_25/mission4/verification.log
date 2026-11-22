@@ -9,3 +9,19 @@ PASS: exact parameter-only width limits 273 f32 and 550 ideal int8, checked at e
 Throughput sources are official Espressif primary documentation and header, saved in sources.json; estimator uses float32 native dot-product-style kernels at assumed 100 MMAC/s, 240 MHz. Computed arithmetic-only time 3.52 us is an estimate; full board timing remains unmeasured. Codespace inference remains the saved measured Mission 3 values.
 Deployment trade-offs, calculation caveats and restart commands are saved as text alongside machine-readable outputs.
 GitHub collaborator check currently lists only likith1109 and no pending invitations. Three teammate invites remain an administrative task requiring exact GitHub usernames, as requested earlier in the session. No additional usernames were guessed.
+
+FINAL DEPLOYMENT AND SUBMISSION CHECKS
+Deployed pushed code commit 7e26405bb1368869de66562f71ae64f6f5768d98 to the Codespace using a verified bundle. Only identical previously committed Mission 3 output was moved to a /tmp backup; no teammate changes were overwritten. Remote checkout is clean. Restarted only the verified app.main:app process in the repository; new PID 23811. Actual code/model hashes and responses are recorded in code_deployment.json.
+PASS: GitHub tree blob IDs for both model files match origin/main, local file bytes, and the selected Mission 2 SHA256 values. Reproduced validation MAE 5.30826473236084 days from Team 25 validation rows using the saved mu/sd and weights. Evidence origin_main_model_verification.json and github_model_tree.json.
+PASS: laptop public /health and /model_info both return HTTP 200; all selected counts and SRAM fit flags agree exactly with describe_model. Evidence live_model_info.json; calculations rerun with --url and recorded in live_calculation_output.log.
+PASS: final real-public-HTTP correctness suite checks field glitches and nonfinite values, plausible out-of-sample values, both prediction routes and all five timing keys. Separate 50-distinct-reading order/agreement test had maximum difference 0 days at atol=0.01 days, rtol=0; reversed order also verified. Evidence final_correctness/ and final_correctness_runner.log.
+PASS: untouched client/bench.py --url PUBLIC_URL --n 50 from the laptop returned 50/50 successful predictions in index order with all required finite timing metrics. Raw output, CSV, exact command/environment and summary are under final_external50/.
+Final external50 round_trip: first=306.014871006 ms, p50=102.262100001, p95=150.149421796, p99=202.666529120; percentiles exclude first.
+Final external50 parse: first=0.049000000 ms, p50=0.040000000, p95=0.051000000, p99=0.073600000; percentiles exclude first.
+Final external50 normalise: first=0.054000000 ms, p50=0.043000000, p95=0.064000000, p99=0.075040000; percentiles exclude first.
+Final external50 inference: first=0.276000000 ms, p50=0.192000000, p95=0.268600000, p99=0.281840000; percentiles exclude first.
+Final external50 build: first=0.021000000 ms, p50=0.016000000, p95=0.026400000, p99=0.030040000; percentiles exclude first.
+Final external50 server_total: first=0.413000000 ms, p50=0.314000000, p95=0.400000000, p99=0.417640000; percentiles exclude first.
+Final external50 network_and_framework: first=305.601871006 ms, p50=101.951231995, p95=149.763421796, p99=202.288609120; percentiles exclude first.
+Saved Mission 3 measurements are unchanged and remain the comparison basis for device/server trade-offs. Final smoke-check timing varies with current network conditions and does not replace the three prior 200-request runs.
+Final submission links, readiness, exact restart commands and the remaining administrative items are saved in SUBMISSION.txt and final_submission_checks.json. No technical submission checks are pending.

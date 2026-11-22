@@ -1,0 +1,8 @@
+
+CORRECTNESS VERIFICATION — real public HTTP requests; not latency benchmarks
+PASS: unchanged selected model hashes; /health and /model_info return HTTP 200 with Team 25, 5→16→16→1, 385 parameters, 1540 float32 bytes, 352 MACs.
+PASS: /docs HTML and /openapi.json return HTTP 200; Swagger has request bodies, valid model references, examples and bounds for all five inputs. Interactive browser execution is tracked separately by swagger_mission3.py.
+PASS: one invalid value per field is HTTP 422 on both routes; opposite-bound violations, nonfinite inputs in all fields, malformed JSON, empty and oversized batches are rejected.
+PASS: plausible values just outside each training-feature range return HTTP 200. Negative rings and age are physically invalid, so their below-zero sides remain rejected.
+PASS: separate 50-distinct-reading agreement/order check; absolute tolerance=0.01 days, relative tolerance=0, maximum observed difference=0.00000000 days. Reversed input order also preserved.
+PASS: all five timing keys are finite/nonnegative on both valid prediction routes; stage sums fit server_total within 0.003 ms rounding tolerance. No latency percentiles or throughput benchmark computed.

@@ -1,0 +1,22 @@
+Team 25 — HotBox
+
+Repository: https://github.com/likith1109/hotbox-edge-ai
+Public API base: https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev
+Health: https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev/health
+Model info: https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev/model_info
+Swagger: https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev/docs
+Current pushed revision: git rev-parse origin/main
+
+Selected model: 5 -> 16 -> 16 -> 1, 385 parameters, 352 MACs.
+Validation MAE: 5.31 days (saved weights reproduce 5.3082647 days on the selected validation split).
+Both model/model.pt and model/config.json are tracked, matched to the selected Mission 2 run, and verified by blob ID/SHA256 on origin/main, GitHub, and the running Codespace.
+
+All requested technical submission checks passed, including the external 50-request client check and a separate 50-distinct-reading order/agreement check. Detailed evidence: artifacts/team_25/mission4/final_submission_checks.json and verification.log. Earlier raw benchmarks and browser evidence remain under artifacts/team_25/mission3/.
+
+Mission 4 calculations: artifacts/team_25/mission4/calculations.json and width_table.csv.
+Sources and estimate caveats: artifacts/team_25/mission4/sources.json and on_device_estimate.json.
+Restart/public-port commands: artifacts/team_25/mission4/restart_commands.txt.
+
+Keep the Codespace started, Uvicorn running, and port 8000 Public during the instructor's announced check window. After restart, restore Public visibility. Restarting requires no retraining.
+
+Administrative items: the three collaborator invitations need exact GitHub usernames. The instructor's final submission mechanism/check window has not been provided; submit the URLs when announced. Actual board latency, quantised accuracy and hidden-company MAE are not measured by these checks.

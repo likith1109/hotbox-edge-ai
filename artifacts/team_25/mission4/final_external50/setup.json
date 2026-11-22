@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/tmp/hotbox-team25-venv/bin/python",
+    "-u",
+    "/home/likithshashidhar/Desktop/edge_ai_assignment1/client/bench.py",
+    "--url",
+    "https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev",
+    "--n",
+    "50"
+  ],
+  "location": "laptop",
+  "hostname": "fedora",
+  "python": "3.14.10 (main, Oct 26 2026, 00:00:00) [GCC 16.2.1 20260819 (Red Hat 16.2.1-2)]",
+  "client_sha256": "4c2171e8a624299d84c5f59e3cf65cc34fcd4cc09738c53fb29c780f23a42d65",
+  "url": "https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev",
+  "n": 50,
+  "note": "Final submission smoke check; saved Mission 3 benchmarks remain unchanged."
+}

@@ -1,0 +1,50 @@
+{
+  "count": 50,
+  "distinct_inputs": 50,
+  "absolute_tolerance_days": 0.01,
+  "relative_tolerance": 0,
+  "maximum_absolute_difference_days": 0.0,
+  "same_order": true,
+  "reversed_order_also_checked": true,
+  "transport": "real public HTTP requests; no latency measurement",
+  "health": {
+    "status": "ok",
+    "team": 25,
+    "params": 385,
+    "val_mae": 5.31
+  },
+  "model_info": {
+    "layers": [
+      {
+        "name": "linear1",
+        "in": 5,
+        "out": 16,
+        "params": 96,
+        "bytes_f32": 384,
+        "macs": 80
+      },
+      {
+        "name": "linear2",
+        "in": 16,
+        "out": 16,
+        "params": 272,
+        "bytes_f32": 1088,
+        "macs": 256
+      },
+      {
+        "name": "linear3",
+        "in": 16,
+        "out": 1,
+        "params": 17,
+        "bytes_f32": 68,
+        "macs": 16
+      }
+    ],
+    "total_params": 385,
+    "total_bytes_f32": 1540,
+    "total_bytes_int8": 385,
+    "total_macs": 352,
+    "fits_300kb_sram_f32": true,
+    "fits_300kb_sram_int8": true
+  }
+}

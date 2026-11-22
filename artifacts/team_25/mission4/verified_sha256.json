@@ -1,0 +1,11 @@
+{
+  "app/model.py": "d65f9327832a709d07c93d2c3a21ab495e66e504d1596400559a170bb16756e1",
+  "app/main.py": "9bd351d517a21930e4c6e120d0567cbe5e2d68c9df294a359c32c4afe517297b",
+  "app/preprocessing.py": "7b4b3eee7d5f476a28f73a11aa5553b70e44c969ab2a48742803816803e8fcc1",
+  "model/model.pt": "8772252f4817c0bcd6e64fc21f56d66d45a323216f1420c856467645d2df8e17",
+  "model/config.json": "26a1e2a49b0169f1f4bc63c399be4fee3de34189d3d442f155858d87e9bdfcfd",
+  "client/bench.py": "4c2171e8a624299d84c5f59e3cf65cc34fcd4cc09738c53fb29c780f23a42d65",
+  "experiments/mission4.py": "e243b84d63eeb346ce5e3d4068903980d29e089a2c7748e3d77b94d89f3eb855",
+  "experiments/sync_codespace.py": "34c6be0a36043615fe82b1ab71254dadd5dff52c10e9ed1e505b8bb46a0b1f04",
+  "experiments/verify_mission3.py": "daf7e6ebe5f8846e0a3dac17decd058e04ed81289220a9305c44ff3d66586cba"
+}

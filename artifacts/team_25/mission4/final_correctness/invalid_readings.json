@@ -1,0 +1,362 @@
+[
+  {
+    "path": "/predict",
+    "field": "battery_v",
+    "value": 0,
+    "status": 422,
+    "response": {
+      "error": "bad reading",
+      "detail": [
+        {
+          "type": "greater_than",
+          "loc": [
+            "battery_v"
+          ],
+          "msg": "Input should be greater than 0",
+          "input": 0,
+          "ctx": {
+            "gt": 0.0
+          },
+          "url": "https://errors.pydantic.dev/2.14/v/greater_than"
+        }
+      ]
+    }
+  },
+  {
+    "path": "/predict_batch",
+    "field": "battery_v",
+    "value": 0,
+    "status": 422,
+    "response": {
+      "error": "bad reading",
+      "detail": [
+        {
+          "type": "greater_than",
+          "loc": [
+            "rows",
+            1,
+            "battery_v"
+          ],
+          "msg": "Input should be greater than 0",
+          "input": 0,
+          "ctx": {
+            "gt": 0.0
+          },
+          "url": "https://errors.pydantic.dev/2.14/v/greater_than"
+        }
+      ]
+    }
+  },
+  {
+    "path": "/predict",
+    "field": "temp_c",
+    "value": -127,
+    "status": 422,
+    "response": {
+      "error": "bad reading",
+      "detail": [
+        {
+          "type": "greater_than_equal",
+          "loc": [
+            "temp_c"
+          ],
+          "msg": "Input should be greater than or equal to -40",
+          "input": -127,
+          "ctx": {
+            "ge": -40.0
+          },
+          "url": "https://errors.pydantic.dev/2.14/v/greater_than_equal"
+        }
+      ]
+    }
+  },
+  {
+    "path": "/predict_batch",
+    "field": "temp_c",
+    "value": -127,
+    "status": 422,
+    "response": {
+      "error": "bad reading",
+      "detail": [
+        {
+          "type": "greater_than_equal",
+          "loc": [
+            "rows",
+            1,
+            "temp_c"
+          ],
+          "msg": "Input should be greater than or equal to -40",
+          "input": -127,
+          "ctx": {
+            "ge": -40.0
+          },
+          "url": "https://errors.pydantic.dev/2.14/v/greater_than_equal"
+        }
+      ]
+    }
+  },
+  {
+    "path": "/predict",
+    "field": "rings_per_day",
+    "value": -1,
+    "status": 422,
+    "response": {
+      "error": "bad reading",
+      "detail": [
+        {
+          "type": "greater_than_equal",
+          "loc": [
+            "rings_per_day"
+          ],
+          "msg": "Input should be greater than or equal to 0",
+          "input": -1,
+          "ctx": {
+            "ge": 0.0
+          },
+          "url": "https://errors.pydantic.dev/2.14/v/greater_than_equal"
+        }
+      ]
+    }
+  },
+  {
+    "path": "/predict_batch",
+    "field": "rings_per_day",
+    "value": -1,
+    "status": 422,
+    "response": {
+      "error": "bad reading",
+      "detail": [
+        {
+          "type": "greater_than_equal",
+          "loc": [
+            "rows",
+            1,
+            "rings_per_day"
+          ],
+          "msg": "Input should be greater than or equal to 0",
+          "input": -1,
+          "ctx": {
+            "ge": 0.0
+          },
+          "url": "https://errors.pydantic.dev/2.14/v/greater_than_equal"
+        }
+      ]
+    }
+  },
+  {
+    "path": "/predict",
+    "field": "wifi_rssi_dbm",
+    "value": 0,
+    "status": 422,
+    "response": {
+      "error": "bad reading",
+      "detail": [
+        {
+          "type": "less_than",
+          "loc": [
+            "wifi_rssi_dbm"
+          ],
+          "msg": "Input should be less than 0",
+          "input": 0,
+          "ctx": {
+            "lt": 0.0
+          },
+          "url": "https://errors.pydantic.dev/2.14/v/less_than"
+        }
+      ]
+    }
+  },
+  {
+    "path": "/predict_batch",
+    "field": "wifi_rssi_dbm",
+    "value": 0,
+    "status": 422,
+    "response": {
+      "error": "bad reading",
+      "detail": [
+        {
+          "type": "less_than",
+          "loc": [
+            "rows",
+            1,
+            "wifi_rssi_dbm"
+          ],
+          "msg": "Input should be less than 0",
+          "input": 0,
+          "ctx": {
+            "lt": 0.0
+          },
+          "url": "https://errors.pydantic.dev/2.14/v/less_than"
+        }
+      ]
+    }
+  },
+  {
+    "path": "/predict",
+    "field": "age_months",
+    "value": -1,
+    "status": 422,
+    "response": {
+      "error": "bad reading",
+      "detail": [
+        {
+          "type": "greater_than_equal",
+          "loc": [
+            "age_months"
+          ],
+          "msg": "Input should be greater than or equal to 0",
+          "input": -1,
+          "ctx": {
+            "ge": 0.0
+          },
+          "url": "https://errors.pydantic.dev/2.14/v/greater_than_equal"
+        }
+      ]
+    }
+  },
+  {
+    "path": "/predict_batch",
+    "field": "age_months",
+    "value": -1,
+    "status": 422,
+    "response": {
+      "error": "bad reading",
+      "detail": [
+        {
+          "type": "greater_than_equal",
+          "loc": [
+            "rows",
+            1,
+            "age_months"
+          ],
+          "msg": "Input should be greater than or equal to 0",
+          "input": -1,
+          "ctx": {
+            "ge": 0.0
+          },
+          "url": "https://errors.pydantic.dev/2.14/v/greater_than_equal"
+        }
+      ]
+    }
+  },
+  {
+    "path": "/predict",
+    "field": "battery_v",
+    "value": 5.1,
+    "status": 422
+  },
+  {
+    "path": "/predict",
+    "field": "temp_c",
+    "value": 85.1,
+    "status": 422
+  },
+  {
+    "path": "/predict",
+    "field": "rings_per_day",
+    "value": 86401,
+    "status": 422
+  },
+  {
+    "path": "/predict",
+    "field": "wifi_rssi_dbm",
+    "value": -121,
+    "status": 422
+  },
+  {
+    "path": "/predict",
+    "field": "age_months",
+    "value": 241,
+    "status": 422
+  },
+  {
+    "path": "/predict",
+    "field": "battery_v",
+    "value": "nan",
+    "status": 422
+  },
+  {
+    "path": "/predict",
+    "field": "battery_v",
+    "value": "inf",
+    "status": 422
+  },
+  {
+    "path": "/predict",
+    "field": "battery_v",
+    "value": "-inf",
+    "status": 422
+  },
+  {
+    "path": "/predict",
+    "field": "temp_c",
+    "value": "nan",
+    "status": 422
+  },
+  {
+    "path": "/predict",
+    "field": "temp_c",
+    "value": "inf",
+    "status": 422
+  },
+  {
+    "path": "/predict",
+    "field": "temp_c",
+    "value": "-inf",
+    "status": 422
+  },
+  {
+    "path": "/predict",
+    "field": "rings_per_day",
+    "value": "nan",
+    "status": 422
+  },
+  {
+    "path": "/predict",
+    "field": "rings_per_day",
+    "value": "inf",
+    "status": 422
+  },
+  {
+    "path": "/predict",
+    "field": "rings_per_day",
+    "value": "-inf",
+    "status": 422
+  },
+  {
+    "path": "/predict",
+    "field": "wifi_rssi_dbm",
+    "value": "nan",
+    "status": 422
+  },
+  {
+    "path": "/predict",
+    "field": "wifi_rssi_dbm",
+    "value": "inf",
+    "status": 422
+  },
+  {
+    "path": "/predict",
+    "field": "wifi_rssi_dbm",
+    "value": "-inf",
+    "status": 422
+  },
+  {
+    "path": "/predict",
+    "field": "age_months",
+    "value": "nan",
+    "status": 422
+  },
+  {
+    "path": "/predict",
+    "field": "age_months",
+    "value": "inf",
+    "status": 422
+  },
+  {
+    "path": "/predict",
+    "field": "age_months",
+    "value": "-inf",
+    "status": 422
+  }
+]

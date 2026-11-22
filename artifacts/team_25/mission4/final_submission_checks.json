@@ -1,0 +1,48 @@
+{
+  "technical_checks": "passed",
+  "team": 25,
+  "team_name": "HotBox",
+  "repo_url": "https://github.com/likith1109/hotbox-edge-ai",
+  "public_api_base_url": "https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev",
+  "verified_code_commit": "7e26405bb1368869de66562f71ae64f6f5768d98",
+  "final_pushed_revision_command": "git rev-parse origin/main",
+  "selected_model": {
+    "architecture": [
+      5,
+      16,
+      16,
+      1
+    ],
+    "params": 385,
+    "val_mae_config_days": 5.31,
+    "reproduced_val_mae_days": 5.30826473236084,
+    "macs": 352,
+    "bytes_f32": 1540,
+    "bytes_int8_ideal": 385,
+    "peak_activation_bytes_f32": 128
+  },
+  "public_health_and_model_info": "HTTP 200; exact selected counts and fit flags verified",
+  "external_benchmark": {
+    "requests": 50,
+    "successful": 50,
+    "artifact": "final_external50/"
+  },
+  "separate_agreement_order_check": {
+    "requests": 50,
+    "absolute_tolerance_days": 0.01,
+    "max_difference_days": 0,
+    "artifact": "final_correctness/"
+  },
+  "selected_model_blobs_on_origin_main_verified": true,
+  "pending_technical_checks": [],
+  "pending_administration": [
+    "Exact GitHub usernames for the three teammate collaborator invitations; only likith1109 currently has access.",
+    "Instructor submission mechanism and grading/check window have not been supplied. Keep endpoint running when announced."
+  ],
+  "unmeasured_by_design": [
+    "Physical ESP32 inference/energy; on-device arithmetic time is an estimate.",
+    "Actual int8 conversion accuracy; byte counts are theoretical.",
+    "Company hidden 400-reading MAE; no hidden labels were supplied."
+  ],
+  "restart_instructions": "artifacts/team_25/mission4/restart_commands.txt"
+}
