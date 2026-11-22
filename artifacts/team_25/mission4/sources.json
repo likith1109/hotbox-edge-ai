@@ -1,0 +1,17 @@
+{
+  "float32_dot_product": {
+    "url": "https://docs.espressif.com/projects/esp-dsp/en/latest/esp32/esp-dsp-benchmarks.html",
+    "fact": "ESP32S3 O2 optimized dsps_dotprod_f32, N=256: 432 CPU cycles.",
+    "checked_utc": "2026-11-22T03:45:36.803035+00:00"
+  },
+  "clock_frequency": {
+    "url": "https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/api-reference/system/power_management.html",
+    "fact": "ESP_PM_CPU_FREQ_MAX supports 80, 160 or 240 MHz on ESP32-S3.",
+    "checked_utc": "2026-11-22T03:45:36.803080+00:00"
+  },
+  "int8_bias_type": {
+    "url": "https://github.com/espressif/esp-nn/blob/master/include/esp_nn_esp32s3.h",
+    "fact": "esp_nn_fully_connected_s8_esp32s3 takes int8 input/filter and int32 bias.",
+    "checked_utc": "2026-11-22T03:45:36.803085+00:00"
+  }
+}

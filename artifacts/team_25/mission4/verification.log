@@ -1,0 +1,11 @@
+MISSION 4 — TEAM 25 HOTBOX
+Selected saved model is unchanged: 5 -> 16 -> 16 -> 1, 385 parameters, 5.31 days validation MAE.
+Ran python experiments/mission4.py; raw output is calculation_output.log.
+PASS: saved weights/config match Mission 2 hashes and load successfully; float32 bytes also equal actual tensor numel*element_size.
+PASS: selected MACs=352, f32 parameter bytes=1540, assignment ideal int8 parameter bytes=385. Realistic int8 weights with int32 biases would be 484 bytes before metadata, not a deployed/validated quantised model.
+PASS: activation schedule counts 21,32,17 simultaneous elements at the three layers, peak 128 f32 bytes or hypothetical 32 int8 bytes; all four separately retained tensors would need 152 f32 bytes.
+PASS: all five width-table rows come from the same describe_model function as the API and independently match P(w)=w^2+8w+1 and MACs=w^2+6w.
+PASS: exact parameter-only width limits 273 f32 and 550 ideal int8, checked at each next width and by exhaustive search. Binary budgets match /model_info; decimal alternatives are also saved.
+Throughput sources are official Espressif primary documentation and header, saved in sources.json; estimator uses float32 native dot-product-style kernels at assumed 100 MMAC/s, 240 MHz. Computed arithmetic-only time 3.52 us is an estimate; full board timing remains unmeasured. Codespace inference remains the saved measured Mission 3 values.
+Deployment trade-offs, calculation caveats and restart commands are saved as text alongside machine-readable outputs.
+GitHub collaborator check currently lists only likith1109 and no pending invitations. Three teammate invites remain an administrative task requiring exact GitHub usernames, as requested earlier in the session. No additional usernames were guessed.

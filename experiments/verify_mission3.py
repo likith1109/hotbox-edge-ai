@@ -202,10 +202,13 @@ async def main():
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--url", help="Optional real public endpoint; otherwise use in-process ASGI")
+    parser.add_argument("--output-dir", help="Save a new verification run without replacing prior mission evidence")
     args = parser.parse_args()
     if args.url:
         import requests
         PUBLIC_URL = args.url.rstrip("/")
         PUBLIC_SESSION = requests.Session()
         ROOT = ROOT / "public_correctness"
+    if args.output_dir:
+        ROOT = Path(args.output_dir)
     asyncio.run(main())

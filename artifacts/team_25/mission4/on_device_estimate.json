@@ -1,0 +1,16 @@
+{
+  "kind": "estimate, not an on-device measurement",
+  "precision": "float32",
+  "kernel": "Native dense layers built from ESP-DSP-style optimized float32 dot products",
+  "source_proxy": "dsps_dotprod_f32, length 256, ESP32S3 O2: 432 cycles",
+  "assumed_cpu_hz": 240000000,
+  "reference_proxy_macs_per_second": 142222222.2222222,
+  "assumed_macs_per_second": 100000000,
+  "macs": 352,
+  "arithmetic_only_estimate_us": 3.52,
+  "arithmetic_only_estimate_ms": 0.00352,
+  "caveat": "100 MMAC/s is an explicit round-down assumption from the 142.22 MMAC/s long-vector reference, not a measured rate for these short layers. 3.52 us is an optimistic MAC-work estimate, not a full prediction guarantee. Length-5/16 tails, per-call setup, bias, ReLU, normalisation, memory access, wake-up, allocation, runtime and I/O add work; full board latency is unmeasured. One MAC is one weight multiply-accumulate, not one FLOP. No dual-core multiplier assumed.",
+  "measured_codespace_public_inference_p50_ms": 0.121,
+  "measured_codespace_local_inference_p50_ms": 0.086,
+  "measured_public_keepalive_rtt_p50_ms": 37.00764199311379
+}

@@ -1,0 +1,15 @@
+Restoring the endpoint before grading
+
+Open https://hotbox-team-25-v66pj7gw7v5q2x6q.github.dev and start the Codespace if stopped. In its Terminal -> New Terminal, run:
+
+cd /workspaces/hotbox-edge-ai
+python -m uvicorn app.main:app --host 0.0.0.0 --port 8000
+
+Leave that terminal running. In a separate laptop terminal, run:
+
+gh codespace ports visibility 8000:public -c hotbox-team-25-v66pj7gw7v5q2x6q
+curl --fail https://hotbox-team-25-v66pj7gw7v5q2x6q-8000.app.github.dev/health
+
+Alternatively in the Codespace Ports tab: right-click 8000 -> Port Visibility -> Public. A restart resets visibility. Keep the Codespace running during the instructor's check window and set GitHub Settings -> Codespaces -> Default idle timeout as long as allowed before that window. The check window has not been supplied in this session.
+
+If automating through SSH after a container rebuild and the SSH server is missing, use the browser terminal to run: sudo apt-get update && sudo apt-get install -y openssh-server. Normal server startup does not require retraining: use the committed selected model/model.pt and model/config.json. Do not run default train.py just to restart the endpoint, because training overwrites model/.

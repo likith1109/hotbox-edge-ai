@@ -1,0 +1,75 @@
+{
+  "model_info": {
+    "layers": [
+      {
+        "name": "linear1",
+        "in": 5,
+        "out": 16,
+        "params": 96,
+        "bytes_f32": 384,
+        "macs": 80
+      },
+      {
+        "name": "linear2",
+        "in": 16,
+        "out": 16,
+        "params": 272,
+        "bytes_f32": 1088,
+        "macs": 256
+      },
+      {
+        "name": "linear3",
+        "in": 16,
+        "out": 1,
+        "params": 17,
+        "bytes_f32": 68,
+        "macs": 16
+      }
+    ],
+    "total_params": 385,
+    "total_bytes_f32": 1540,
+    "total_bytes_int8": 385,
+    "total_macs": 352,
+    "fits_300kb_sram_f32": true,
+    "fits_300kb_sram_int8": true
+  },
+  "weight_elements": 352,
+  "bias_elements": 33,
+  "float32_weights_bytes": 1408,
+  "float32_bias_bytes": 132,
+  "ideal_int8_all_parameters_bytes": 385,
+  "realistic_int8_weights_int32_biases_bytes": 484,
+  "activation_schedule": [
+    {
+      "layer": 1,
+      "input_elements": 5,
+      "output_elements": 16,
+      "simultaneous_elements": 21,
+      "bytes_f32": 84,
+      "bytes_int8": 21
+    },
+    {
+      "layer": 2,
+      "input_elements": 16,
+      "output_elements": 16,
+      "simultaneous_elements": 32,
+      "bytes_f32": 128,
+      "bytes_int8": 32
+    },
+    {
+      "layer": 3,
+      "input_elements": 16,
+      "output_elements": 1,
+      "simultaneous_elements": 17,
+      "bytes_f32": 68,
+      "bytes_int8": 17
+    }
+  ],
+  "peak_activation_elements": 32,
+  "peak_activation_bytes_f32": 128,
+  "peak_activation_bytes_int8": 32,
+  "all_four_tensors_retained_bytes_f32": 152,
+  "normalisation_statistics_bytes_f32": 40,
+  "native_f32_parameters_activations_and_statistics_bytes": 1708,
+  "assumptions": "Batch size one; two reusable 16-slot buffers. First input occupies five slots; a layer input and output coexist, then old input is released. ReLU and input normalisation are in place. No saved training activations or autograd. Excludes kernel scratch, scalar/vector accumulators, alignment padding, runtime/interpreter, stack, JSON/network, allocator caches and code. Int8 activation count is hypothetical; no int8 model was produced. Full quantised kernels need int32 biases/accumulators and quantisation metadata."
+}

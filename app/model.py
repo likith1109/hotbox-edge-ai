@@ -3,6 +3,9 @@ import torch
 from torch import nn
 
 FEATURES = ["battery_v", "temp_c", "rings_per_day", "wifi_rssi_dbm", "age_months"]
+# Explicit binary capacities used for the assignment's parameter-storage tests.
+SRAM_BUDGET_BYTES = 300 * 1024
+PSRAM_BUDGET_BYTES = 8 * 1024 * 1024
 
 
 class BatteryNet(nn.Module):
@@ -33,11 +36,10 @@ def describe_model(net):
             })
     params = sum(layer["params"] for layer in layers)
     # These are parameter-storage checks, not a whole-runtime RAM guarantee.
-    budget = 300 * 1024
     return {
         "layers": layers, "total_params": params,
         "total_bytes_f32": 4 * params, "total_bytes_int8": params,
         "total_macs": sum(layer["macs"] for layer in layers),
-        "fits_300kb_sram_f32": 4 * params <= budget,
-        "fits_300kb_sram_int8": params <= budget,
+        "fits_300kb_sram_f32": 4 * params <= SRAM_BUDGET_BYTES,
+        "fits_300kb_sram_int8": params <= SRAM_BUDGET_BYTES,
     }

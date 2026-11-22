@@ -1,0 +1,15 @@
+Team 25 HotBox: device versus server
+
+Recommendation: for a real doorbell, run this small model locally in native float32 code. Keep the required Codespace API for this assignment, fleet monitoring, and model update comparisons. The current PyTorch model.pt is a server artifact, not a microcontroller executable; native export and board testing would be separate work.
+
+Latency: Mission 3 measured public keep-alive median RTT 37.008 ms, versus server inference 0.121 ms. Without keep-alive, median RTT rose to 254.907 ms. Inside-Codespace RTT was 1.218 ms and inference 0.086 ms. The network/framework/client residual dominated the representative public request. An arithmetic-only on-device estimate of 0.00352 ms is an assumption-based calculation, not measured ESP32 latency; it excludes preprocessing, bias/ReLU, dispatch, wake-up and I/O. Do not compare it as if both numbers measured identical end-to-end work.
+
+Privacy: local inference keeps voltage, temperature, usage/ring rate, Wi-Fi RSSI and service age on the device. Server inference sends those readings to hosting infrastructure; the assignment API is deliberately Public. No video is required by this model.
+
+Cost: local inference uses existing device compute and avoids a per-prediction hosting/network dependency, but needs native firmware integration, testing and updates. Central hosting makes rollouts and diagnostics easier but needs continuing runtime availability and fleet traffic support. No currency prices or cost savings were measured.
+
+Power: short local computation may avoid an extra radio transaction. Actual benefit depends on the doorbell's existing Wi-Fi activity, wake-up schedule and hardware. Energy was not measured, so no battery-life improvement percentage is claimed. The selected float32 weights already occupy only 1540 bytes; int8 is not necessary to fit. Quantisation could change accuracy and has not been performed or validated.
+
+Wi-Fi outage and availability: local inference can continue offline. The server cannot answer while the device's Wi-Fi, internet route or Codespace is unavailable. Cache a recent estimate if a server-only product is used. Codespaces idle shutdown and Public-port resets are operational concerns for grading, not a reason to treat it as a production backend.
+
+Memory convention: /model_info uses 300 KiB = 307200 bytes and an ideal one-byte-per-parameter int8 estimate. Parameter-only fit flags exclude activations, normalisation statistics, stack, kernel scratch and runtime. Real ESP-NN int8 fully-connected APIs use int32 biases; for this model that is 352 weight bytes + 132 bias bytes = 484 bytes before quantisation metadata. See sources.json.

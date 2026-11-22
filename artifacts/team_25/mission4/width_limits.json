@@ -1,0 +1,31 @@
+{
+  "sram_budget_bytes": 307200,
+  "psram_budget_bytes": 8388608,
+  "unit_convention": "300 KiB SRAM and 8 MiB PSRAM; matches existing /model_info. Fits flags concern parameters only, not whole-program memory.",
+  "float32": {
+    "maximum_width": 273,
+    "bytes_at_maximum": 306856,
+    "first_failing_width": 274,
+    "bytes_at_first_failure": 309076
+  },
+  "ideal_int8": {
+    "maximum_width": 550,
+    "bytes_at_maximum": 306901,
+    "first_failing_width": 551,
+    "bytes_at_first_failure": 308010
+  },
+  "decimal_300000_byte_alternative": {
+    "float32": {
+      "maximum_width": 269,
+      "bytes_at_maximum": 298056,
+      "first_failing_width": 270,
+      "bytes_at_first_failure": 300244
+    },
+    "ideal_int8": {
+      "maximum_width": 543,
+      "bytes_at_maximum": 299194,
+      "first_failing_width": 544,
+      "bytes_at_first_failure": 300289
+    }
+  }
+}
